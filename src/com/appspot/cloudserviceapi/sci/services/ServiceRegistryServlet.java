@@ -209,9 +209,7 @@ public class ServiceRegistryServlet extends HttpServlet {
 						//=== end - support getting the content of the redirected service!!!
 					} else
 					if(useDescription) {
-//						String description = HTMLUtil.handleText(u.getDescription());
 						String description = sr.getDescription();
-//						description = ServiceRegistryUtil.handleEndPoint(description, r);
 						description = sr.getDescription();
 						
 //						if(!isUrl(endPoint)) {
@@ -235,7 +233,9 @@ public class ServiceRegistryServlet extends HttpServlet {
 						}
 						if(resp != null) {
 							ServiceRegistryUtil.countHit(sr, r, request, hitCountEnabled);
-							response.getWriter().print(resp.trim());
+							//=== support "Related Services" based on the summary content!
+							String related = ServiceRegistryUtil.toRelatedLinks(sr.getSummary(), r) + "<p>";
+							response.getWriter().print(related + resp.trim());
 						}
 					} else {
 						if(isUrl(endPoint)) {

@@ -1,6 +1,7 @@
 package com.appspot.cloudserviceapi.data;
 
 import java.util.Date;
+import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -134,8 +135,8 @@ public class ServiceRegistryUtil {
 	 * Retrieve the name of a SR endpoint i.e. for ${sid}, returns just sid 
 	 * returns null if it is not an SR endpoint i.e. no id found!
 	 * */
-	public static String getRedirectedServiceName(String sid) throws Exception {
-		if(sid == null) throw new Exception("EndPoint is null or empty!");
+	public static String getRedirectedServiceName(String sid) throws RuntimeException {
+		if(sid == null) throw new RuntimeException("EndPoint is null or empty!");
 
 		String retVal = null;
 		
@@ -158,5 +159,48 @@ public class ServiceRegistryUtil {
 //
 //		return ret;
 //	}
+
+	  public static String getRealLink(String service, ServiceRegistryDAO r) {
+		  	String ret = service;
+		  	
+		  	if(r != null) {
+				ServiceRegistry sr = null;
+				sr = (tapp.model.ServiceRegistry)r.findServiceRegistryByService(service);
+				if(sr == null) {
+					//do nothing
+				} else {
+					ret = sr.getEndpoint();
+				}
+		  	}
+//		  	else {
+//			  	if(service.equals("related1")) {
+//			  		ret = "http://www.x.com";
+//			  	} else 
+//			  	if(service.equals("related2")) {
+//			  		ret = "http://www.y.com";
+//			  	}
+//		  	}
+		  	
+		  	return ret;
+		  }
+		  
+	  public static String toRelatedLinks(String summaryText, ServiceRegistryDAO r) throws RuntimeException {
+		StringTokenizer st =new StringTokenizer(summaryText);
+//		System.out.println("tokens count: " + st.countTokens());
+		StringBuffer sb = new StringBuffer();
+		String temp = null;
+		while (st.hasMoreElements()) {
+			String token = st.nextElement().toString();
+			temp = getRedirectedServiceName(token);
+//			System.out.println("token = " + getRedirectedServiceName(token));
+			if(temp == null) {
+				sb.append(token).append(' ');
+			} else {
+				//look up for the real link!
+				sb.append("<a href='").append(getRealLink(temp, r)).append("'>").append(temp).append("</a>").append(' ');
+			}
+		}
+	  	return sb.toString();
+	  }
 
 }
