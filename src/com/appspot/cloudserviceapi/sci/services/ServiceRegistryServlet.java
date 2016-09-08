@@ -234,7 +234,10 @@ public class ServiceRegistryServlet extends HttpServlet {
 						if(resp != null) {
 							ServiceRegistryUtil.countHit(sr, r, request, hitCountEnabled);
 							//=== support "Related Services" based on the summary content!
-							String related = ServiceRegistryUtil.toRelatedLinks(sr.getSummary(), r) + "<p>";
+							String related = "";
+							if(sr.getSummary() != null) {
+								related = ServiceRegistryUtil.toRelatedLinks(sr.getSummary(), r) + "<p>";
+							}
 							response.getWriter().print(related + resp.trim());
 						}
 					} else {
