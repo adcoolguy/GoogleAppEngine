@@ -32,6 +32,7 @@ import org.ocpsoft.pretty.time.PrettyTime;
 import org.springframework.security.core.Authentication;
 
 import tapp.model.ServiceRegistry;
+import app.common.AppUtils;
 import app.common.Constants;
 import app.common.SecurityUtils;
 
@@ -198,18 +199,12 @@ public class ServiceRegistryStart {
 	public String getHostName() {
 		if(cachedHostName == null) {
 			cachedHostName = requestGlobals.getHTTPServletRequest().getRemoteHost();
-//			ServiceRegistryDAO dao = new ServiceRegistryDAO();
-//			ServiceRegistry sr = dao.findServiceRegistryByService(Constants.APP_ID_MASK);
-//			if(sr != null) {
-//				cachedHostName = sr.getEndpoint();
-				if(cachedHostName != null && !cachedHostName.equals("localhost") && !cachedHostName.equals("127.0.0.1")) {	//TODO future enhancement should avoid this check on PROD
-					cachedHostName = AppEngine.getHostName();
-				} else {
-					cachedHostName += ":8888";
-				}
-//			} else {
-//				cachedHostName = AppEngine.getHostName();
-//			}
+			if(cachedHostName != null && !cachedHostName.equals("localhost") && !cachedHostName.equals("127.0.0.1")) {	//TODO future enhancement should avoid this check on PROD
+				cachedHostName = AppEngine.getHostName();
+			} else {
+				cachedHostName += ":8888";
+			}
+//			cachedHostName = AppUtils.getAppHost(cachedHostName);
 		}
 		System.out.println("cachedHostName set to [" + cachedHostName + "]");
 		

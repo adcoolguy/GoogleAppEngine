@@ -236,7 +236,7 @@ public class ServiceRegistryServlet extends HttpServlet {
 							//=== support "Related Services" based on the summary content!
 							String related = "";
 							if(sr.getSummary() != null) {
-								related = ServiceRegistryUtil.toRelatedLinks(sr.getSummary(), r) + "<p>";
+								related = "*** " + ServiceRegistryUtil.toRelatedLinks(sr.getSummary(), r, request.getRemoteHost()) + " ***<p>";
 							}
 							response.getWriter().print(related + resp.trim());
 						}

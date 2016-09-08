@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import com.appspot.cloudserviceapi.data.AppEngine;
+
 import app.model.Movie;
 import app.model.User;
 
@@ -82,5 +84,14 @@ public class AppUtils {
 		}
 		
 		return retVal;
+	}
+
+	public static String getAppHost(String cachedHostName) {
+		if(cachedHostName != null && !cachedHostName.equals("localhost") && !cachedHostName.equals("127.0.0.1")) {	//TODO future enhancement should avoid this check on PROD
+			cachedHostName = AppEngine.getHostName();
+		} else {
+			cachedHostName = "http://localhost:8888";
+		}
+		return cachedHostName;
 	}
 }

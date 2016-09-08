@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 import javax.servlet.http.HttpServletRequest;
 
 import tapp.model.ServiceRegistry;
+import app.common.AppUtils;
 import app.common.Constants;
 
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
@@ -160,6 +161,12 @@ public class ServiceRegistryUtil {
 //		return ret;
 //	}
 
+	  public static String getSRLink(String service, ServiceRegistryDAO r, String remoteHost) {
+		  	String ret = service;
+
+		  	return AppUtils.getAppHost(remoteHost) + "/go/" + ret;	//KISS for now
+	  }
+
 	  public static String getRealLink(String service, ServiceRegistryDAO r) {
 		  	String ret = service;
 		  	
@@ -184,7 +191,7 @@ public class ServiceRegistryUtil {
 		  	return ret;
 		  }
 		  
-	  public static String toRelatedLinks(String summaryText, ServiceRegistryDAO r) throws RuntimeException {
+	  public static String toRelatedLinks(String summaryText, ServiceRegistryDAO r, String remoteHost) throws RuntimeException {
 		StringTokenizer st =new StringTokenizer(summaryText);
 //		System.out.println("tokens count: " + st.countTokens());
 		StringBuffer sb = new StringBuffer();
@@ -197,7 +204,7 @@ public class ServiceRegistryUtil {
 				sb.append(token).append(' ');
 			} else {
 				//look up for the real link!
-				sb.append("<a href='").append(getRealLink(temp, r)).append("'>").append(temp).append("</a>").append(' ');
+				sb.append("<a target='_new' href='").append(getSRLink(temp, r, remoteHost)).append("'>").append(temp).append("</a>").append(' ');
 			}
 		}
 	  	return sb.toString();
