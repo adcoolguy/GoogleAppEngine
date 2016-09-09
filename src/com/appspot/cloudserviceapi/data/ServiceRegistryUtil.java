@@ -204,7 +204,7 @@ public class ServiceRegistryUtil {
 				sb.append(token).append(' ');
 			} else {
 				//look up for the real link!
-				sb.append("<a target='_new' href='").append(getSRLink(temp, r, remoteHost)).append("'>").append(temp).append("</a>").append(' ');
+				sb.append("<a target='_new' href='").append(getSRLink(temp, r, remoteHost)).append("'>${").append(temp).append("}</a>").append(' ');
 			}
 		}
 	  	return sb.toString();

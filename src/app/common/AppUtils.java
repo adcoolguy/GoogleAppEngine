@@ -88,7 +88,7 @@ public class AppUtils {
 
 	public static String getAppHost(String cachedHostName) {
 		if(cachedHostName != null && !cachedHostName.equals("localhost") && !cachedHostName.equals("127.0.0.1")) {	//TODO future enhancement should avoid this check on PROD
-			cachedHostName = AppEngine.getHostName();
+			cachedHostName = "";	//AppEngine.getHostName();
 		} else {
 			cachedHostName = "http://localhost:8888";
 		}
