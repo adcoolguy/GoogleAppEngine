@@ -193,7 +193,7 @@ public class ServiceRegistryUtil {
 		  
 	  public static String toRelatedLinks(String summaryText, ServiceRegistryDAO r, String remoteHost) throws RuntimeException {
 		StringTokenizer st =new StringTokenizer(summaryText);
-//		System.out.println("tokens count: " + st.countTokens());
+		//		System.out.println("tokens count: " + st.countTokens());
 		StringBuffer sb = new StringBuffer();
 		String temp = null;
 		while (st.hasMoreElements()) {

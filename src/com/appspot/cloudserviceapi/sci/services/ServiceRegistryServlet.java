@@ -211,7 +211,7 @@ public class ServiceRegistryServlet extends HttpServlet {
 					if(useDescription) {
 						String description = sr.getDescription();
 						description = sr.getDescription();
-						
+
 //						if(!isUrl(endPoint)) {
 //							endPoint = "";	//not a hyperlink, excluded and also good for security reason (endpoint could be a password)
 //						}
@@ -238,6 +238,11 @@ public class ServiceRegistryServlet extends HttpServlet {
 							if(sr.getSummary() != null) {
 								related = "~~~ " + ServiceRegistryUtil.toRelatedLinks(sr.getSummary(), r, request.getRemoteHost()) + " ~~~<p>";
 							}
+							//=== support "Related Services" based on the description (the content)!
+							//=== KISS: support scenario like ${1}<p> or ${1}<br>
+							resp = StringUtils.replaceAll(resp, ">${", "> ${");
+							resp = StringUtils.replaceAll(resp, "}<", "} <");
+							resp = ServiceRegistryUtil.toRelatedLinks(resp, r, request.getRemoteHost());
 							response.getWriter().print(related + resp.trim());
 						}
 					} else {
