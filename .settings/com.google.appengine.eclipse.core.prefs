@@ -9,4 +9,4 @@ gaeLaunchAppInBrowser=true
 googleCloudSqlEnabled=false
 localDevMySqlEnabled=true
 ormEnhancementInclusions=src/com/appspot/cloudserviceapi/|src/tapp/model/|src/app/model/*.java
-validationExclusions=src/com/persistent/utils/excel/AnnotatedExcelReport.java
+validationExclusions=src/com/persistent/utils/excel/AnnotatedExcelReport.java|src/cloudserviceapi/app/controller/CrudService.java

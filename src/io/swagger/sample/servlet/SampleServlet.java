@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Api(value = "/sample/users", description = "gets some data from a servlet")
+@io.swagger.annotations.Api(value = "/sample/users", description = "gets some data from a servlet")
 public class SampleServlet extends HttpServlet {
 
     @ApiOperation(httpMethod = "GET", value = "Resource to get a user", response = SampleData.class, nickname = "getUser")

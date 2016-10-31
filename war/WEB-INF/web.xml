@@ -919,7 +919,7 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
   <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
   <init-param>
    <param-name>services</param-name>
-   <param-value>app.model.CalendarEndpoint,app.model.MovieEndpoint,app.model.UserEndpoint,cloudserviceapi.app.controller.CrudService,com.bkper.server.api.TransactionEndpoint,io.swagger.sample.servlet.SampleServlet,tapp.model.ServiceRegistryUserEndpoint</param-value>
+   <param-value>app.model.CalendarEndpoint,app.model.MovieEndpoint,app.model.UserEndpoint,com.bkper.server.api.TransactionEndpoint,tapp.model.ServiceRegistryUserEndpoint</param-value>
   </init-param>
  </servlet>
  <servlet-mapping>
