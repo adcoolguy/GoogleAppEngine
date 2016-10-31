@@ -47,7 +47,7 @@
      	<include path="/parse/css/*.css" />
      	<include path="/parse/*" />
      	<include path="/mcrud/*" />     	
-     	<include path="/html/*" />
+     	<include path="/html/**" />
         <include path="/html/doc/*" />
      	<include path="/fullcalendar/*" />
      	<include path="/jquery/*" />

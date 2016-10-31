@@ -40,22 +40,22 @@
                     <h3>Demo. Try editing me below</h3>
                     <div class="editor-wrapper">
                         <div class="editor">st=>start: Start:>http://www.google.com[blank]
-                            e=>end:>http://www.google.com
-                            op1=>operation: My Operation
-                            sub1=>subroutine: My Subroutine
-                            cond=>condition: Yes
-                            or No?:>http://www.google.com
-                            io=>inputoutput: catch something...
+e=>end:>http://www.google.com
+op1=>operation: My Ooooperation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes
+or No?:>http://www.google.com
+io=>inputoutput: catch something...
 
-                            st->op1->cond
-                            cond(yes)->io->e
-                            cond(no)->sub1->op1</div>
-                        <!--  </div>
+st->op1->cond
+cond(yes)->io->e
+cond(no)->sub1(right)->op1</div>
+                         </div>
                          Theme:
                          <select class="theme">
                            <option value="simple">Simple</option>
                            <option value="hand" selected>Hand drawn</option>
-                         </select> -->
+                         </select>
                         </div>
                 </td>
                 <td class="diagram">This should be a diagram! If you don't see it you need Javascript enabled</td>
@@ -65,21 +65,21 @@
     </section>
 
 <div id='diagram'></div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
     <!-- Needed for the text editor -->
-    <!--<script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js" type="text/javascript" charset="utf-8"></script>
 
     <!--<script src="underscore-min.js"></script>-->
     <!--<script src="raphael-min.js"></script>-->
     <!--<script src="flowchart-latest.js"></script>-->
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
-    <script src="../../js/flowchart-1.2.6.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+    <script src="//adrai.github.io/flowchart.js/flowchart-latest.js"></script>
     <script src="../../js/svginnerhtml.min.js"></script>
     <!-- Needed for the text editor -->
-    <!--<script src="../../js/ace.js" type="text/javascript" charset="utf-8"></script>-->
+    <!-- <script src="../../js/ace.js" type="text/javascript" charset="utf-8"></script> -->
 
     <script type="text/javascript">
 
@@ -87,6 +87,7 @@
 
             var editor_div = div.find(".editor");
             var diagram_div = div.find(".diagram");
+            // debugger
             var theme_div = div.find(".theme");
 
             // Setup the editor diagram
@@ -123,27 +124,18 @@
                     }
                     editor.getSession().setAnnotations([annotation]);
                     throw err;
+                    // console.log(err);
                 }
             }
         }
 
         $(document).ready(function() {
             // Example diagrams
-            //$('.diagram').sequenceDiagram();
+            // $('.diagram').sequenceDiagram();
 
             // Setup all the editors
             setup_editor($('#demo'));
         });
-    </script>
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-42950201-1', 'adrai.github.io');
-        ga('send', 'pageview');
     </script>
 </body>
 </html>
