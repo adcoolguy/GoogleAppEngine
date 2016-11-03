@@ -125,7 +125,7 @@
 			</t:parameter>
 			<p:serviceCell>
         		<a target="_new" href="https://${hostName}/go/${serviceRegistry.service}?incog=true"><t:outputraw t:value="serviceRegistry.service" /></a><br/><br/>
-        		<a target="_new" href="view-source:https://${hostName}/go/${serviceRegistry.service}?incog=true"><t:outputraw t:value="serviceRegistry.service" /></a>
+        		<a target="_new" href="view-source:http://${hostName}/go/${serviceRegistry.service}?incog=true"><t:outputraw t:value="serviceRegistry.service" /></a>
 			</p:serviceCell>
 			<p:lastAccessedCell>
 				<!-- t:output format="message:month_year" value="serviceRegistry.lastAccessed" -->
@@ -173,7 +173,7 @@
 			</t:parameter>
 			<p:serviceCell>
         		<a target="_new" href="https://${hostName}/go/${serviceRegistry.service}?incog=true"><t:outputraw t:value="serviceRegistry.service" /></a><br/><br/>
-        		<a target="_new" href="view-source:https://${hostName}/go/${serviceRegistry.service}"><t:outputraw t:value="serviceRegistry.service" /></a>
+        		<a target="_new" href="view-source:http://${hostName}/go/${serviceRegistry.service}"><t:outputraw t:value="serviceRegistry.service" /></a>
 			</p:serviceCell>
 			<p:lastAccessedCell>
 				${friendlyLastAccessedLocalTime}

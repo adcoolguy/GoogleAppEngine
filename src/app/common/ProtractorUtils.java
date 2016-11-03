@@ -16,7 +16,7 @@ public class ProtractorUtils {
 
 	public static String header = "var u = require('l.js');var fs = require('fs');" + "\n" +
 			"describe('protractor e2e tests', function() {" + "\n" +
-			"browser.manage().timeouts().pageLoadTimeout(60000);" + "\n" +
+			"browser.manage().timeouts().pageLoadTimeout(600000);" + "\n" +
 			"browser.manage().timeouts().implicitlyWait(30000);" + "\n" +
 			"jasmine.DEFAULT_TIMEOUT_INTERVAL = 6000000;" + "\n" +
 			"/* for non-angular page */" + "\n" +
