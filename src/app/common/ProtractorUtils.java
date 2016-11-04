@@ -13,20 +13,20 @@ public class ProtractorUtils {
 //	public static boolean debug = true;
 	public static boolean debug = false;
 	long lineCount = 0;
+	public static String newline = "\n<br>";
+	public static String header = "var u = require('l.js');var fs = require('fs');" + newline +
+			"describe('protractor e2e tests', function() {" + newline +
+			"browser.manage().timeouts().pageLoadTimeout(600000);" + newline +
+			"browser.manage().timeouts().implicitlyWait(30000);" + newline +
+			"jasmine.DEFAULT_TIMEOUT_INTERVAL = 6000000;" + newline +
+			"/* for non-angular page */" + newline +
+			"browser.ignoreSynchronization = true; /* set this false for AngularJS app */" + newline +
+			"beforeEach(function() {" + newline +
+			"   //any initialization here"  +  newline +
+			"});" +  newline +
+			"it('spec', function () {"  +  newline;
 
-	public static String header = "var u = require('l.js');var fs = require('fs');" + "\n" +
-			"describe('protractor e2e tests', function() {" + "\n" +
-			"browser.manage().timeouts().pageLoadTimeout(600000);" + "\n" +
-			"browser.manage().timeouts().implicitlyWait(30000);" + "\n" +
-			"jasmine.DEFAULT_TIMEOUT_INTERVAL = 6000000;" + "\n" +
-			"/* for non-angular page */" + "\n" +
-			"browser.ignoreSynchronization = true; /* set this false for AngularJS app */" + "\n" +
-			"beforeEach(function() {" + "\n" +
-			"   //any initialization here"  +  "\n" +
-			"});" +  "\n" +
-			"it('spec', function () {"  +  "\n";
-
-	public static String footer = " })" +  "\n" + "});" +  "\n";
+	public static String footer = " })" +  newline + "});" +  newline;
 
 	private String firstLine = "";
 
@@ -80,22 +80,22 @@ public class ProtractorUtils {
 					}
 				} else
 				if(cmd.equals("assertText")) {
-					cmd = cmd.replaceAll("assertText", "it('assert: has text', function () {" + "\n" +
-						"	expect(element(by.cssContainingText('body', '{{text}}')).getText()).toContain('{{text}}');" + "\n" +
-						"	console.log('assert: has text done');" + "\n" +
-						"});" + "\n" +
-						"/*" + "\n" +
-						"it('assert: has text input', function () {"+ "\n" +
-						"	expect(element(by.css('{{}}')).isPresent()).toBe(true);"+ "\n" +
-						"	expect(element(by.css('{{}}')).getAttribute('value')).toBe('{{text}}');"+ "\n" +
-						"	console.log('assert: has text input done');" + "\n" +
-						"});" + "\n" +
-						"*/" + "\n" +
-						"/*" + "\n" +
-						"it('assert: window title', function () {" + "\n" +
-						"	expect(browser.driver.getTitle()).toBe('{{text}}');" + "\n" +
-						"	console.log('assert: window title done');" + "\n" +
-						"});" + "\n" +
+					cmd = cmd.replaceAll("assertText", "it('assert: has text', function () {" + newline +
+						"	expect(element(by.cssContainingText('body', '{{text}}')).getText()).toContain('{{text}}');" + newline +
+						"	console.log('assert: has text done');" + newline +
+						"});" + newline +
+						"/*" + newline +
+						"it('assert: has text input', function () {"+ newline +
+						"	expect(element(by.css('{{}}')).isPresent()).toBe(true);"+ newline +
+						"	expect(element(by.css('{{}}')).getAttribute('value')).toBe('{{text}}');"+ newline +
+						"	console.log('assert: has text input done');" + newline +
+						"});" + newline +
+						"*/" + newline +
+						"/*" + newline +
+						"it('assert: window title', function () {" + newline +
+						"	expect(browser.driver.getTitle()).toBe('{{text}}');" + newline +
+						"	console.log('assert: window title done');" + newline +
+						"});" + newline +
 						"*/");
 				} else
 				if(cmd.equals("type")) {
@@ -131,7 +131,7 @@ public class ProtractorUtils {
 		if(!StringUtils.isEmpty(seleniumString)) {
 			long lineNotIgnored = 0;
 			String t = null; String t1 = null;
-			StringTokenizer st = new java.util.StringTokenizer (seleniumString, "\n", true);
+			StringTokenizer st = new java.util.StringTokenizer (seleniumString, newline, true);
 			while (st.hasMoreElements()) {
 				t = (String) st.nextElement();
 				if(!StringUtils.isEmpty(t.trim()) && lineNotIgnored == 0) {
@@ -148,10 +148,10 @@ public class ProtractorUtils {
 				}
 				sb.append(t1);
 				if(t1 != null && t1.trim().length() > 0) {
-					sb.append("console.log('" + ++lineCount + "');" + "\n");
+					sb.append("console.log('" + ++lineCount + "');" + newline);
 				}
 				if(t1 != null && t1.trim() != "" && t1.trim().length() > 1 || t1.trim().indexOf("//") == 0) {
-					sb.append("\n");
+					sb.append(newline);
 				}
 			}
 
@@ -163,16 +163,16 @@ public class ProtractorUtils {
 		ProtractorUtils p = new ProtractorUtils();
 //		String host = "https://chudoon3t.appspot.com";
 //		String s = 
-//		"open " + host + "/n" + "\n" +
-//		"\n" +
-//		"type css=input[type=\"text\"] test" + "\n" +
-//		"\n" +
-//		"type css=input[type=\"password\"] test1234" + "\n" +
-//		"\n" +
-//		"click css=input[type=\"submit\"]" + "\n" +
-//		"\n" +
-//		"waitForElementPresent css=a.pull-right" + "\n" +
-//		"assertText css=input[type=\"submit\"] exact:*Exact String - * should be kept*" + "\n" +
+//		"open " + host + "/n" + newline +
+//		newline +
+//		"type css=input[type=\"text\"] test" + newline +
+//		newline +
+//		"type css=input[type=\"password\"] test1234" + newline +
+//		newline +
+//		"click css=input[type=\"submit\"]" + newline +
+//		newline +
+//		"waitForElementPresent css=a.pull-right" + newline +
+//		"assertText css=input[type=\"submit\"] exact:*Exact String - * should be kept*" + newline +
 //		"assertText css=input[type=\"submit\"] *Login*";
 		String finalScript = null;
 //		finalScript = ProtractorUtils.header + p.parse(s) + ProtractorUtils.footer;
@@ -194,11 +194,11 @@ public class ProtractorUtils {
 //				t1 = d.toScript(line);
 				t1 = line;
 				//System.out.println(t1);
-				sb.append(t1).append("\n");
+				sb.append(t1).append(newline);
 			}
 			in.close(); // Close the stream.
 			String temp = p.parse(sb.toString());
-			String f = p.getFirstLine().replaceAll("\n", "");
+			String f = p.getFirstLine().replaceAll(newline, "");
 			finalScript = ProtractorUtils.header.replaceAll("\\{\\{\\}\\}", f) + temp + ProtractorUtils.footer;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

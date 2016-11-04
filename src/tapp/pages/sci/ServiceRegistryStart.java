@@ -206,9 +206,25 @@ public class ServiceRegistryStart {
 			}
 //			cachedHostName = AppUtils.getAppHost(cachedHostName);
 		}
+		
 		System.out.println("cachedHostName set to [" + cachedHostName + "]");
 		
 		return cachedHostName;
+	}
+
+	public String getHostNameWithoutProtocol() {
+		return removeProtocol(cachedHostName);
+	}
+
+	private String removeProtocol(String cachedHostName) {
+		String ret = cachedHostName;
+		if(ret != null) {
+			ret = ret.replaceAll("https://", "");
+			ret = ret.replaceAll("http://", "");
+			ret = ret.trim();
+		}
+		
+		return ret;
 	}
 
 	/*
