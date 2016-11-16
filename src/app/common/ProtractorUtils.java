@@ -62,7 +62,11 @@ public class ProtractorUtils {
 					}
 				} else
 				if(cmd.equals("click")) {
-					cmd = cmd.replaceAll("click", "element(by.css('{{}}')).click();");
+					cmd = cmd.replaceAll("click", "element(by.css('{{}}')).click();" + newline +
+							"/*" + newline +
+							"expect(element(by.css('{{}}')).getAttribute('disabled')).toEqual('true');" + newline +
+							"*/" + newline
+							);
 				} else
 				if(cmd.equals("waitForElementPresent")) {
 					cmd = cmd.replaceAll("waitForElementPresent", "browser.sleep(800);");

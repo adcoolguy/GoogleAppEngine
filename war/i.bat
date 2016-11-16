@@ -1,1 +1,1 @@
-nodist use 6.5.0 && npm i bower -g && npm config get prefix > npmbinpath.txt && set /P NPMBINPATH=< npmbinpath.txt && set PATH=%NPMBINPATH%;%PATH%
+nodist use 6.6.0 && npm i bower -g && npm config get prefix > npmbinpath.txt && set /P NPMBINPATH=< npmbinpath.txt && set PATH=%NPMBINPATH%;%PATH%
