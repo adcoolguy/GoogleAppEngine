@@ -17,6 +17,8 @@ import org.apache.tapestry5.services.HttpServletRequestFilter;
 import org.apache.tapestry5.services.LibraryMapping;
 import org.apache.tapestry5.services.Request;
 
+import cloudserviceapi.app.controller.GeniusManagerImpl;
+
 //import tapp.model.eo.CdActivityDetails;
 //import tapp.model.eo.College;
 //import tapp.model.eo.ParentInput;
@@ -27,7 +29,6 @@ import org.apache.tapestry5.services.Request;
 
 
 import cloudserviceapi.service.manager.GeniusManager;
-import cloudserviceapi.service.manager.GeniusManagerImpl;
 import cloudserviceapi.service.manager.SecuredManager;
 import cloudserviceapi.service.manager.SecuredManagerImpl;
 import cloudserviceapi.service.manager.SocialManager;

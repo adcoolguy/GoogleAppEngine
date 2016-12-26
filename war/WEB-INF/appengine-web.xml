@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
 	<!-- c.f. https://developers.google.com/appengine/docs/java/config/appconfig for latest features -->
-    <application>cloudiservice</application>
-    <version>19</version>
+    <application>2-share</application>
+    <version>13</version>
     <!-- Configure java.util.logging -->
     <system-properties>
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
@@ -47,7 +47,7 @@
      	<include path="/parse/css/*.css" />
      	<include path="/parse/*" />
      	<include path="/mcrud/*" />     	
-     	<include path="/html/**" />
+     	<include path="/html/*" />
         <include path="/html/doc/*" />
      	<include path="/fullcalendar/*" />
      	<include path="/jquery/*" />
@@ -67,7 +67,7 @@
      	<!-- 2Share -->
      	<exclude path="/ws/*" />
      	<!-- n stuff -->
-     	<exclude path="/n/**/node_modules/**"/>
+      <exclude path="/n/**/node_modules/**"/>
     </static-files>
     <!-- on the same server as the app server -->
 	<resource-files>

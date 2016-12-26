@@ -1,9 +1,13 @@
-package cloudserviceapi.service.manager;
+package cloudserviceapi.app.controller;
 
-import io.swagger.annotations.Api;
+//import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Contact;
+import io.swagger.annotations.Info;
+import io.swagger.annotations.License;
+import io.swagger.annotations.SwaggerDefinition;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,8 +20,8 @@ import org.slf4j.LoggerFactory;
 import tapp.model.ServiceRegistry;
 import app.model.Movie;
 import app.model.User;
+import cloudserviceapi.service.manager.GeniusManager;
 import tapp.model.ServiceRegistry;
-import cloudserviceapi.app.controller.UserHandler;
 
 import com.appspot.cloudserviceapi.dao.GeniuDao;
 import com.appspot.cloudserviceapi.dao.gae.DaoFactoryImpl;
@@ -26,7 +30,24 @@ import com.appspot.cloudserviceapi.dto.Geniu;
 import com.google.appengine.api.datastore.Transaction;
 //import com.spoledge.audao.db.dao.DaoException;
 
-//@Api(value = "genius", tags = "Genius Manager")
+@SwaggerDefinition(
+        info = @Info(
+                title = "CrudService",	//"NOT USED" c.f. web.xml's swagger.api.title
+                version = "V0.0.1",		//"NOT USED" c.f. web.xml's api.version
+                description = "CRUD Servlet",
+                termsOfService = "http://swagger.io/terms/",
+                contact = @Contact(name = "Adcoolguy", email = "apiteam@swagger.io", url = "http://swagger.io"),
+                license = @License(name = "Apache 2.0", url = "http://www.apache.org/licenses/LICENSE-2.0.html")
+        ),						
+        consumes = {"application/json", "application/x-www-form-urlencoded"},						
+        produces = {"application/json"}
+//        ,
+//        host = "http://chudoon3t.appspot.com" /*AppEngine.getHostName()*/,	//"NOT USED" c.f. web.xml swagger.api.basepath (needs to be prefixed with http(s)!!!)
+//        schemes = {SwaggerDefinition.Scheme.HTTPS
+//        	, SwaggerDefinition.Scheme.HTTP
+//        	}
+)
+@io.swagger.annotations.Api(value = "api/jwt/genius", tags = "sr")
 public class GeniusManagerImpl implements GeniusManager {
 
     private static final Logger logger = LoggerFactory.getLogger(GeniusManagerImpl.class);

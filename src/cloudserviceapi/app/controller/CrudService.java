@@ -1,6 +1,6 @@
 package cloudserviceapi.app.controller;
 
-import io.swagger.annotations.Api;
+//import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -62,7 +62,7 @@ public class CrudService extends HttpServlet {
 	@ApiOperation(httpMethod = "GET", 
 	   value = "Resource to get an Item" 
 //	   , response = SampleData.class
-	   , nickname="get"
+	   , nickname="crud"
 	)
 	@ApiResponses(value = {
 			@ApiResponse(code = 200, message = "Success", response = app.model.Movie.class),
@@ -239,7 +239,7 @@ public class CrudService extends HttpServlet {
 	@ApiOperation(httpMethod = "POST", 
 	   value = "Resource to create/change an item" 
 //	   , response = SampleData.class 
-	   , nickname="save2Share"
+	   , nickname="crud"
 	)
 	@ApiResponses(value = {
 			@ApiResponse(code = 200, message = "Success", response = app.model.Movie.class),
@@ -267,6 +267,30 @@ public class CrudService extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException {
 		System.out.println("CrudService: doPost invoked");
+		handleServiceRequest(request, response);
+	}
+
+	@Override
+	@ApiOperation(httpMethod = "DELETE", 
+	   value = "Resource to delete an item" 
+//	   , response = SampleData.class 
+	   , nickname="crud"
+	)
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Success", response = app.model.Movie.class),
+			@ApiResponse(code = HttpServletResponse.SC_BAD_REQUEST, message = "Invalid input")
+		}
+	)
+	@ApiImplicitParams({
+        	@ApiImplicitParam(name = "uid", defaultValue = "test", value = "User ID", required = true, dataType = "string", paramType = "query"),
+        	@ApiImplicitParam(allowableValues="modelMovie,modelUser,modelCalendar", name = "type", value = "Item type", required = true, dataType = "string", paramType = "form"),
+	        @ApiImplicitParam(allowableValues="delete", name = "action", value = "Delete to be performed on item", required = true, dataType = "string", paramType = "form"),
+			@ApiImplicitParam(name = "id", value = "Item ID", required = false, dataType = "string", paramType = "form")
+		}
+	)
+	public void doDelete(HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
+		System.out.println("CrudService: doDelete invoked");
 		handleServiceRequest(request, response);
 	}
 

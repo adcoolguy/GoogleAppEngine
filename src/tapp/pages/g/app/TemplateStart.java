@@ -23,8 +23,8 @@ import org.ocpsoft.pretty.time.PrettyTime;
 
 import tapp.pages.sci.Index;
 import app.common.SecurityUtils;
+import cloudserviceapi.app.controller.GeniusManagerImpl;
 import cloudserviceapi.service.manager.GeniusManager;
-import cloudserviceapi.service.manager.GeniusManagerImpl;
 
 import com.appspot.cloudserviceapi.common.BackupService;
 import com.appspot.cloudserviceapi.common.TapestryUtil;

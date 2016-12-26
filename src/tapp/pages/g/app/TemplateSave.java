@@ -14,8 +14,8 @@ import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 
+import cloudserviceapi.app.controller.GeniusManagerImpl;
 import cloudserviceapi.service.manager.GeniusManager;
-import cloudserviceapi.service.manager.GeniusManagerImpl;
 
 import com.appspot.cloudserviceapi.common.BackupService;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;
