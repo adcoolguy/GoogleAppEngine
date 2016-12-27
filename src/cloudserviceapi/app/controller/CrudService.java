@@ -261,7 +261,7 @@ public class CrudService extends HttpServlet {
 			@ApiImplicitParam(name = "shared", value = "Item is shared or not (not used)", required = false, dataType = "string", paramType = "form"),
 			@ApiImplicitParam(name = "channelPattern", value = "Channel ID (not used)", required = false, dataType = "string", paramType = "form"),
 			@ApiImplicitParam(name = "search_results", value = "JSONP search results (not used)", required = false, dataType = "string", paramType = "form"),
-			@ApiImplicitParam(name = "oid", value = "Owner (Creator) ID", required = false, dataType = "string", paramType = "form")
+			@ApiImplicitParam(name = "oid", value = "Owner/Creator - Parse's User Object ID e.g. 70p4Mz1tiY (pub)", required = false, dataType = "string", paramType = "form")
 		}
 	)
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -270,29 +270,29 @@ public class CrudService extends HttpServlet {
 		handleServiceRequest(request, response);
 	}
 
-	@Override
-	@ApiOperation(httpMethod = "DELETE", 
-	   value = "Resource to delete an item" 
-//	   , response = SampleData.class 
-	   , nickname="crud"
-	)
-	@ApiResponses(value = {
-			@ApiResponse(code = 200, message = "Success", response = app.model.Movie.class),
-			@ApiResponse(code = HttpServletResponse.SC_BAD_REQUEST, message = "Invalid input")
-		}
-	)
-	@ApiImplicitParams({
-        	@ApiImplicitParam(name = "uid", defaultValue = "test", value = "User ID", required = true, dataType = "string", paramType = "query"),
-        	@ApiImplicitParam(allowableValues="modelMovie,modelUser,modelCalendar", name = "type", value = "Item type", required = true, dataType = "string", paramType = "form"),
-	        @ApiImplicitParam(allowableValues="delete", name = "action", value = "Delete to be performed on item", required = true, dataType = "string", paramType = "form"),
-			@ApiImplicitParam(name = "id", value = "Item ID", required = false, dataType = "string", paramType = "form")
-		}
-	)
-	public void doDelete(HttpServletRequest request, HttpServletResponse response)
-			throws IOException {
-		System.out.println("CrudService: doDelete invoked");
-		handleServiceRequest(request, response);
-	}
+//	@Override
+//	@ApiOperation(httpMethod = "POST", 
+//	   value = "Resource to delete an item" 
+////	   , response = SampleData.class 
+//	   , nickname="crud"
+//	)
+//	@ApiResponses(value = {
+//			@ApiResponse(code = 200, message = "Success", response = app.model.Movie.class),
+//			@ApiResponse(code = HttpServletResponse.SC_BAD_REQUEST, message = "Invalid input")
+//		}
+//	)
+//	@ApiImplicitParams({
+//        	@ApiImplicitParam(name = "uid", defaultValue = "test", value = "User ID", required = true, dataType = "string", paramType = "query"),
+//        	@ApiImplicitParam(allowableValues="modelMovie,modelUser,modelCalendar", name = "type", value = "Item type", required = true, dataType = "string", paramType = "form"),
+//	        @ApiImplicitParam(allowableValues="delete", name = "action", value = "Delete to be performed on item", required = true, dataType = "string", paramType = "form"),
+//			@ApiImplicitParam(name = "id", value = "Item ID", required = false, dataType = "string", paramType = "form")
+//		}
+//	)
+//	public void doDelete(HttpServletRequest request, HttpServletResponse response)
+//			throws IOException {
+//		System.out.println("CrudService: doDelete invoked");
+//		handleServiceRequest(request, response);
+//	}
 
 	private void handleServiceRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		try {

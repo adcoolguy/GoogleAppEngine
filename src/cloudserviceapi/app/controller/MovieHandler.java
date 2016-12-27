@@ -784,6 +784,9 @@ public class MovieHandler implements CrudServiceCallback, ServletContextListener
 	}
 	
 	public Object doUpdateItem(Object item) throws Exception {
+		if(item == null) {
+			throw new Exception(Constants.ERR_NO_ITEM_FOR_OWNERSHIP);
+		}
 		if(!SecurityUtils.isOwner((Movie)item, oid)) {
 			throw new Exception(Constants.ERR_NO_OWNERSHIP);
 		}
@@ -1082,6 +1085,9 @@ public class MovieHandler implements CrudServiceCallback, ServletContextListener
 
 	@Override
 	public Object doDeleteItem(Object item) throws Exception {
+		if(item == null) {
+			throw new Exception(Constants.ERR_NO_ITEM_FOR_OWNERSHIP);
+		}
 		if(!SecurityUtils.isOwner((Movie)item, oid)) {
 			throw new Exception(Constants.ERR_NO_OWNERSHIP);
 		}

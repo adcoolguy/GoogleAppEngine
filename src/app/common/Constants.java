@@ -20,6 +20,7 @@ public class Constants {
 	public static final String SHARED = "shared";
 	public static final String SHARED_BY_ALL = "sharedbyall";
 	public static final String ERR_NOT_AUTHENTICATED = "Not Authenticated. Permission denied.";
+	public static final String ERR_NO_ITEM_FOR_OWNERSHIP = "No item found for ownership check. Permission to delete/update denied.";
 	public static final String ERR_NO_OWNERSHIP = "No ownership is found. Permission to update denied.";
 	public static final String CH_DAILY = "d";
 	public static final String CH_WEEKLY = "w";

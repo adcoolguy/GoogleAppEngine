@@ -113,6 +113,15 @@ The following will allow one to determine, plan or/and avoid expensive operation
 3. 2Share Recurring Calendar Events (currently restricted only up to 6)
 4. 2Share SHA-256 Hash Generation of Private/Public Resource (can be disabled via Google Doc's spreadsheet)
 
+****** Parse
+
+Sample objectId: 70p4Mz1tiY (pub) ahcnqmzCDR (ie) sTRc7XPuLs (j)
+c.f. https://dashboard.parse.com/apps/2share/browser/_User
+
+http://toshare.herokuapp.com/parse
+
+https://devcenter.heroku.com/articles/deploying-a-parse-server-to-heroku
+
 ****** Twitter
 Incomplete c.f.
 https://github.com/abraham/twitteroauth/blob/master/test.php
@@ -275,6 +284,10 @@ KeyError: '[Your kind name]'
 Configuration Tips -
 
 2Share
+
+. To turn off cache, visit the spreadsheet e.g. https://docs.google.com/spreadsheets/d/1nZ5bITADCBoiUXnExeCy1ejaJOZBj6eyHwiuP1409aY/edit#gid=0
+and clear the entry:
+cache	proxy	host	rest	url
 
 . To turn on backup service
 http://localhost:8888/postsettings?setting=true&pincode=advanced.ui.active

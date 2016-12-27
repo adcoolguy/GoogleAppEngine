@@ -50,10 +50,14 @@ public class SecurityUtils {
         return retVal;
 	}
 	
-	public static boolean isOwner(Movie item, String oid) {
+	public static boolean isOwner(Movie item, String oid) throws Exception {
 		boolean retVal = false;
 		
+		if(item == null) {
+			throw new Exception(Constants.ERR_NO_ITEM_FOR_OWNERSHIP);
+		}
 		String owner = oid;	//AppUtils.getOwnerPart(oid);
+		System.out.println("SecurityUtils.java isOwner checking owner " + owner + " with " + item.getOid() + " ...");
 		if(oid != null && owner != null && owner.equals(item.getOid())) {
 			retVal = true;
 		} else 
