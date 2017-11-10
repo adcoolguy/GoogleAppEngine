@@ -1,1 +1,1 @@
-nodist use 6.6.0 && npm i bower -g && npm config get prefix > npmbinpath.txt && set /P NPMBINPATH=< npmbinpath.txt && set PATH=%NPMBINPATH%;%PATH%
+refreshenv && nvm install 6.0.0 && nvm use 6.0.0 && %NVM_HOME%\v6.0.0\npm i bower -g && %NVM_HOME%\v6.0.0\npm config get prefix > npmbinpath.txt && set /P NPMBINPATH=< npmbinpath.txt && set PATH=%NPMBINPATH%;%PATH%

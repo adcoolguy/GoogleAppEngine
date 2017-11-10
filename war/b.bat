@@ -1,1 +1,1 @@
-"%NPMBINPATH%"\bower i && cd n && "%NPMBINPATH%"\bower i && cd react && npm i && cd .. && swg1 && cd ..
+refreshenv && nvm use 6 && %NVM_HOME%\v6.0.0\npm i bower && "%NPMBINPATH%"\bower i && cd n && "%NPMBINPATH%"\bower i && cd react && npm i && cd .. && swg1 && cd ..
