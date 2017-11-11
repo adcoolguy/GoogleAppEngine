@@ -2,7 +2,6 @@ package com.appspot.cloudserviceapi.security.spring;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -16,13 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
-import org.apache.tapestry5.ComponentResources;
-import org.apache.tapestry5.SelectModel;
 import org.apache.tapestry5.beaneditor.Validate;
-import org.apache.tapestry5.ioc.Messages;
-import org.apache.tapestry5.ioc.annotations.Inject;
-import org.apache.tapestry5.ioc.services.TypeCoercer;
-import org.apache.tapestry5.util.EnumSelectModel;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

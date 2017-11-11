@@ -2,18 +2,11 @@ package tapp.pages;
 
 import java.util.List;
 
-import org.apache.tapestry5.ComponentResources;
-import org.apache.tapestry5.beaneditor.BeanModel;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.BeanModelSource;
 
 import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
 import com.appspot.cloudserviceapi.services.manager.UserManager;
-
-import tapp.model.sgc.Client;
-import tapp.model.sgc.WorkOrder;
-import com.appspot.cloudserviceapi.sgc.services.manager.ClientManager;
-import com.appspot.cloudserviceapi.sgc.services.manager.OrderManager;
 
 public class UserStart {
 

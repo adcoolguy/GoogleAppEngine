@@ -9,9 +9,6 @@ import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
-import org.apache.tapestry5.beaneditor.NonVisual;
-//import org.apache.tapestry5.beaneditor.Validate;
-
 import com.persistent.utils.excel.ExcelColumn;
 import com.persistent.utils.excel.ExcelReport;
 

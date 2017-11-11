@@ -4,9 +4,9 @@ import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.SessionAttribute;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
-import tapp.model.sci.FiOSToken;
-
 import com.appspot.cloudserviceapi.sci.services.manager.FiOSTokenManager;
+
+import tapp.model.sci.FiOSToken;
 
 public class AdminTokenSave {
 

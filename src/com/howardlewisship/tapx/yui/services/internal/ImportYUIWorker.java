@@ -14,8 +14,6 @@
 
 package com.howardlewisship.tapx.yui.services.internal;
 
-import com.howardlewisship.tapx.yui.ImportYUI;
-import com.howardlewisship.tapx.yui.YuiSymbols;
 import org.apache.tapestry5.Asset;
 import org.apache.tapestry5.MarkupWriter;
 import org.apache.tapestry5.SymbolConstants;
@@ -26,13 +24,20 @@ import org.apache.tapestry5.func.Mapper;
 import org.apache.tapestry5.func.Worker;
 import org.apache.tapestry5.ioc.annotations.Symbol;
 import org.apache.tapestry5.model.MutableComponentModel;
-import org.apache.tapestry5.plastic.*;
+import org.apache.tapestry5.plastic.MethodAdvice;
+import org.apache.tapestry5.plastic.MethodDescription;
+import org.apache.tapestry5.plastic.MethodInvocation;
+import org.apache.tapestry5.plastic.PlasticClass;
+import org.apache.tapestry5.plastic.PlasticUtils;
 import org.apache.tapestry5.runtime.Component;
 import org.apache.tapestry5.runtime.Event;
 import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 import org.apache.tapestry5.services.transform.ComponentClassTransformWorker2;
 import org.apache.tapestry5.services.transform.TransformationSupport;
+
+import com.howardlewisship.tapx.yui.ImportYUI;
+import com.howardlewisship.tapx.yui.YuiSymbols;
 
 public class ImportYUIWorker implements ComponentClassTransformWorker2
 {

@@ -3,12 +3,6 @@ package app.common;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
-
-import com.appspot.cloudserviceapi.data.AppEngine;
-
-import app.model.Movie;
-import app.model.User;
 
 public class AppUtils {
 

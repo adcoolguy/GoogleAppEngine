@@ -1,12 +1,9 @@
 package cloudserviceapi.app.controller;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -16,20 +13,14 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import tapp.model.sci.FiOSToken;
+import com.appspot.cloudserviceapi.common.JsonUtil;
+import com.appspot.cloudserviceapi.data.EMF;
 
 import app.common.Constants;
-import app.common.SecurityUtils;
 import app.model.Calendar;
 import app.model.Movie;
 import app.model.User;
 import app.model.UserEndpoint;
-
-import com.appspot.cloudserviceapi.common.JsonUtil;
-import com.appspot.cloudserviceapi.data.EMF;
-import com.google.api.server.spi.response.CollectionResponse;
-import com.google.appengine.api.datastore.Query;
-import com.google.appengine.api.datastore.Text;
 
 /**
  * Format:

@@ -1,5 +1,19 @@
 package cloudserviceapi.app.controller;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.appspot.cloudserviceapi.common.JsonUtil;
+
+import app.common.Constants;
+import app.model.Movie;
+import app.model.User;
 //import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -10,22 +24,6 @@ import io.swagger.annotations.Contact;
 import io.swagger.annotations.Info;
 import io.swagger.annotations.License;
 import io.swagger.annotations.SwaggerDefinition;
-import io.swagger.annotations.Tag;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import app.common.Constants;
-import app.model.Movie;
-import app.model.User;
-
-import com.appspot.cloudserviceapi.common.JsonUtil;
 
 /**
  * https://github.com/swagger-api/swagger-core/wiki/Annotations

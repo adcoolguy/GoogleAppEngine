@@ -1,19 +1,17 @@
 package cloudserviceapi.app.controller;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Collection;
 import java.util.Iterator;
 
 import org.joda.time.DateTime;
 
+import com.appspot.cloudserviceapi.common.JsonUtil;
+import com.google.api.server.spi.response.CollectionResponse;
+
 import app.common.Constants;
 import app.model.Calendar;
 import app.model.Movie;
 import app.model.User;
-import app.model.UserEndpoint;
-
-import com.appspot.cloudserviceapi.common.JsonUtil;
-import com.google.api.server.spi.response.CollectionResponse;
 
 public class MovieHelper {
 	

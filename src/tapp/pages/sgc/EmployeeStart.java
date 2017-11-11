@@ -2,15 +2,12 @@ package tapp.pages.sgc;
 
 import java.util.List;
 
-import org.apache.tapestry5.ComponentResources;
-import org.apache.tapestry5.beaneditor.BeanModel;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.BeanModelSource;
 
-import tapp.model.sgc.Employee;
-import tapp.model.sgc.WorkOrder;
 import com.appspot.cloudserviceapi.sgc.services.manager.EmployeeManager;
-import com.appspot.cloudserviceapi.sgc.services.manager.OrderManager;
+
+import tapp.model.sgc.Employee;
 
 public class EmployeeStart {
 

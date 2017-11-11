@@ -1,16 +1,13 @@
 package com.appspot.cloudserviceapi.common;
 
-import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
-
-import app.model.Calendar;
-
 
 //import com.google.appengine.repackaged.org.codehaus.jackson.annotate.JsonTypeInfo.Id;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
+
+import app.model.Calendar;
 
 /**
  * https://sites.google.com/site/gson/gson-user-guide

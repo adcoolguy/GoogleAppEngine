@@ -3,13 +3,13 @@ package com.appspot.cloudserviceapi.util;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.appengine.api.memcache.jsr107cache.GCacheFactory;
+
 import net.sf.jsr107cache.Cache;
 import net.sf.jsr107cache.CacheException;
 import net.sf.jsr107cache.CacheFactory;
 import net.sf.jsr107cache.CacheManager;
 import net.sf.jsr107cache.CacheStatistics;
-
-import com.google.appengine.api.memcache.jsr107cache.GCacheFactory;
 
 /*
  * Source: http://blog.knoldus.com/2010/09/30/google-app-engine-understanding-caching/

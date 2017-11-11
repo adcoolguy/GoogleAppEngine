@@ -15,8 +15,6 @@ import org.compass.gps.impl.SingleCompassGps;
 
 import com.appspot.cloudserviceapi.common.TapestryUtil;
 import com.appspot.cloudserviceapi.data.PMF;
-import com.appspot.cloudserviceapi.dto.Geniu;
-import com.appspot.cloudserviceapi.dto.Huma;
 import com.google.appengine.api.datastore.DatastoreFailureException;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;

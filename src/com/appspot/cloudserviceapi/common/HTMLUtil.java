@@ -1,12 +1,8 @@
 package com.appspot.cloudserviceapi.common;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.google.gdata.util.common.html.HtmlToText;
 
 public class HTMLUtil {
 	private static final Pattern REMOVE_TAGS = Pattern.compile("<.+?>");

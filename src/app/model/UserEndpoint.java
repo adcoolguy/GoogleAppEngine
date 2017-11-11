@@ -1,20 +1,17 @@
 package app.model;
 
-import com.appspot.cloudserviceapi.data.EMF;
-import com.google.api.server.spi.config.Api;
-import com.google.api.server.spi.response.CollectionResponse;
-import com.google.appengine.api.datastore.Cursor;
-
 import java.util.List;
 
 import javax.annotation.Nullable;
 import javax.inject.Named;
-import javax.persistence.EntityExistsException;
-import javax.persistence.EntityNotFoundException;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
 import javax.persistence.Query;
 
-
+import com.appspot.cloudserviceapi.data.EMF;
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.response.CollectionResponse;
+import com.google.appengine.api.datastore.Cursor;
 //import org.datanucleus.store.appengine.query.JPACursorHelper;
 import com.google.appengine.datanucleus.query.JPACursorHelper;
 

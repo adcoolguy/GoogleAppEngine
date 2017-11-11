@@ -1,20 +1,17 @@
 package com.appspot.cloudserviceapi.sci.services;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import tapp.model.sci.RepositoryData;
-
 import com.appspot.cloudserviceapi.common.CodesionUtil;
 import com.appspot.cloudserviceapi.sci.dao.RepositoryDataDAO;
 import com.google.appengine.api.datastore.Text;
+
+import tapp.model.sci.RepositoryData;
 
 @SuppressWarnings("serial")
 public class CodesionPreCommitServlet extends HttpServlet {

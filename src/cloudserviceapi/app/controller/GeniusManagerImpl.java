@@ -1,5 +1,20 @@
 package cloudserviceapi.app.controller;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.appspot.cloudserviceapi.dao.GeniuDao;
+import com.appspot.cloudserviceapi.dao.gae.DaoFactoryImpl;
+import com.appspot.cloudserviceapi.data.Datastore;
+import com.appspot.cloudserviceapi.dto.Geniu;
+import com.google.appengine.api.datastore.Transaction;
+//import com.spoledge.audao.db.dao.DaoException;
+
+import cloudserviceapi.service.manager.GeniusManager;
 //import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -8,27 +23,6 @@ import io.swagger.annotations.Contact;
 import io.swagger.annotations.Info;
 import io.swagger.annotations.License;
 import io.swagger.annotations.SwaggerDefinition;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import tapp.model.ServiceRegistry;
-import app.model.Movie;
-import app.model.User;
-import cloudserviceapi.service.manager.GeniusManager;
-import tapp.model.ServiceRegistry;
-
-import com.appspot.cloudserviceapi.dao.GeniuDao;
-import com.appspot.cloudserviceapi.dao.gae.DaoFactoryImpl;
-import com.appspot.cloudserviceapi.data.Datastore;
-import com.appspot.cloudserviceapi.dto.Geniu;
-import com.google.appengine.api.datastore.Transaction;
-//import com.spoledge.audao.db.dao.DaoException;
 
 @SwaggerDefinition(
         info = @Info(

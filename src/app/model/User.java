@@ -1,14 +1,10 @@
 package app.model;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -19,6 +15,9 @@ import javax.persistence.OneToMany;
 //import passwordchange.core.UserSecurityQuestion;
 
 import com.google.appengine.api.datastore.Key;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(value="User", description="Owner or parent of the Movie")
 @Entity

@@ -2,12 +2,9 @@ package cloudserviceapi.app.controller;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.inject.Named;
-import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.servlet.ServletContextEvent;
@@ -15,27 +12,22 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.http.HttpServletRequest;
 
 import org.joda.time.DateTime;
-import org.joda.time.DateTimeUtils;
 import org.joda.time.DateTimeZone;
 import org.joda.time.Instant;
-import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-
-import app.common.Constants;
-import app.common.SecurityUtils;
-import app.model.Calendar;
-import app.model.CalendarEndpoint;
-import app.model.Movie;
-import app.model.User;
-import app.model.UserEndpoint;
 
 import com.appspot.cloudserviceapi.common.JsonUtil;
 import com.appspot.cloudserviceapi.data.EMF;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
+
+import app.common.Constants;
+import app.model.Calendar;
+import app.model.CalendarEndpoint;
+import app.model.Movie;
+import app.model.User;
 
 /**
  * Format:

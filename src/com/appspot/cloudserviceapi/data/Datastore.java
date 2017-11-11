@@ -1,12 +1,7 @@
 package com.appspot.cloudserviceapi.data;
 
-import java.util.Random;
-import java.util.UUID;
-
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.KeyFactory;
-import com.google.appengine.api.datastore.Key;
 
 /*
  * Reference: http://audao.spoledge.com/doc-overview.html

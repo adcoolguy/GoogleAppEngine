@@ -4,8 +4,6 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.alerts.AlertManager;
@@ -21,18 +19,15 @@ import org.apache.tapestry5.services.BeanModelSource;
 import org.apache.tapestry5.services.RequestGlobals;
 import org.ocpsoft.pretty.time.PrettyTime;
 
-import tapp.pages.sci.Index;
-import app.common.SecurityUtils;
-import tapp.pages.sci.Index;
-import app.common.SecurityUtils;
-
-import cloudserviceapi.service.manager.SecuredManager;
-
 import com.appspot.cloudserviceapi.common.TapestryUtil;
 import com.appspot.cloudserviceapi.data.AppEngine;
 import com.appspot.cloudserviceapi.dto.Secure;
 import com.appspot.cloudserviceapi.security.spring.UserRole;
 import com.appspot.cloudserviceapi.util.Compass;
+
+import app.common.SecurityUtils;
+import cloudserviceapi.service.manager.SecuredManager;
+import tapp.pages.sci.Index;
 
 public class SecuredStart {
 

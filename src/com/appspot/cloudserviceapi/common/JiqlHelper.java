@@ -1,20 +1,5 @@
  package com.appspot.cloudserviceapi.common;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.text.CharacterIterator;
-import java.text.StringCharacterIterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class JiqlHelper {
 
 	public String handleDrupal62SQL(String sql) {

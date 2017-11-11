@@ -12,12 +12,12 @@ import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 
-import tapp.model.ServiceRegistry;
-
 import com.appspot.cloudserviceapi.common.HTMLUtil;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
 import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;
+
+import tapp.model.ServiceRegistry;
 
 public class SaveMobile {
 

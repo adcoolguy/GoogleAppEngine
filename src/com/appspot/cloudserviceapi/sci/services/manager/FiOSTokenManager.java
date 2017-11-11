@@ -2,8 +2,6 @@ package com.appspot.cloudserviceapi.sci.services.manager;
 
 import java.util.List;
 
-import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
-
 import tapp.model.sci.FiOSToken;
 
 public interface FiOSTokenManager {

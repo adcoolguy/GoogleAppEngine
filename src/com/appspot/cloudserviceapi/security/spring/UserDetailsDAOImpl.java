@@ -1,21 +1,6 @@
 package com.appspot.cloudserviceapi.security.spring;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-
-import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
-import com.google.appengine.api.datastore.Key;
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-import com.google.gdata.data.ExtensionDescription.Default;
 
 /**
  * https://www.javacodegeeks.com/2012/10/spring-security-prevent-brute-force.

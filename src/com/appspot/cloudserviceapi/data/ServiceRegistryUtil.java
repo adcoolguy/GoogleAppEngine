@@ -5,12 +5,11 @@ import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpServletRequest;
 
-import tapp.model.ServiceRegistry;
+import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
+
 import app.common.AppUtils;
 import app.common.Constants;
-
-import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
-import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryRepository;
+import tapp.model.ServiceRegistry;
 
 public class ServiceRegistryUtil {
 

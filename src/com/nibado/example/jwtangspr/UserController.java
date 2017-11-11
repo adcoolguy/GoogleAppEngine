@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 
 import org.datanucleus.util.StringUtils;
@@ -15,14 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import app.common.ParseHelper;
-import app.common.SecurityUtils;
-
-import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;
 import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
 import com.appspot.cloudserviceapi.security.spring.UserSecurityDAO;
 
+import app.common.ParseHelper;
+import app.common.SecurityUtils;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 

@@ -7,25 +7,17 @@ package com.appspot.cloudserviceapi.dao.gae;
 
 
 import java.sql.Date;
-import java.sql.Timestamp;
-
 import java.util.ArrayList;
-
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.Key;
-import com.google.appengine.api.datastore.KeyFactory;
-import com.google.appengine.api.datastore.Query;
-
-import com.google.appengine.api.datastore.Text;
-
-import com.spoledge.audao.db.dao.gae.GaeAbstractDaoImpl;
-import com.spoledge.audao.db.dao.DBException;
-import com.spoledge.audao.db.dao.DaoException;
-
 
 import com.appspot.cloudserviceapi.dao.GeniuDao;
 import com.appspot.cloudserviceapi.dto.Geniu;
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Text;
+import com.spoledge.audao.db.dao.DaoException;
+import com.spoledge.audao.db.dao.gae.GaeAbstractDaoImpl;
 
 
 /**

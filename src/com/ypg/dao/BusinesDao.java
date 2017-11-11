@@ -5,12 +5,8 @@
  */
 package com.ypg.dao;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-
 import com.spoledge.audao.db.dao.AbstractDao;
 import com.spoledge.audao.db.dao.DaoException;
-
 import com.ypg.dto.Busines;
 
 

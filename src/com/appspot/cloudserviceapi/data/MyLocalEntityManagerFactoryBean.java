@@ -1,7 +1,6 @@
 package com.appspot.cloudserviceapi.data;
 
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceException;
 
 //import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 

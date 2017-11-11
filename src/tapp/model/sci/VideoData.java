@@ -1,19 +1,15 @@
 package tapp.model.sci;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.Date;
-import java.util.Random;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
-import org.apache.tapestry5.beaneditor.Validate;
 import org.compass.annotations.Searchable;
 import org.compass.annotations.SearchableId;
-import org.compass.annotations.SearchableMetaData;
 import org.compass.annotations.SearchableProperty;
 
 import com.appspot.cloudserviceapi.sci.data.ProductInterested;

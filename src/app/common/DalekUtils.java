@@ -1,13 +1,11 @@
 package app.common;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.StringTokenizer;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.appspot.cloudserviceapi.common.RemoveHTMLReader;
 import com.appspot.cloudserviceapi.common.StringUtil;
 
 public class DalekUtils {

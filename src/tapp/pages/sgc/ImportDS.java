@@ -1,7 +1,5 @@
 package tapp.pages.sgc;
 
-import java.io.File;
-
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.tapestry5.PersistenceConstants;
 import org.apache.tapestry5.annotations.Persist;

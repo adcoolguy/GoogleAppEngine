@@ -1,25 +1,18 @@
 package tapp.pages.g.app;
 
-import java.io.IOException;
-
-import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectPage;
-import org.apache.tapestry5.annotations.Meta;
 import org.apache.tapestry5.annotations.Persist;
-import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestGlobals;
-
-import tapp.model.ServiceRegistry;
 
 import com.appspot.cloudserviceapi.data.ServiceRegistryUtil;
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
+
+import tapp.model.ServiceRegistry;
 
 //@Meta("tapestry.persistence-strategy=flash")
 public class TemplateAction {

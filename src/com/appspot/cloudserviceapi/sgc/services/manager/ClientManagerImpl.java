@@ -3,6 +3,7 @@ package com.appspot.cloudserviceapi.sgc.services.manager;
 import java.util.List;
 
 import com.appspot.cloudserviceapi.sgc.dao.ClientDAO;
+
 import tapp.model.sgc.Client;
 
 public class ClientManagerImpl implements ClientManager {

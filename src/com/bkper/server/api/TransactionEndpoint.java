@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.appspot.cloudserviceapi.data.Persistence;
 import com.google.api.server.spi.config.Api;
 
 @Api(name = "bkper")

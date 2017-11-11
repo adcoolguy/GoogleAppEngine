@@ -1,11 +1,5 @@
 package com.appspot.cloudserviceapi.data;
 
-import java.io.IOException;
-import java.text.ParseException;
-import java.util.Collection;
-import java.util.Iterator;
-
-import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 

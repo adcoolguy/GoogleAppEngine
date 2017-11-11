@@ -9,6 +9,7 @@ import javax.jdo.Query;
 
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.sgc.Protect;
+
 import tapp.model.sgc.Client;
 
 public class ClientDAO {

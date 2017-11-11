@@ -1,25 +1,13 @@
 package com.persistent.utils.excel;
 
 import java.io.ByteArrayInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.StringReader;
-import java.io.StringWriter;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.io.ByteArrayOutputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -31,11 +19,6 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 //import org.apache.poi.ss.usermodel.WorkbookFactory;
-
-import com.appspot.cloudserviceapi.sgc.dao.ClientDAO;
-import com.appspot.cloudserviceapi.sgc.dao.EmployeeDAO;
-import com.appspot.cloudserviceapi.sgc.dao.WorkOrderDAO;
-import tapp.model.sgc.WorkOrder;
 
 /**
  * Reference: http://persistentdesigns.com/wp/?p=512

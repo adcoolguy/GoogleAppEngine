@@ -5,9 +5,6 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tapestry5.Asset;
-import org.apache.tapestry5.alerts.AlertManager;
-import org.apache.tapestry5.alerts.Duration;
-import org.apache.tapestry5.alerts.Severity;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.SessionState;
@@ -16,34 +13,24 @@ import org.apache.tapestry5.corelib.components.ActionLink;
 import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.corelib.components.Grid;
 import org.apache.tapestry5.corelib.components.Zone;
-import org.apache.tapestry5.grid.GridDataSource;
-import org.apache.tapestry5.internal.alerts.AlertManagerImpl;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.apache.tapestry5.ioc.services.TypeCoercer;
 import org.apache.tapestry5.services.AssetSource;
-import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestGlobals;
 import org.apache.tapestry5.services.ajax.AjaxResponseRenderer;
-import org.apache.tapestry5.services.ajax.JavaScriptCallback;
-import org.apache.tapestry5.services.javascript.JavaScriptSupport;
-import org.joda.time.format.DateTimeFormat;
 import org.ocpsoft.pretty.time.PrettyTime;
 import org.springframework.security.core.Authentication;
 
-import tapp.model.ServiceRegistry;
-import app.common.AppUtils;
-import app.common.Constants;
-import app.common.SecurityUtils;
-
 import com.appspot.cloudserviceapi.common.HTMLUtil;
-import com.appspot.cloudserviceapi.common.SettingsDBUtils;
 import com.appspot.cloudserviceapi.common.TimeUtil;
 import com.appspot.cloudserviceapi.data.AppEngine;
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
 import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;
 import com.appspot.cloudserviceapi.security.spring.UserRole;
 import com.appspot.cloudserviceapi.util.Compass;
+
+import app.common.SecurityUtils;
+import tapp.model.ServiceRegistry;
 
 public class ServiceRegistryStart {
 

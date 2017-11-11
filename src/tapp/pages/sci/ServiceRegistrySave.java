@@ -7,24 +7,19 @@ import org.apache.tapestry5.ValidationException;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.Path;
-import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.SessionAttribute;
 import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
-import org.datanucleus.util.StringUtils;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
-
-import tapp.model.ServiceRegistry;
-import app.common.SecurityUtils;
 
 import com.appspot.cloudserviceapi.common.HTMLUtil;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
 import com.appspot.cloudserviceapi.sci.services.ServiceRegistryServlet;
 import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;
-import com.appspot.cloudserviceapi.security.spring.UserRole;
+
+import app.common.SecurityUtils;
+import tapp.model.ServiceRegistry;
 
 public class ServiceRegistrySave {
 

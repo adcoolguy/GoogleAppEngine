@@ -8,11 +8,7 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.persistence.EntityManager;
 
-import javax.transaction.Transaction;
-
 import org.joda.time.DateTime;
-
-import tapp.model.ServiceRegistry;
 
 import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.data.EMF;
@@ -20,6 +16,8 @@ import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.sgc.Protect;
 //import com.appspot.cloudserviceapi.util.CacheController;
 //import com.appspot.cloudserviceapi.util.CacheKey;
+
+import tapp.model.ServiceRegistry;
 
 /**
  * This class makes use of both JPA and JDO.

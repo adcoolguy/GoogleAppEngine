@@ -3,8 +3,9 @@ package tapp.pages.sgc;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
-import tapp.model.sgc.WorkOrder;
 import com.appspot.cloudserviceapi.sgc.services.manager.OrderManager;
+
+import tapp.model.sgc.WorkOrder;
 
 public class OrderSave {
 

@@ -1,11 +1,8 @@
 package tapp.pages.g.app;
 
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
 
 import javax.jdo.PersistenceManager;
-import javax.servlet.http.HttpServletRequest;
 
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectPage;
@@ -14,9 +11,6 @@ import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 
-import cloudserviceapi.app.controller.GeniusManagerImpl;
-import cloudserviceapi.service.manager.GeniusManager;
-
 import com.appspot.cloudserviceapi.common.BackupService;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;
 import com.appspot.cloudserviceapi.common.StringUtil;
@@ -24,6 +18,8 @@ import com.appspot.cloudserviceapi.data.Datastore;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.dto.Geniu;
 import com.appspot.cloudserviceapi.sci.services.ServiceRegistryServlet;
+
+import cloudserviceapi.service.manager.GeniusManager;
 
 public class TemplateSave {
 

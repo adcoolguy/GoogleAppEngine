@@ -5,9 +5,6 @@
  */
 package com.appspot.cloudserviceapi.dto;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -22,6 +19,9 @@ import org.compass.annotations.SearchableId;
 import org.compass.annotations.SearchableProperty;
 
 import com.appspot.cloudserviceapi.common.SimilarityManager;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * This is a DTO class.

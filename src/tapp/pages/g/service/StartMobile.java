@@ -3,20 +3,17 @@ package tapp.pages.g.service;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectPage;
-import org.apache.tapestry5.corelib.components.Grid;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 import org.ocpsoft.pretty.time.PrettyTime;
 
-import tapp.model.ServiceRegistry;
-import tapp.pages.g.social.SocialStart;
-
 import com.appspot.cloudserviceapi.common.HTMLUtil;
 import com.appspot.cloudserviceapi.data.AppEngine;
 import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;
+
+import tapp.model.ServiceRegistry;
 
 public class StartMobile {
 

@@ -5,9 +5,9 @@ import java.util.List;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.BeanModelSource;
 
-import tapp.model.sci.VideoData;
-
 import com.appspot.cloudserviceapi.sci.services.manager.VideoDataManager;
+
+import tapp.model.sci.VideoData;
 
 public class VideoDataStart {
 

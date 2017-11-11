@@ -1,24 +1,10 @@
 package com.appspot.cloudserviceapi.common;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import org.apache.http.Header;
-import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.ProtocolException;
-import org.apache.http.client.CircularRedirectException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.client.params.ClientPNames;
-import org.apache.http.client.utils.URIUtils;
-import org.apache.http.impl.client.DefaultRedirectHandler;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
-import org.apache.http.impl.client.RedirectLocations;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.ExecutionContext;
 import org.apache.http.protocol.HttpContext;
 
 /**

@@ -1,9 +1,6 @@
 package com.appspot.cloudserviceapi.security.spring;
 
-import java.util.Date;
-
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.CredentialsExpiredException;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.Authentication;

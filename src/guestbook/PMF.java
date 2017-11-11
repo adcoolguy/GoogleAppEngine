@@ -1,7 +1,7 @@
 package guestbook;
 
-import java.sql.Driver;
 import java.sql.Connection;
+import java.sql.Driver;
 import java.util.Properties;
 
 public final class PMF {

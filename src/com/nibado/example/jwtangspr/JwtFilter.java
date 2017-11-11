@@ -11,9 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.datanucleus.util.StringUtils;
-import org.springframework.web.filter.GenericFilterBean;
 
-import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.common.HttpUtil;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;
 

@@ -3,7 +3,6 @@ package com.appspot.cloudserviceapi.sci.services.manager;
 import java.util.List;
 
 import tapp.model.ServiceRegistry;
-import tapp.model.sci.VideoData;
 
 public interface ServiceRegistryManager {
 

@@ -7,9 +7,9 @@ package com.ypg.dao.gae;
 
 
 import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-
-import com.ypg.dao.*;
+import com.ypg.dao.BusinesDao;
+import com.ypg.dao.DaoFactory;
+import com.ypg.dao.PartnerDao;
 
 
 /**

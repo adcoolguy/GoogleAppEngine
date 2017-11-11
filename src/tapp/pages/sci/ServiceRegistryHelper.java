@@ -1,12 +1,10 @@
 package tapp.pages.sci;
 
-import org.datanucleus.util.StringUtils;
-
-import tapp.model.ServiceRegistry;
-import app.common.SecurityUtils;
-
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
 import com.appspot.cloudserviceapi.security.spring.UserRole;
+
+import app.common.SecurityUtils;
+import tapp.model.ServiceRegistry;
 
 public class ServiceRegistryHelper {
 

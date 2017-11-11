@@ -1,13 +1,12 @@
 package com.appspot.cloudserviceapi;
 
-import io.swagger.jaxrs.config.BeanConfig;
-
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
 import cloudserviceapi.app.controller.CrudService;
+import io.swagger.jaxrs.config.BeanConfig;
 
 /**
  * http://thebesthacker.com/question/unable-to-configure-swagger-with-embedded-jetty-programmatically.html

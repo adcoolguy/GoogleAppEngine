@@ -11,9 +11,9 @@ import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import app.model.Calendar;
-
 import com.appspot.cloudserviceapi.common.TimeUtil;
+
+import app.model.Calendar;
 
 public class CalendarHelper {
 

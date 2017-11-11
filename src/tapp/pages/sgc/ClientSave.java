@@ -3,8 +3,9 @@ package tapp.pages.sgc;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
-import tapp.model.sgc.Client;
 import com.appspot.cloudserviceapi.sgc.services.manager.ClientManager;
+
+import tapp.model.sgc.Client;
 
 public class ClientSave {
 

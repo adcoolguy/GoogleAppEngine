@@ -2,9 +2,9 @@ package com.appspot.cloudserviceapi.sci.services.manager;
 
 import java.util.List;
 
-import tapp.model.ServiceRegistry;
-
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
+
+import tapp.model.ServiceRegistry;
 
 public class ServiceRegistryManagerImpl implements ServiceRegistryManager {
 

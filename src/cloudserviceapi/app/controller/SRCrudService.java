@@ -1,11 +1,28 @@
 package cloudserviceapi.app.controller;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import io.swagger.annotations.Api;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.appspot.cloudserviceapi.data.EMF;
+import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
+import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryRepository;
+import com.appspot.cloudserviceapi.sci.dao.SortedServiceRegistryImpl;
+
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -15,33 +32,7 @@ import io.swagger.annotations.Contact;
 import io.swagger.annotations.Info;
 import io.swagger.annotations.License;
 import io.swagger.annotations.SwaggerDefinition;
-
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
-import org.springframework.data.domain.Sort.Order;
-import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import tapp.model.ServiceRegistry;
-
-import com.appspot.cloudserviceapi.data.EMF;
-import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
-import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryRepository;
-import com.appspot.cloudserviceapi.sci.dao.SortedServiceRegistryImpl;
 
 @Controller
 @RequestMapping(value = "/jwt/fusr", 

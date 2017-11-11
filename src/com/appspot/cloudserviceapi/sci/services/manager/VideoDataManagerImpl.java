@@ -2,9 +2,9 @@ package com.appspot.cloudserviceapi.sci.services.manager;
 
 import java.util.List;
 
-import tapp.model.sci.VideoData;
-
 import com.appspot.cloudserviceapi.sci.dao.VideoDataDAO;
+
+import tapp.model.sci.VideoData;
 
 public class VideoDataManagerImpl implements VideoDataManager {
 

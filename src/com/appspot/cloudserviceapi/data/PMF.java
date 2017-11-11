@@ -1,6 +1,5 @@
 package com.appspot.cloudserviceapi.data;
 
-import java.io.IOException;
 import java.util.Properties;
 
 import javax.jdo.JDOHelper;

@@ -5,9 +5,6 @@ package com.appspot.cloudserviceapi.data;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceException;
-
 //import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 public class SingletonEntityManagerFactory //extends LocalContainerEntityManagerFactoryBean 

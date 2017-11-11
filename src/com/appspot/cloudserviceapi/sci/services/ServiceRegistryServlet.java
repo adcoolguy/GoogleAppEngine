@@ -2,7 +2,6 @@ package com.appspot.cloudserviceapi.sci.services;
 
 import java.io.IOException;
 
-import javax.servlet.FilterConfig;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,8 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.datanucleus.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import tapp.model.ServiceRegistry;
 
 import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;
@@ -24,6 +21,7 @@ import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryRepository;
 
 import app.common.DalekUtils;
 import app.common.ProtractorUtils;
+import tapp.model.ServiceRegistry;
 
 @SuppressWarnings("serial")
 public class ServiceRegistryServlet extends HttpServlet {

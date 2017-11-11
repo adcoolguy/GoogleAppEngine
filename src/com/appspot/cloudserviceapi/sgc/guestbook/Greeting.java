@@ -11,9 +11,10 @@ import org.compass.annotations.Searchable;
 import org.compass.annotations.SearchableId;
 import org.compass.annotations.SearchableProperty;
 
-import tapp.model.sgc.Employee;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.users.User;
+
+import tapp.model.sgc.Employee;
 
 @PersistenceCapable
 @Searchable(alias="greeting")

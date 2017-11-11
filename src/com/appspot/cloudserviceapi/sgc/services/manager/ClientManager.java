@@ -3,7 +3,6 @@ package com.appspot.cloudserviceapi.sgc.services.manager;
 import java.util.List;
 
 import tapp.model.sgc.Client;
-import tapp.model.sgc.WorkOrder;
 
 public interface ClientManager {
 

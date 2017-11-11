@@ -8,12 +8,12 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.persistence.EntityManager;
 
-import tapp.model.sci.RepositoryData;
-
 import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.data.EMF;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.sgc.Protect;
+
+import tapp.model.sci.RepositoryData;
 
 /**
  * This class makes use of both JPA and JDO.

@@ -2,7 +2,6 @@ package com.appspot.cloudserviceapi.common;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.Scanner;
 
 public class SimilarityManager {

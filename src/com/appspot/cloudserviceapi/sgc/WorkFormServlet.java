@@ -1,8 +1,8 @@
 package com.appspot.cloudserviceapi.sgc;
 
+import static com.appspot.cloudserviceapi.common.StringUtil.handleNumber;
+
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.ServletException;
@@ -14,11 +14,11 @@ import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.common.StringUtil;
 import com.appspot.cloudserviceapi.sgc.dao.EmployeeDAO;
 import com.appspot.cloudserviceapi.sgc.dao.WorkOrderDAO;
-import tapp.model.sgc.WorkOrder;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
-import static com.appspot.cloudserviceapi.common.StringUtil.handleNumber;
+
+import tapp.model.sgc.WorkOrder;
 
 @SuppressWarnings("serial")
 public class WorkFormServlet extends HttpServlet {

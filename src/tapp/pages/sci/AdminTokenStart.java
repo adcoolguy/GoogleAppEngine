@@ -2,14 +2,12 @@ package tapp.pages.sci;
 
 import java.util.List;
 
-import org.apache.tapestry5.ComponentResources;
-import org.apache.tapestry5.beaneditor.BeanModel;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.BeanModelSource;
 
-import tapp.model.sci.FiOSToken;
-
 import com.appspot.cloudserviceapi.sci.services.manager.FiOSTokenManager;
+
+import tapp.model.sci.FiOSToken;
 
 public class AdminTokenStart {
 

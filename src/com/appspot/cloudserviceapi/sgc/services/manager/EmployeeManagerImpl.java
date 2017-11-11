@@ -2,9 +2,8 @@ package com.appspot.cloudserviceapi.sgc.services.manager;
 
 import java.util.List;
 
-import com.appspot.cloudserviceapi.sgc.dao.ClientDAO;
 import com.appspot.cloudserviceapi.sgc.dao.EmployeeDAO;
-import tapp.model.sgc.Client;
+
 import tapp.model.sgc.Employee;
 
 public class EmployeeManagerImpl implements EmployeeManager {

@@ -6,10 +6,11 @@
 package com.appspot.cloudserviceapi.dao.gae;
 
 
+import com.appspot.cloudserviceapi.dao.DaoFactory;
+import com.appspot.cloudserviceapi.dao.GeniuDao;
+import com.appspot.cloudserviceapi.dao.HumaDao;
+import com.appspot.cloudserviceapi.dao.SecureDao;
 import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-
-import com.appspot.cloudserviceapi.dao.*;
 
 
 /**

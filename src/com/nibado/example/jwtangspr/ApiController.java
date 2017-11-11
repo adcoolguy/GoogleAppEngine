@@ -1,7 +1,5 @@
 package com.nibado.example.jwtangspr;
 
-import io.jsonwebtoken.Claims;
-
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -11,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import io.jsonwebtoken.Claims;
 
 @RestController
 @RequestMapping("/jwt")

@@ -11,8 +11,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.domain.Sort.Order;
 
-import tapp.model.ServiceRegistry;
 import cloudserviceapi.app.controller.SortedServiceRegistryRepository;
+import tapp.model.ServiceRegistry;
 
 public class SortedServiceRegistryImpl implements SortedServiceRegistryRepository {
 

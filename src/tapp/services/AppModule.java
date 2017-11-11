@@ -1,21 +1,37 @@
 package tapp.services;
 
-import java.math.BigInteger;
-import java.security.SecureRandom;
-
 import org.apache.tapestry5.SymbolConstants;
 //import org.apache.tapestry5.beanvalidator.BeanValidatorConfigurer;	//gone since 5.3.2
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
-import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.ioc.annotations.SubModule;
 import org.apache.tapestry5.services.BeanBlockContribution;
-import org.apache.tapestry5.services.HttpServletRequestFilter;
 import org.apache.tapestry5.services.LibraryMapping;
 import org.apache.tapestry5.services.Request;
+
+import com.appspot.cloudserviceapi.data.AppEngine;
+//import com.appspot.cloudserviceapi.eo.services.manager.ActivityManager;
+//import com.appspot.cloudserviceapi.eo.services.manager.ActivityManagerImpl;
+//import com.appspot.cloudserviceapi.eo.services.manager.ParentInputService;
+//import com.appspot.cloudserviceapi.eo.services.manager.ParentInputServiceImpl;
+import com.appspot.cloudserviceapi.sci.services.manager.FiOSTokenManager;
+import com.appspot.cloudserviceapi.sci.services.manager.FiOSTokenManagerImpl;
+import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;
+import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManagerImpl;
+import com.appspot.cloudserviceapi.sci.services.manager.VideoDataManager;
+import com.appspot.cloudserviceapi.sci.services.manager.VideoDataManagerImpl;
+import com.appspot.cloudserviceapi.services.manager.UserManager;
+import com.appspot.cloudserviceapi.services.manager.UserManagerImpl;
+import com.appspot.cloudserviceapi.sgc.services.manager.ClientManager;
+import com.appspot.cloudserviceapi.sgc.services.manager.ClientManagerImpl;
+import com.appspot.cloudserviceapi.sgc.services.manager.EmployeeManager;
+import com.appspot.cloudserviceapi.sgc.services.manager.EmployeeManagerImpl;
+import com.appspot.cloudserviceapi.sgc.services.manager.OrderManager;
+import com.appspot.cloudserviceapi.sgc.services.manager.OrderManagerImpl;
+import com.troymaxventures.tapestry.gaeutils.GaeDevServerModule;
 
 import cloudserviceapi.app.controller.GeniusManagerImpl;
 
@@ -33,28 +49,6 @@ import cloudserviceapi.service.manager.SecuredManager;
 import cloudserviceapi.service.manager.SecuredManagerImpl;
 import cloudserviceapi.service.manager.SocialManager;
 import cloudserviceapi.service.manager.SocialManagerImpl;
-
-import com.appspot.cloudserviceapi.data.AppEngine;
-//import com.appspot.cloudserviceapi.eo.services.manager.ActivityManager;
-//import com.appspot.cloudserviceapi.eo.services.manager.ActivityManagerImpl;
-//import com.appspot.cloudserviceapi.eo.services.manager.ParentInputService;
-//import com.appspot.cloudserviceapi.eo.services.manager.ParentInputServiceImpl;
-import com.appspot.cloudserviceapi.sci.services.manager.FiOSTokenManager;
-import com.appspot.cloudserviceapi.sci.services.manager.FiOSTokenManagerImpl;
-import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;
-import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManagerImpl;
-import com.appspot.cloudserviceapi.sci.services.manager.VideoDataManager;
-import com.appspot.cloudserviceapi.sci.services.manager.VideoDataManagerImpl;
-import com.appspot.cloudserviceapi.service.tapestry.RequiresLoginFilter;
-import com.appspot.cloudserviceapi.services.manager.UserManager;
-import com.appspot.cloudserviceapi.services.manager.UserManagerImpl;
-import com.appspot.cloudserviceapi.sgc.services.manager.ClientManager;
-import com.appspot.cloudserviceapi.sgc.services.manager.ClientManagerImpl;
-import com.appspot.cloudserviceapi.sgc.services.manager.EmployeeManager;
-import com.appspot.cloudserviceapi.sgc.services.manager.EmployeeManagerImpl;
-import com.appspot.cloudserviceapi.sgc.services.manager.OrderManager;
-import com.appspot.cloudserviceapi.sgc.services.manager.OrderManagerImpl;
-import com.troymaxventures.tapestry.gaeutils.GaeDevServerModule;
 
 //https://github.com/plannowtech/tapestry5-ckeditor
 //@SubModule({com.plannow.tapestry5.ckeditor.services.CkEditorModule.class, GaeDevServerModule.class})

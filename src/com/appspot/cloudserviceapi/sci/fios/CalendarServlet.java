@@ -16,13 +16,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.appspot.cloudserviceapi.sci.dao.FiOSTokenDAO;
-import tapp.model.sci.FiOSToken;
 import com.google.gdata.client.calendar.CalendarService;
 import com.google.gdata.data.DateTime;
 import com.google.gdata.data.calendar.CalendarEventEntry;
 import com.google.gdata.data.calendar.CalendarEventFeed;
 import com.google.gdata.data.extensions.When;
 import com.google.gdata.util.ServiceException;
+
+import tapp.model.sci.FiOSToken;
 
 /**
  * More complete implementation can be based on

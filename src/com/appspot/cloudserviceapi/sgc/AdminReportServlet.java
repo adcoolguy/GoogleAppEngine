@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.appspot.cloudserviceapi.common.Constants;
-import com.appspot.cloudserviceapi.common.TimeUtil;
 import com.appspot.cloudserviceapi.sgc.dao.WorkOrderDAO;
-import tapp.model.sgc.WorkOrder;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
+
+import tapp.model.sgc.WorkOrder;
 
 @SuppressWarnings("serial")
 public class AdminReportServlet extends HttpServlet {

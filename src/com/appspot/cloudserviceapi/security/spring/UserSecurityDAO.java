@@ -10,7 +10,6 @@ import javax.persistence.EntityManager;
 
 import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.data.EMF;
-import com.appspot.cloudserviceapi.data.PMF;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.sgc.Protect;
 

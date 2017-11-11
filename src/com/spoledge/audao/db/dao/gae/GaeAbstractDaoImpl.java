@@ -15,8 +15,11 @@
  */
 package com.spoledge.audao.db.dao.gae;
 
-import java.util.Calendar;
+import static com.google.appengine.api.datastore.FetchOptions.Builder.withLimit;
+import static com.google.appengine.api.datastore.FetchOptions.Builder.withOffset;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.List;
@@ -36,15 +39,10 @@ import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.ShortBlob;
 import com.google.appengine.api.datastore.Text;
 import com.google.appengine.api.datastore.Transaction;
-
 import com.google.appengine.api.users.User;
-
-import static com.google.appengine.api.datastore.FetchOptions.Builder.*;
-
-import com.spoledge.audao.db.dao.DaoException;
 import com.spoledge.audao.db.dao.DBException;
+import com.spoledge.audao.db.dao.DaoException;
 import com.spoledge.audao.db.dao.DtoCache;
-import com.spoledge.audao.db.dao.DtoCacheFactory;
 import com.spoledge.audao.db.dao.ExpiringMemoryDtoCacheImpl;
 import com.spoledge.audao.db.dao.RootDaoImpl;
 

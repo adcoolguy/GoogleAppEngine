@@ -1,6 +1,6 @@
 package com.appspot.cloudserviceapi;
 
-import java.util.*;
+import java.util.StringTokenizer;
 
 public class HelloWorld {
   public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package com.appspot.cloudserviceapi.data;
 
+import java.util.Random;
+
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -12,8 +14,6 @@ import com.google.appengine.api.memcache.Expiration;
 import com.google.appengine.api.memcache.MemcacheService;
 import com.google.appengine.api.memcache.MemcacheService.SetPolicy;
 import com.google.appengine.api.memcache.MemcacheServiceFactory;
-
-import java.util.Random;
 
 /**
  * A counter which can be incremented rapidly.

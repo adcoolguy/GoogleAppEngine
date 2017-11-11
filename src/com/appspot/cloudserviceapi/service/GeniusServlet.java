@@ -1,20 +1,12 @@
 package com.appspot.cloudserviceapi.service;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.List;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.appspot.cloudserviceapi.common.CodesionUtil;
-//import com.appspot.cloudserviceapi.common.JSLintUtil;
-//import com.appspot.cloudserviceapi.common.PMDUtil;
-//import com.appspot.cloudserviceapi.test.CodesionSVNTest;
-//import com.newatlanta.commons.vfs.provider.gae.GaeVFS;
 
 @SuppressWarnings("serial")
 public class GeniusServlet extends HttpServlet {

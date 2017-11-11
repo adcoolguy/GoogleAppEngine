@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -20,7 +19,13 @@ import org.apache.commons.lang3.SerializationUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 
-import tapp.model.ServiceRegistry;
+import com.appspot.cloudserviceapi.common.JsonUtil;
+import com.appspot.cloudserviceapi.data.EMF;
+import com.google.api.server.spi.response.CollectionResponse;
+import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.api.datastore.Text;
+
 import app.common.AppUtils;
 import app.common.Constants;
 import app.common.DatastoreUtils;
@@ -29,13 +34,6 @@ import app.model.Calendar;
 import app.model.Movie;
 import app.model.MovieEndpoint;
 import app.model.User;
-
-import com.appspot.cloudserviceapi.common.JsonUtil;
-import com.appspot.cloudserviceapi.data.EMF;
-import com.google.api.server.spi.response.CollectionResponse;
-import com.google.appengine.api.datastore.Key;
-import com.google.appengine.api.datastore.KeyFactory;
-import com.google.appengine.api.datastore.Text;
 
 /**
  * Format:

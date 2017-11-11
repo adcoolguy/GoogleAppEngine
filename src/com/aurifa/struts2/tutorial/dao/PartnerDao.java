@@ -1,7 +1,5 @@
 package com.aurifa.struts2.tutorial.dao;
 
-import java.util.List;
-
 import com.aurifa.struts2.tutorial.model.Partner;
 import com.spoledge.audao.db.dao.DaoException;
 
