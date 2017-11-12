@@ -5,7 +5,7 @@
 <%@ page import="org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter"%>
 <html>
 <head>
-    <title>C7i107b</title>
+    <title>V1 A100</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width"> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
 
@@ -59,9 +59,9 @@
 <div data-role="main" class="ui-content">
 <div style="text-align: center; font-size: 24px; padding: 30px;">Welcome!</div>
 <form method="post" action="j_spring_security_check" data-ajax="false">
-	<label for="password">User ID: <span>*</span></label>
+	<label for="password">User ID: <span></span></label>
 	<input type="text" name="password" id="password" placeholder="Enter your user ID">
-	<label for="j_password">Password: <span>*</span></label>
+	<label for="j_password">Password: <span></span></label>
 	<input type="password" id="j_password" name="j_password" placeholder="Enter your password"/>
 	<br>
     <button class="btn btn-lg btn-primary btn-block" type="submit">
