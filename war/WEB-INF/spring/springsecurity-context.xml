@@ -166,7 +166,11 @@
 <beans:bean id="gaeDAOAuthenticationProvider" class="com.appspot.cloudserviceapi.security.spring.GaeDaoAuthenticationProvider">
 	<beans:property name="userDetailsDAO" ref="userDetailsDAOImpl"/>
     <beans:property name="userDetailsService" ref="GaeUserDetailsService"/>
+	<beans:property name="passwordEncoder" ref="encoder"/>
 </beans:bean>
+
+<!-- https://www.mkyong.com/spring-security/spring-security-password-hashing-example/ -->
+<beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
 <beans:bean lazy-init="true" id="userDetailsDAOImpl" class="com.appspot.cloudserviceapi.security.spring.UserDetailsDAOImpl" />
 
@@ -177,7 +181,7 @@
 	    <beans:property name="userSecurityDAO" ref="userSecurityDAO" />
 	</beans:bean>
 
-	<beans:bean id="encoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"/>
+<!-- <beans:bean id="encoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"/> -->
 
 	<!-- http://tojava13.appspot.com/question/5080f7ab4f1eba38a4d3ee62 -->
 <beans:bean id="userSecurityManagerService" class="org.springframework.aop.framework.ProxyFactoryBean">
