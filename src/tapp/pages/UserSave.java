@@ -13,6 +13,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.ioc.services.TypeCoercer;
 import org.apache.tapestry5.util.EnumSelectModel;
 import org.apache.tapestry5.util.EnumValueEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
 import com.appspot.cloudserviceapi.security.spring.UserRole;
@@ -93,6 +94,11 @@ public class UserSave {
 				myBean.setUserRoles(selectedList);
 			}
 		}
+
+		String password = myBean.getPassword();
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String hashedPassword = passwordEncoder.encode(password);
+		myBean.setPassword(hashedPassword);
 
 		beanManager.save(myBean);
 		
