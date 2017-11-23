@@ -2,6 +2,7 @@ package tapp.pages;
 
 import java.util.List;
 
+import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.BeanModelSource;
 
