@@ -4,6 +4,16 @@
         <title>User</title>
     	<meta name="viewport" content="user-scalable=no, width=device-width"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
 		<style>
+<!-- http://tapestry.apache.org/css.html#CSS-Defaultstylesheet -->
+/*
+Tapestry mobile fix for a singular column based view
+*/
+TABLE.t-data-grid TBODY TR TD {
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+	padding: 0px;
+}
+
 TABLE.t-data-grid THEAD TR {
     background-color: #4d609a;
 }

@@ -6,10 +6,13 @@ import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
+import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.ioc.annotations.SubModule;
 import org.apache.tapestry5.services.BeanBlockContribution;
 import org.apache.tapestry5.services.LibraryMapping;
+import org.apache.tapestry5.services.MarkupRenderer;
+import org.apache.tapestry5.services.MarkupRendererFilter;
 import org.apache.tapestry5.services.Request;
 
 import com.appspot.cloudserviceapi.data.AppEngine;
@@ -60,6 +63,11 @@ public class AppModule {
 	// Logger.getLogger(AppModule.class.getName());
 	@Inject
 	private Request request;
+
+	@Contribute(MarkupRenderer.class)
+	public static void deactiveDefaultCSS(OrderedConfiguration<MarkupRendererFilter> configuration) {
+		configuration.override("InjectDefaultStylesheet", null);
+	}
 
 	public static void bind(ServiceBinder binder) {
 
