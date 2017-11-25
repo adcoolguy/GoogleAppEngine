@@ -14,9 +14,6 @@ TABLE.t-data-grid TBODY TR TD {
 	padding: 0px;
 }
 
-TABLE.t-data-grid THEAD TR {
-    background-color: #4d609a;
-}
 table {
    table-layout:fixed;
    width:98%;
@@ -34,7 +31,7 @@ tr:nth-of-type(odd) {
   background: #eee; 
 }
 th { 
-  background: #333; 
+  background: #c7b2e7; 
   color: white; 
   font-weight: bold; 
 }
