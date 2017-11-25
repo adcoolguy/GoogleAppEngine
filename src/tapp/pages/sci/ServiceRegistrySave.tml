@@ -1,70 +1,10 @@
 <html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" xmlns:sec="http://www.springframework.org/security/tags" xmlns:p="tapestry:parameter">
  <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
- <meta name="viewport" content="user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="initial-scale=1.07, user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
  <title>Service Registry</title>
  <style type="text/css">
-    /* iPhone 2G-4S in portrait and landscape (source: http://stephen.io/mediaqueries/) */
-    @media only screen
-    and (min-device-width : 320px)
-    and (max-device-width : 480px) {
-    	#buttonCancel2, #buttonCancel2:focus {
-    		position:absolute;
-    		left:8px;
-    	}
-        *, .t-beaneditor, label, input[type="submit"], input[type="text"], textarea, .bck {
-        	font-size: 48px;
-        }
-		/** http://stackoverflow.com/questions/7073396/disable-zoom-on-input-focus-in-android-webpage */
-		input:focus, .nozoom {
-			font-size: 48px!important
-		}
-		#nav-section1, #nav-section2, #label1, #label2 {
-			font-size: 16px;
-		}
-		td {
-        	width: 450px;
-		}
-        body {
-            -webkit-text-size-adjust:80%;
-            margin-left: 8px;
-        }
-        DIV.t-beaneditor {
-            padding-left: 5px;
-        }
-		DIV.t-beaneditor-row {
-            font-size: 12px;
-        }
-		DIV.t-beaneditor-row LABEL {
-            font-size: 40px;
-        }
-        h2 {
-            font-size: .75em;
-            margin-top: 10px;
-        }
-    }
-    /** iPhone 5 portrait and landscape (source: http://stephen.io/mediaqueries/) */
-    @media only screen 
-	and (min-device-width : 320px) 
-	and (max-device-width : 568px) { 
-        h2 {
-            font-size: 1.75em;
-        }
-		.cke_toolbar {
-		    zoom: 1.8;
-		}
-		
-		.cke_reset_all, .cke_reset_all * {
-			font-size: 72px;
-		}
-		
-		.cke_skin_kama .cke_format .cke_text, .cke_skin_kama .cke_font .cke_text {
-		   	width: 72px;
-		}
-	}
- 	.t-beaneditor-submit {
-		color: red;
- 	}
+ 
  </style>
  <script id="worker1" type="javascript/worker">
 	self.onmessage = function(e) {

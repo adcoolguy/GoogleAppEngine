@@ -4,80 +4,24 @@
     	<!-- Spring 3 optimized for GAEJ released [b0002] -->
         <title>Service</title>
     	<meta name="viewport" content="initial-scale=1.07, user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
-        <link rel="stylesheet" type="text/css" href="/css/table.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/mobileme.css"/>
         <style type="text/css">
-	        /* iPhone 2G-4S in portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen
-	        and (min-device-width : 320px)
-	        and (max-device-width : 480px) {
-	        	.q1 {
-/*					font-size: 48px!important */
-	        	}
-	            body {
-	                -webkit-text-size-adjust:80%;
-	                margin-right: 20px;
-	            }
-	            h2 {
-	                font-size: .75em;
-	                margin-top: 10px;
-	            }
-	            #myzone {
-					padding-bottom: 10px;
-	            }
-	        }
-	        /** iPhone 5 portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen 
-			and (min-device-width : 320px) 
-			and (max-device-width : 568px) { 
-	            h2 {
-	                font-size: 1.75em;
-	            }
+			@media 
+			only screen and (max-width: 760px),
+			(min-device-width: 768px) and (max-device-width: 1024px)  {
+			    /*
+			    Label the data
+			    */
+			    td:nth-of-type(1):before { content: "ID"; }
+			    td:nth-of-type(2):before { content: "SERV"; }
+			    td:nth-of-type(3):before { content: "DESCRIPTION"; }
+			    td:nth-of-type(4):before { content: "S URL"; }
+			    td:nth-of-type(5):before { content: "VISITED"; }
+			    td:nth-of-type(6):before { content: "UPDATED"; }
+			    td:nth-of-type(7):before { content: "ENDPOINT"; }
+			    td:nth-of-type(8):before { content: "HIT"; }
+			    td:nth-of-type(9):before { content: "ACTION"; }
 			}
-			/** http://stackoverflow.com/questions/7073396/disable-zoom-on-input-focus-in-android-webpage */
-
-        	table.t-data-grid {
-        	    /*table-layout:fixed;*/ /* IE needs this !!! */
-        		width:100%;
-        	}
-        	/*
-        	.t-data-grid-pager {
-        		display: ${dataGridPagerDisplay}
-        	}
-        	*/
-        	/*
-        	.cke_skin_kama .cke_wrapper {
-        		display: inline;	// this does not work for some reason, thus editor.css is changed directly!:(
-        	}
-        	*/
-        	.shortUrl {
-                width:16px;
-				max-width:45px;
-				word-wrap:break-word;
-        	}
-			.description, .detailsExcerpt {
-                width:150px;
-				max-width:150px;
-                white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				/*-ms-text-overflow: ellipsis;*/
-			}
-			.id { width:25px;height:20px; max-width:30px; word-wrap:break-word; }
-			.endpoint {
-                width:100px;
-                max-width:150px;
-                white-space: nowrap;
-                overflow:hidden;
-                word-wrap:break-word;
-                text-overflow: ellipsis;
-                /*-ms-text-overflow: ellipsis;*/
-            }
-			.targ { width:100%; height:100%; }
-			.service { width:25px;max-width:100px; word-wrap:break-word; }
-			.lastUpdated { width:25px; max-width:30px; word-wrap:break-word; }
-			.lastAccessed { width:25px; max-width:30px; word-wrap:break-word; }
-			.hit { width:5px;max-width:18px; word-wrap:break-word; }
-			.delete { width:20px;max-width:40px; word-wrap:break-word; }
 		</style>
 		<script type="text/javascript" src='//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.js'></script>
 		<script>
