@@ -34,13 +34,6 @@
 		body {
 			background-color: white;
 		}
-<!-- providing zebra effect to grid -->
-.myRowClass:hover, .myRowClass:nth-child(even):hover {
-  	background-color: #DCE5FF;
-}
-.myRowClass:nth-child(even) { 
-    background-color: #E8E8E8;
-}
 
 detailsExcerpt { max-width:150px; word-wrap:break-word; }
 .targ { width:100%; height:100%; }

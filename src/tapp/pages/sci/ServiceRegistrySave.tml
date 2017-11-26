@@ -2,10 +2,11 @@
  <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="initial-scale=1.07, user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
- <title>Service Registry</title>
- <style type="text/css">
- 
- </style>
+	<link rel="stylesheet" type="text/css" href="/css/mobileme.css"/>
+	<title>Service Registry</title>
+	<style type="text/css">
+	 
+	</style>
  <script id="worker1" type="javascript/worker">
 	self.onmessage = function(e) {
     	//self.postMessage('msg from worker 1');

@@ -3,51 +3,25 @@
     <head>
         <title>Code (${totalRows})</title>
     	<meta name="viewport" content="initial-scale=1.07, user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
-        <link rel="stylesheet" type="text/css" href="/css/table.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/mobileme.css"/>
         <style type="text/css">
-	        /* iPhone 2G-4S in portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen
-	        and (min-device-width : 320px)
-	        and (max-device-width : 480px) {
-	            body {
-	                -webkit-text-size-adjust:80%;
-	                margin-left: 15px;
-	            }
-	            h2 {
-	                font-size: .75em;
-	                margin-top: 10px;
-	            }
-	        }
-	        /** iPhone 5 portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen 
-			and (min-device-width : 320px) 
-			and (max-device-width : 568px) { 
-	            h2 {
-	                font-size: 1.75em;
-	            }
+			@media 
+			only screen and (max-width: 760px),
+			(min-device-width: 768px) and (max-device-width: 1024px)  {
+			    /*
+			    Label the data
+			    */
+			    td:nth-of-type(1):before { content: "ID"; }
+			    td:nth-of-type(2):before { content: "SERV"; }
+			    td:nth-of-type(3):before { content: "DESCRIPTION"; }
+			    td:nth-of-type(4):before { content: "S URL"; }
+			    td:nth-of-type(5):before { content: "VISITED"; }
+			    td:nth-of-type(6):before { content: "UPDATED"; }
+			    td:nth-of-type(7):before { content: "ENDPOINT"; }
+			    td:nth-of-type(8):before { content: "HIT"; }
+			    td:nth-of-type(9):before { content: "ACTION"; }
 			}
-
-/** http://motyar.blogspot.com/2009/12/simplest-tooltip-with-pure-css.html# */
-td.description {
-    text-decoration:none;
-}
-td.details {
-	width:100%;
-}
-td.description span, td.details span {
-    display:none;
-    padding:2px 3px;
-    margin-left:0px;
-}
-td.description:hover span, td.details:hover span {
-     display:inline;
-     position:absolute;
-     border:1px solid #FF00FF;
-     background:#FFE4F6;
-     color:#2BA94F;
-     font-size:150%;
-}
-        </style>
+		</style>
     </head>
     <body>
         <t:alerts/>
