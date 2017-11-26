@@ -5,7 +5,7 @@
 <%@ page import="org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter"%>
 <html>
 <head>
-    <title>V1 A100a</title>
+    <title>V1 A100b</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width"> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
 
