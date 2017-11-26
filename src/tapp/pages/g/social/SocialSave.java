@@ -18,6 +18,7 @@ import com.appspot.cloudserviceapi.common.StringUtil;
 import com.appspot.cloudserviceapi.data.Datastore;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.dto.Huma;
+import com.appspot.cloudserviceapi.sci.services.ServiceRegistryServlet;
 
 import cloudserviceapi.service.manager.SocialManager;
 
@@ -160,6 +161,15 @@ public class SocialSave {
 			retVal = myBean.getDetails()!=null?StringUtil.toASCIICode(myBean.getDetails()):"";
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+		return retVal;
+	}
+
+	/** Backup Service On/Off Switched */
+	public String getBackupServiceDisplay() {
+		String retVal = "none";
+		if(ServiceRegistryServlet.isBackupServiceEnabled()) {
+			retVal = "inline";
 		}
 		return retVal;
 	}

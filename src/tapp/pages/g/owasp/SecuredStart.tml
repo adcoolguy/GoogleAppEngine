@@ -3,46 +3,21 @@
     <head>
         <title>Code (${total})</title>
     	<meta name="viewport" content="initial-scale=1.07, user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
-        <link rel="stylesheet" type="text/css" href="/css/table.css"/>
-        <style type="text/css">
-	        /* iPhone 2G-4S in portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen
-	        and (min-device-width : 320px)
-	        and (max-device-width : 480px) {
-	            body {
-	                -webkit-text-size-adjust:80%;
-	                margin-left: 15px;
-	            }
-	            h2 {
-	                font-size: .75em;
-	                margin-top: 10px;
-	            }
-	        }
-	        /** iPhone 5 portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen 
-			and (min-device-width : 320px) 
-			and (max-device-width : 568px) { 
-	            h2 {
-	                font-size: 1.75em;
-	            }
+        <link rel="stylesheet" type="text/css" href="/css/mobileme.css"/>
+        <style>
+			@media 
+			only screen and (max-width: 760px),
+			(min-device-width: 768px) and (max-device-width: 1024px)  {
+			    /*
+			    Label the data
+			    */
+			    td:nth-of-type(1):before { content: "ID"; }
+			    td:nth-of-type(2):before { content: "UPDATED"; }
+			    td:nth-of-type(3):before { content: "CATEGORY"; }
+			    td:nth-of-type(4):before { content: "WHAT"; }
+			    td:nth-of-type(5):before { content: "DETAILS"; }
+			    td:nth-of-type(6):before { content: "ACTION"; }
 			}
-/** http://motyar.blogspot.com/2009/12/simplest-tooltip-with-pure-css.html# */
-td.description {
-    text-decoration:none;
-}
-td.description span, td.details span {
-    display:none;
-    padding:2px 3px;
-    margin-left:0px;
-}
-td.description:hover span, td.details:hover span {
-     display:inline;
-     position:absolute;
-     border:1px solid #FF00FF;
-     background:#FFE4F6;
-     color:#2BA94F;
-     font-size:150%;
-}
         </style>
     </head>
     <body>
@@ -55,20 +30,12 @@ td.description:hover span, td.details:hover span {
 			</form>
     	</div>
 
-<!-- <<<<<<< HEAD -->
 		<p>
 		<t:pagelink t:page="g/owasp/SecuredSave" context="0">Create Something</t:pagelink>&#160;&#160;&#160;
 		<t:pagelink t:page="sci/serviceregistrystart" context="0">Service Registry</t:pagelink>
 		</p><br/>
 
 				<table t:id="secured1Grid" rowClass="literal:myRowClass" t:type="grid" pagerPosition="both" source="Templates" row="Template" add="delete" rowsPerPage="20" include="id,lastUpdatedDate,platform,what,details" reorder="id,lastUpdatedDate,platform,what,details">
-<!--
-=======
-		<p><t:pagelink t:page="g/owasp/SecuredSave" context="0">Create Something</t:pagelink></p><br/>
-
-				<table t:id="secured1Grid" rowClass="literal:myRowClass" t:type="grid" pagerPosition="both" source="Templates" row="Template" add="delete" rowsPerPage="20" include="id,lastUpdatedDate,similarity,what,details,wordCount,frequencyCount" reorder="id,what,details,similarity">
->>>>>>> 2eb925d094e6ec5a442cea17398f6141cb3a3148
--->
 					<t:parameter name="idCell">
 						<t:pagelink page="g/owasp/SecuredSave" context="Template.id">${Template.id}</t:pagelink>
 					</t:parameter>
@@ -76,12 +43,7 @@ td.description:hover span, td.details:hover span {
 						<span>${Template.details}</span>${detailsExcerpt}
 					</p:detailsCell>
 					<p:lastUpdatedDateCell>
-<!-- <<<<<<< HEAD
 						${friendlyLastUpdatedTime}
-======= 
--->
-						<t:output format="message:month_year" value="Template.lastUpdatedDate"/>
-<!-- >>>>>>> 2eb925d094e6ec5a442cea17398f6141cb3a3148 -->
 					</p:lastUpdatedDateCell>					
 					<t:parameter name="deleteCell">
 						<sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_TEMPLATE_ADMIN">

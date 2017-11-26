@@ -18,6 +18,7 @@ import com.appspot.cloudserviceapi.common.StringUtil;
 import com.appspot.cloudserviceapi.data.Datastore;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.dto.Secure;
+import com.appspot.cloudserviceapi.sci.services.ServiceRegistryServlet;
 
 import cloudserviceapi.service.manager.SecuredManager;
 
@@ -177,4 +178,12 @@ public class SecuredSave {
 		this.myBean = myBean;
 	}
 
+	/** Backup Service On/Off Switched */
+	public String getBackupServiceDisplay() {
+		String retVal = "none";
+		if(ServiceRegistryServlet.isBackupServiceEnabled()) {
+			retVal = "inline";
+		}
+		return retVal;
+	}
 }

@@ -1,28 +1,8 @@
 <html t:type="layout" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" xmlns:sec="http://www.springframework.org/security/tags">
  <head>
- <title>Library</title>
+    <meta name="viewport" content="initial-scale=1.07, user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
+	<title>Library</title>
         <style type="text/css">
-	        /* iPhone 2G-4S in portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen
-	        and (min-device-width : 320px)
-	        and (max-device-width : 480px) {
-	            body {
-	                -webkit-text-size-adjust:80%;
-	                margin-left: 15px;
-	            }
-	            h2 {
-	                font-size: .75em;
-	                margin-top: 10px;
-	            }
-	        }
-	        /** iPhone 5 portrait and landscape (source: http://stephen.io/mediaqueries/) */
-	        @media only screen 
-			and (min-device-width : 320px) 
-			and (max-device-width : 568px) { 
-	            h2 {
-	                font-size: 1.75em;
-	            }
-			}
 		</style>
  <script src="/jquery/jquery-1.3.2.min.js"></script>
  <script type="text/javascript">
@@ -211,8 +191,9 @@
 	<sec:ifNotGranted roles="ROLE_ADMIN, ROLE_SCI_ADMIN">
 		<div style="display:none;">Once saved, the data need couples of seconds to appear in the search (due to the background indexing process).</div>
 	</sec:ifNotGranted>
-	<div style="margin:10px 5px 5px 2px;height:115px;">
-   		AppId [<span id="appid">${uniqueSID}</span>] What [<span id="uniqueWhat">${uniqueWhat}</span>] Category [<span id="uniqueCategory">${uniqueCategory}</span>] Backup Service [<span id="host">${backupServiceHost}</span>]&#160;<a href="https://${backupServiceHost}/api/index.php/Genius/${uniqueWhat}-${uniqueCategory}-${uniqueSID}.xml">XML</a>&#160;<a href="https://${backupServiceHost}/api/index.php/Genius/${uniqueWhat}-${uniqueCategory}-${uniqueSID}.html">HTML</a>&#160;<a href="https://${backupServiceHost}/api/index.php/Genius/${uniqueWhat}-${uniqueCategory}-${uniqueSID}.txt">TXT</a>&#160;:
+	<div>AppId [<span id="appid">${uniqueSID}</span>] What [<span id="uniqueWhat">${uniqueWhat}</span>] Category [<span id="uniqueCategory">${uniqueCategory}</span>]</div> 
+	<div style="margin:10px 5px 5px 2px;height:115px;display:${backupServiceDisplay};">
+   		Backup Service [<span id="host">${backupServiceHost}</span>]&#160;<a href="https://${backupServiceHost}/api/index.php/Genius/${uniqueWhat}-${uniqueCategory}-${uniqueSID}.xml">XML</a>&#160;<a href="https://${backupServiceHost}/api/index.php/Genius/${uniqueWhat}-${uniqueCategory}-${uniqueSID}.html">HTML</a>&#160;<a href="https://${backupServiceHost}/api/index.php/Genius/${uniqueWhat}-${uniqueCategory}-${uniqueSID}.txt">TXT</a>&#160;:
 	   	<iframe style="width:100%;height:65px;" id="url_iframe" name="url_iframe" src="https://${backupServiceHost}/api/index.php/Genius/${uniqueWhat}-${uniqueCategory}-${uniqueSID}.xml"></iframe>
 		<label for="backup1_1">Normal Backup:&#160;</label>
 			<input class="bck" type="button" name="backup1_1" id="backup1_1" value="Backup" onclick="keepHtml = false; backupOnly();" style="width:15%;"/>&#160;&#160;
