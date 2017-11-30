@@ -4,8 +4,18 @@
     	<!-- Spring 3 optimized for GAEJ released [b0002] -->
         <title>Service</title>
     	<meta name="viewport" content="initial-scale=1.07, user-scalable=no"/> <!-- source: https://developer.apple.com/library/ios/DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="/css/mobileme.css"/>
         <style type="text/css">
+@media (min-width:761px) {
+	td {
+	  width: 100px;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	}
+}
+
 			@media 
 			only screen and (max-width: 760px),
 			(min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -44,22 +54,31 @@
 		</script>
     </head>
     <body class="outer">
+<div class="container">
 
-<div id="landscape" class="landscape"><div><h4>Landscape Mode: Sorted by last updated (UPT) field (desc) by default <a onclick="showPortraitOnly();return false;" href="#" style="float:right;">Change to Portrait Mode</a></h4></div>
+<div id="landscape" class="landscape"><a onclick="showPortraitOnly();return false;" href="#">Change to Portrait Mode</a>
         <t:alerts/>
        	<div>
 	        <h2 style="display:inline">Service Registry Manager (${totalRows})</h2>
-	        <span style="float:right;">User ID: ${loggedInUser} (${userAssignedRole})    <t:actionlink t:id="logout1">Logout</t:actionlink></span>
+	        <span style="float:right;">User ID: ${loggedInUser} (${userAssignedRole}) &nbsp;
+	        	<t:actionlink t:id="logout1">Logout</t:actionlink>
+	        </span>
 			<p/><p/>
-			<form style="display:${searchBoxDisplay};right:0px;margin:5px 10px 5px 0px;" action="/sci/jsp/search_service.jsp">
+			<form style="display:${searchBoxDisplay};" action="/sci/jsp/search_service.jsp">
 				<img style="height:12px;margin-right:4px;" src="/images/google-web-search-m.png" alt="Search Icon"/>Search (e.g. \.text\(\) AND \.val\(\)) <input type="text" name="q" class="q1" value="" style="min-width:150px;margin:0px 10px 0px 2px;"/><a href='http://lucene.apache.org/java/2_9_1/queryparsersyntax.html'>?</a>&nbsp;&nbsp;<a href='http://www.javaranch.com/journal/2004/04/Lucene.html'>Syntax</a>
 			</form>
     	</div>
         <p>
-        <t:pagelink t:page="sci/ServiceRegistrySave" context="0">Create New</t:pagelink>&#160;&#160;&#160;
-		<t:pagelink id="geniusstart1" t:page="g/app/templatestart" context="0" style="display:${geniusStartDisplay};">Genius</t:pagelink>
+		<div class="row">
+		   <div class="col-xs-6">
+		        <t:pagelink t:page="sci/ServiceRegistrySave" context="0">Create New</t:pagelink>&#160;&#160;&#160;
+		   </div>
+		   <div class="col-xs-6">
+				<t:pagelink id="geniusstart1" t:page="g/app/templatestart" context="0" style="display:${geniusStartDisplay};">Genius</t:pagelink>
+		   </div>
+		 </div>
         </p>
-
+		<div>Sorted by last updated (UPT) - descending order</div>
         <t:form t:id="form1">
 			<t:errors t:banner="${customErrorMessage}" />
         </t:form>
@@ -93,21 +112,26 @@
 		</table>
 </div>				
 
-<div id="portrait" class="portrait"><div><h4>Portrait Mode: Sorted by last visited (VIS) field (desc) by default <a onclick="showLandscapeOnly();return false;" href="#" style="float:right;">Change to Landscape Mode</a></h4></div>
+<div id="portrait" class="portrait"><a onclick="showLandscapeOnly();return false;" href="#" style="float:right;">Change to Landscape Mode</a>
         <t:alerts/>
         <div>
-          <h2 style="display:inline">Service Registry Manager (${totalRows})</h2>
+          <h2>Service Registry Manager (${totalRows})</h2>
           <span style="float:right;">User ID: ${loggedInUser} (${userAssignedRole})    <t:actionlink t:id="logout">Logout</t:actionlink></span>
-      <p/><p/>
-      <form style="display:${searchBoxDisplay};right:0px;margin:5px 10px 5px 0px;" action="/sci/jsp/search_service.jsp">
-        <img style="height:12px;margin-right:4px;" src="/images/google-web-search-m.png" alt="Search Icon"/>Search (e.g. \.text\(\) AND \.val\(\)) <input type="text" name="q" class="q1" value="" style="min-width:150px;margin:0px 10px 0px 2px;"/><a href='http://lucene.apache.org/java/2_9_1/queryparsersyntax.html'>?</a>&nbsp;&nbsp;<a href='http://www.javaranch.com/journal/2004/04/Lucene.html'>Syntax</a>
+      <br/><br/>
+      <form style="display:${searchBoxDisplay};float: right;" action="/sci/jsp/search_service.jsp">
+        <img style="height:12px;margin-right:4px;" src="/images/google-web-search-m.png" alt="Search Icon"/>(e.g. \.text\(\) AND \.val\(\)) <input type="text" name="q" class="q1" value=""/><a href='http://lucene.apache.org/java/2_9_1/queryparsersyntax.html'>?</a>&nbsp;&nbsp;<a href='http://www.javaranch.com/journal/2004/04/Lucene.html'>Syntax</a>
       </form>
       </div>
-        <p>
-        <t:pagelink t:page="sci/ServiceRegistrySave" context="0">Create New</t:pagelink>&#160;&#160;&#160;
-		<t:pagelink id="geniusstart2" t:page="g/app/templatestart" context="0" style="display:${geniusStartDisplay};">Genius</t:pagelink>
-        </p>
-
+		<br/><br/><br/>
+		<div class="row">
+		   <div class="col-xs-6">
+		        <t:pagelink t:page="sci/ServiceRegistrySave" context="0">Create New</t:pagelink>&#160;&#160;&#160;
+		   </div>
+		   <div class="col-xs-6">
+				<t:pagelink id="geniusstart1" t:page="g/app/templatestart" context="0" style="display:${geniusStartDisplay};">Genius</t:pagelink>
+		   </div>
+		</div>
+		<div>Sorted by last visited (VIS) - descending order</div>
         <t:form t:id="form2">
 			<t:errors t:banner="${customErrorMessage}" />
         </t:form>
@@ -157,6 +181,8 @@ function showLandscapeOnly() {
 <form style="display:${runIndexDisplay};display:none;" t:type="form">
     <t:submit t:id="compassForm" value="Run Index Now (Warning: Costly Operation!)"/>
 </form>
+
+</div>
 
     </body>
 

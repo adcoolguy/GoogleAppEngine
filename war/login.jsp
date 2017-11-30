@@ -47,7 +47,7 @@
 	<div style="padding: 20px" data-role="content" data-theme="c">
 
  	<% if (session.getAttribute(AbstractAuthenticationProcessingFilter.SPRING_SECURITY_LAST_EXCEPTION_KEY) != null) { %>
- 		<div class="errors">
+ 		<div style="word-wrap: break-word;" class="errors">
 			Your login attempt was not successful, try again.<br />
 			Reason: <%=session.getAttribute(AbstractAuthenticationProcessingFilter.SPRING_SECURITY_LAST_EXCEPTION_KEY)%>
 		</div>
@@ -57,7 +57,7 @@
 
 <!-------------- First page main content ----------->
 <div data-role="main" class="ui-content">
-<div style="text-align: center; font-size: 24px; padding: 30px;">Welcome!</div>
+<div style="text-align: center; font-size: 24px; padding: 30px; margin: 0px 60px 0px 60px">Welcome!</div>
 <form method="post" action="j_spring_security_check" data-ajax="false">
 	<label for="password">User ID: <span></span></label>
 	<input type="text" name="password" id="password" placeholder="Enter your user ID">
