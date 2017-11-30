@@ -126,12 +126,12 @@ public class ServiceRegistryServlet extends HttpServlet {
 		
 		//=== if move pass beyond this, it is business as usual pal!
 		
-		String resp = null;
+		String resp = null, respF = "\n</body>\n</html>", respH = "<html><head><meta name=\"viewport\" content=\"initial-scale=1.07, user-scalable=no\"/><head>\n<body>\n";
 		if(serviceName != null && !serviceName.trim().equals("")) {
 			try {
 				if(sr == null) sr = (ServiceRegistry)r.findServiceRegistryByService(serviceName);
 				if(sr == null) {
-					resp = ":)";	//"<html>Sorry, no such service [" + serviceName + "] found in the registry.</html>";
+					resp = respH + "*** There is nothing here :) ***" + respF;	//"<html>Sorry, no such service [" + serviceName + "] found in the registry.</html>";
 					response.getWriter().println(resp);
 				}
 				//TODO - this could be a target for the (future's) Java closure :)
@@ -187,7 +187,7 @@ public class ServiceRegistryServlet extends HttpServlet {
 						//=== begin - support getting the content of the redirected service!!!
 						if(!isUrl(finalEndPoint) && !useDescription1) {
 							ServiceRegistryUtil.countHit(sr, r, request, hitCountEnabled);
-							resp = firstRedirectedSR.getEndpoint();	//returns the content of the endpoint (which is not supposed to be an URL)
+							resp = respH + firstRedirectedSR.getEndpoint() + respF;	//returns the content of the endpoint (which is not supposed to be an URL)
 							response.getWriter().print(resp.trim());
 						} else
 						//it is a redirection
@@ -196,10 +196,10 @@ public class ServiceRegistryServlet extends HttpServlet {
 							response.sendRedirect(finalEndPoint);
 						} else {
 							ServiceRegistryUtil.countHit(sr, r, request, hitCountEnabled);
-							resp = firstRedirectedSR.getDescription();	//returns the description content
+							resp = respH + firstRedirectedSR.getDescription() + respF;	//returns the description content
 							
 							if(resp != null) {
-								resp = handleTestScripts(sr.getCategory(), firstRedirectedSR);
+								resp = respH + handleTestScripts(sr.getCategory(), firstRedirectedSR) + respF;
 							}
 							
 							response.getWriter().print(resp.trim());
@@ -219,15 +219,15 @@ public class ServiceRegistryServlet extends HttpServlet {
 //							resp = endPoint + System.getProperty("line.separator") + description;
 						}
 						if(sr.getCategory() != null) {
-							resp = handleTestScripts(sr.getCategory(), sr);
+							resp = respH + handleTestScripts(sr.getCategory(), sr) + respF;
 						} else
 						if(request.getParameter("xray") != null) {
-							resp = StringUtil.toASCIICode(description);
+							resp = respH + StringUtil.toASCIICode(description) + respF;
 						} else
 						if(request.getParameter("xml") != null) {
-							resp = description.substring(1, description.length());	//TBD - temporary solution, until the char is filtered properly
+							resp = respH + description.substring(1, description.length()) + respF;	//TBD - temporary solution, until the char is filtered properly
 						} else {
-							resp = description.trim();
+							resp = respH + description.trim() + respF;
 						}
 						if(resp != null) {
 							ServiceRegistryUtil.countHit(sr, r, request, hitCountEnabled);
@@ -240,7 +240,7 @@ public class ServiceRegistryServlet extends HttpServlet {
 							//=== KISS: support scenario like ${1}<p> or ${1}<br>
 							resp = StringUtils.replaceAll(resp, ">${", "> ${");
 							resp = StringUtils.replaceAll(resp, "}<", "} <");
-							resp = ServiceRegistryUtil.toRelatedLinks(resp, r, request.getRemoteHost());
+							resp = resp = respH + ServiceRegistryUtil.toRelatedLinks(resp, r, request.getRemoteHost()) + respF;
 							response.getWriter().print(related + resp.trim());
 						}
 					} else {
@@ -249,14 +249,14 @@ public class ServiceRegistryServlet extends HttpServlet {
 							response.sendRedirect(endPoint);
 						} else {
 							ServiceRegistryUtil.countHit(sr, r, request, hitCountEnabled);
-							resp = endPoint;	//just returns the content
+							resp = respH + endPoint + respF;	//just returns the content
 							response.getWriter().print(resp.trim());
 						}
 					}
 				}
 				else if(sr != null && disabled) {
 					ServiceRegistryUtil.countHit(sr, r, request, hitCountEnabled);	//for tracking purpose only including DOS attack
-					resp = "<html>Sorry, the service [" + serviceName + "] is currently disabled. Please contact the administrator for details.</html>";
+					resp = respH + "*** Sorry, the service [" + serviceName + "] is currently disabled. ***" + respF;
 					response.getWriter().println(resp);
 				}
 				//TODO commented out for now due to https://community.jboss.org/message/868254#868254
