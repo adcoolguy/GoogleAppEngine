@@ -2,7 +2,8 @@ package app.model;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
+//import javax.annotation.Nullable;
+import com.google.gdata.util.common.base.Nullable;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;

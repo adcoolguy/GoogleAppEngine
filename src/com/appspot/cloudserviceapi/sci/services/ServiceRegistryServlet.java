@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.datanucleus.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
+//import org.datanucleus.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.appspot.cloudserviceapi.common.Constants;
@@ -238,8 +239,8 @@ public class ServiceRegistryServlet extends HttpServlet {
 							}
 							//=== support "Related Services" based on the description (the content)!
 							//=== KISS: support scenario like ${1}<p> or ${1}<br>
-							resp = StringUtils.replaceAll(resp, ">${", "> ${");
-							resp = StringUtils.replaceAll(resp, "}<", "} <");
+							resp = StringUtils.replace(resp, ">${", "> ${");
+							resp = StringUtils.replace(resp, "}<", "} <");
 							resp = resp = respH + ServiceRegistryUtil.toRelatedLinks(resp, r, request.getRemoteHost()) + respF;
 							response.getWriter().print(related + resp.trim());
 						}

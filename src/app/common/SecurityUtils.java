@@ -6,7 +6,8 @@ import java.util.Iterator;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.datanucleus.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
+//import org.datanucleus.util.StringUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 

@@ -20,4 +20,4 @@ export JAVA_OPTS='-XX:MaxPermSize=1024m'
 echo $GAE_JAVA_SDK_HOME/bin/appcfg.sh --oauth2 --use_java7 --enable_jar_splitting update ${PROJECT_HOME}/war
 #rm ~/.appcfg_cookies
 #$GAE_JAVA_SDK_HOME/bin/appcfg.sh --no_cookies --use_java7 --enable_jar_splitting update ${PROJECT_HOME}/war
-$GAE_JAVA_SDK_HOME/bin/appcfg.sh --use_java7 --enable_jar_splitting update ${PROJECT_HOME}/war
+$GAE_JAVA_SDK_HOME/bin/appcfg.sh --enable_jar_splitting update ${PROJECT_HOME}/war

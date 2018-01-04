@@ -10,7 +10,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.datanucleus.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
+//import org.datanucleus.util.StringUtils;
 
 import com.appspot.cloudserviceapi.common.HttpUtil;
 import com.appspot.cloudserviceapi.common.SettingsDBUtils;

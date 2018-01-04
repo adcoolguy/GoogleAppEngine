@@ -78,7 +78,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Swagger"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jetty"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/joda-time-2.2.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/appengine-java-sdk-1.9.59"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
