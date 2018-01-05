@@ -3,8 +3,8 @@ package com.appspot.cloudserviceapi.services.manager;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
-import com.appspot.cloudserviceapi.security.spring.UserSecurityDAO;
+import com.appspot.cloudserviceapi.security.spring.model.GaeUserDetails;
+import com.appspot.cloudserviceapi.security.spring.model.UserSecurityDAO;
 
 public class UserManagerImpl implements UserManager {
 

@@ -12,9 +12,9 @@ import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 
-import com.appspot.cloudserviceapi.common.BackupService;
-import com.appspot.cloudserviceapi.common.SettingsDBUtils;
-import com.appspot.cloudserviceapi.common.StringUtil;
+import com.appspot.cloudserviceapi.common.model.BackupService;
+import com.appspot.cloudserviceapi.common.model.SettingsDBUtils;
+import com.appspot.cloudserviceapi.common.model.StringUtil;
 import com.appspot.cloudserviceapi.data.Datastore;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.dto.Huma;

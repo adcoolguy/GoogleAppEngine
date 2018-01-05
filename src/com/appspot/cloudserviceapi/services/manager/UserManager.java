@@ -2,7 +2,7 @@ package com.appspot.cloudserviceapi.services.manager;
 
 import java.util.List;
 
-import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
+import com.appspot.cloudserviceapi.security.spring.model.GaeUserDetails;
 
 public interface UserManager {
 

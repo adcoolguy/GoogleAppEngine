@@ -1,4 +1,4 @@
-<%@ page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@ page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 <%@ page import="com.google.appengine.api.users.User" %>
 <%@ page import="com.google.appengine.api.users.UserService" %>
 <%@ page import="com.google.appengine.api.users.UserServiceFactory" %>

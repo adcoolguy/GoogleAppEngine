@@ -8,5 +8,5 @@ gaeIsEclipseDefaultInstPath=true
 gaeLaunchAppInBrowser=true
 googleCloudSqlEnabled=false
 localDevMySqlEnabled=true
-ormEnhancementInclusions=src/com/appspot/cloudserviceapi/|src/tapp/model/|src/app/model/*.java
+ormEnhancementInclusions=src/com/appspot/cloudserviceapi/common/model/|src/tapp/model/|src/app/model/|src/com/appspot/cloudserviceapi/|src/com/appspot/cloudserviceapi/common/
 validationExclusions=src/com/persistent/utils/excel/AnnotatedExcelReport.java|src/cloudserviceapi/app/controller/CrudService.java

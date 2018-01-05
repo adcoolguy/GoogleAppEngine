@@ -13,7 +13,7 @@ import org.compass.gps.CompassGps;
 import org.compass.gps.device.jdo.Jdo2GpsDevice;
 import org.compass.gps.impl.SingleCompassGps;
 
-import com.appspot.cloudserviceapi.common.TapestryUtil;
+import com.appspot.cloudserviceapi.common.model.TapestryUtil;
 import com.appspot.cloudserviceapi.data.PMF;
 import com.google.appengine.api.datastore.DatastoreFailureException;
 import com.google.appengine.api.datastore.DatastoreService;

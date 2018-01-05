@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.Constants;
+import com.appspot.cloudserviceapi.common.model.Constants;
 import com.appspot.cloudserviceapi.data.Persistence;
-import com.appspot.cloudserviceapi.security.spring.UserSecurityDAO;
+import com.appspot.cloudserviceapi.security.spring.model.UserSecurityDAO;
 import com.appspot.cloudserviceapi.sgc.dao.ClientDAO;
 import com.appspot.cloudserviceapi.sgc.dao.EmployeeDAO;
 import com.appspot.cloudserviceapi.sgc.dao.GreetingDAO;

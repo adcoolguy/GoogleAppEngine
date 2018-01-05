@@ -3,10 +3,12 @@
     <persistence-unit name="transactions-optional">
         <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
         <class>tapp.model.ServiceRegistry</class>
-        <class>com.appspot.cloudserviceapi.security.spring.GaeUserDetails</class>
-        <class>com.appspot.cloudserviceapi.security.spring.GaeGrantedAuthority</class>
+        <class>com.appspot.cloudserviceapi.security.spring.model.GaeUserDetails</class>
+        <class>com.appspot.cloudserviceapi.security.spring.model.GaeGrantedAuthority</class>
+        <class>com.appspot.cloudserviceapi.common.model.Settings</class>
         <class>app.model.User</class>
         <class>app.model.Movie</class>
+        <class>app.model.Calendar</class>
         <class>app.model.Calendar</class>
 <!--
 Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.appspot.cloudserviceapi.media.xmm.Movie column: id (should be mapped with insert="false" update="false")

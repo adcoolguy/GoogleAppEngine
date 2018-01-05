@@ -19,11 +19,11 @@ import org.apache.tapestry5.services.BeanModelSource;
 import org.apache.tapestry5.services.RequestGlobals;
 import org.ocpsoft.pretty.time.PrettyTime;
 
-import com.appspot.cloudserviceapi.common.TapestryUtil;
+import com.appspot.cloudserviceapi.common.model.TapestryUtil;
 import com.appspot.cloudserviceapi.data.AppEngine;
 import com.appspot.cloudserviceapi.dto.Huma;
 import com.appspot.cloudserviceapi.dto.Secure;
-import com.appspot.cloudserviceapi.security.spring.UserRole;
+import com.appspot.cloudserviceapi.security.spring.model.UserRole;
 import com.appspot.cloudserviceapi.util.Compass;
 
 import app.common.SecurityUtils;

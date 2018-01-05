@@ -1,7 +1,7 @@
 <%@ page session="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@ page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 
 <html>
 <head>

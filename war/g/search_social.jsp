@@ -1,6 +1,6 @@
 <%@ page import="java.util.Calendar" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="com.appspot.cloudserviceapi.common.TimeUtil" %>
+<%@ page import="com.appspot.cloudserviceapi.common.model.TimeUtil" %>
 
 <%@ page import="org.compass.core.CompassQuery" %>
 <%@ page import="org.compass.core.CompassQueryBuilder" %>
@@ -12,7 +12,7 @@
 <%@ page import="com.appspot.cloudserviceapi.dto.Huma" %>
 <%@ page import="com.appspot.cloudserviceapi.data.AppEngine" %>
 <%@ page import="org.apache.commons.lang3.StringUtils" %>
-<%@ page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@ page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 
 <html>
   <head>

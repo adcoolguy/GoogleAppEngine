@@ -19,7 +19,7 @@ import org.apache.commons.lang3.SerializationUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 
-import com.appspot.cloudserviceapi.common.JsonUtil;
+import com.appspot.cloudserviceapi.common.model.JsonUtil;
 import com.appspot.cloudserviceapi.data.EMF;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Key;

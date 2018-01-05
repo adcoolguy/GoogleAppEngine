@@ -1,7 +1,10 @@
 #! /usr/bin/env bash
 
+#if you get "You do not have permission to modify this app (app_id=u'...", execute the following:
+#rm ~/.appcfg_oauth2_tokens_java
+
 #Need to create soft link to your GAEJ home e.g.
-#ln -s /Users/ag/appengine-java-sdk-1.5.1 /appengine-java-sdk
+#sudo ln -s ~/appengine-java-sdk-1.9.60 /appengine-java-sdk
 #ln -s '/Users/ag' /project_home
 
 #Also need to make sure Java is installed properly, generally available at /usr/bin/java and 

@@ -1,4 +1,4 @@
-<%@page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 
 <jsp:include page="header_login.jsp"/>
 <table id="content-box">

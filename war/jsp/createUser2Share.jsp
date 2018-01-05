@@ -1,7 +1,7 @@
 <%@ page import="app.common.Constants" %>
 <%@ page import="app.model.User" %>
 <%@ page import="cloudserviceapi.app.controller.UserHandler" %>
-<%@ page import="com.appspot.cloudserviceapi.common.JsonUtil" %>
+<%@ page import="com.appspot.cloudserviceapi.common.model.JsonUtil" %>
 <html>
     <title>This is just a test JSP dude!</title>
 <%

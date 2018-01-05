@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.appspot.cloudserviceapi.common.SettingsDBUtils;
-import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
-import com.appspot.cloudserviceapi.security.spring.UserSecurityDAO;
+import com.appspot.cloudserviceapi.common.model.SettingsDBUtils;
+import com.appspot.cloudserviceapi.security.spring.model.GaeUserDetails;
+import com.appspot.cloudserviceapi.security.spring.model.UserSecurityDAO;
 
 import app.common.ParseHelper;
 import app.common.SecurityUtils;

@@ -6,7 +6,7 @@
 <%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
 <%@ page import="com.appspot.cloudserviceapi.sgc.guestbook.Greeting" %>
 <%@ page import="com.appspot.cloudserviceapi.data.Persistence" %>
-<%@ page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@ page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 <%@ page import="com.appspot.cloudserviceapi.util.Compass" %>
 
 

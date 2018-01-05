@@ -11,8 +11,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.appspot.cloudserviceapi.security.spring.GaeGrantedAuthority;
-import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
+import com.appspot.cloudserviceapi.security.spring.model.GaeGrantedAuthority;
+import com.appspot.cloudserviceapi.security.spring.model.GaeUserDetails;
 
 import app.model.Movie;
 

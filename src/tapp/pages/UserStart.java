@@ -6,7 +6,7 @@ import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.BeanModelSource;
 
-import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
+import com.appspot.cloudserviceapi.security.spring.model.GaeUserDetails;
 import com.appspot.cloudserviceapi.services.manager.UserManager;
 
 public class UserStart {

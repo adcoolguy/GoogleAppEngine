@@ -15,9 +15,9 @@ import org.apache.tapestry5.util.EnumSelectModel;
 import org.apache.tapestry5.util.EnumValueEncoder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.appspot.cloudserviceapi.security.spring.GaeUserDetails;
-import com.appspot.cloudserviceapi.security.spring.UserRole;
-import com.appspot.cloudserviceapi.security.spring.UserSecurityDAO;
+import com.appspot.cloudserviceapi.security.spring.model.GaeUserDetails;
+import com.appspot.cloudserviceapi.security.spring.model.UserRole;
+import com.appspot.cloudserviceapi.security.spring.model.UserSecurityDAO;
 import com.appspot.cloudserviceapi.services.manager.UserManager;
 
 public class UserSave {

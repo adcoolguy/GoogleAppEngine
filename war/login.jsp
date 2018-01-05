@@ -1,7 +1,7 @@
 <%--<%@ page session="true"%>--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@ page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 <%@ page import="org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter"%>
 <html>
 <head>
@@ -41,7 +41,7 @@
 <div data-role="page" data-theme="c">
 	<div tyle="text-align: center" data-role="header" data-nobackbtn="true">
 <% if(session.getAttribute("data-icon-back") != null) { %>
-		<a href="<%= com.appspot.cloudserviceapi.common.Constants.MAIN_URL %>" data-icon="back"><%=session.getAttribute("data-icon-back")%></a>
+		<a href="<%= com.appspot.cloudserviceapi.common.model.Constants.MAIN_URL %>" data-icon="back"><%=session.getAttribute("data-icon-back")%></a>
 <% } %>
 	</div>
 	<div style="padding: 20px" data-role="content" data-theme="c">

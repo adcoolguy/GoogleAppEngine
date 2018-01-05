@@ -4,7 +4,7 @@ import java.util.Map;
 
 import org.apache.tapestry5.OptionModel;
 
-import com.appspot.cloudserviceapi.security.spring.UserRole;
+import com.appspot.cloudserviceapi.security.spring.model.UserRole;
 
 public class UserRoleOptionModel implements OptionModel {
 	UserRole userRole;

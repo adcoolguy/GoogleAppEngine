@@ -1,5 +1,5 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 
 <html>
   <head>

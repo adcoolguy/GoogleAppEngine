@@ -1,7 +1,7 @@
 package tapp.pages.sci;
 
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
-import com.appspot.cloudserviceapi.security.spring.UserRole;
+import com.appspot.cloudserviceapi.security.spring.model.UserRole;
 
 import app.common.SecurityUtils;
 import tapp.model.ServiceRegistry;

@@ -1,4 +1,4 @@
-<%@page import="com.appspot.cloudserviceapi.common.Constants" %>
+<%@page import="com.appspot.cloudserviceapi.common.model.Constants" %>
 
 <body style="overflow-x: hidden;">
 <jsp:include page="header_login.jsp"/>

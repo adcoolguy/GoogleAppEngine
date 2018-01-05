@@ -17,7 +17,7 @@ import org.joda.time.Instant;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import com.appspot.cloudserviceapi.common.JsonUtil;
+import com.appspot.cloudserviceapi.common.model.JsonUtil;
 import com.appspot.cloudserviceapi.data.EMF;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Key;

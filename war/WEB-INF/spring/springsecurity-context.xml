@@ -163,7 +163,7 @@
 </beans:bean>
 
 <!-- Bean implementing AuthenticationProvider of Spring Security -->
-<beans:bean id="gaeDAOAuthenticationProvider" class="com.appspot.cloudserviceapi.security.spring.GaeDaoAuthenticationProvider">
+<beans:bean id="gaeDAOAuthenticationProvider" class="com.appspot.cloudserviceapi.security.spring.model.GaeDaoAuthenticationProvider">
 	<beans:property name="userDetailsDAO" ref="userDetailsDAOImpl"/>
     <beans:property name="userDetailsService" ref="GaeUserDetailsService"/>
 	<beans:property name="passwordEncoder" ref="encoder"/>
@@ -172,12 +172,12 @@
 <!-- https://www.mkyong.com/spring-security/spring-security-password-hashing-example/ -->
 <beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
-<beans:bean lazy-init="true" id="userDetailsDAOImpl" class="com.appspot.cloudserviceapi.security.spring.UserDetailsDAOImpl" />
+<beans:bean lazy-init="true" id="userDetailsDAOImpl" class="com.appspot.cloudserviceapi.security.spring.model.UserDetailsDAOImpl" />
 
 	<beans:bean lazy-init="true" id="userSecurityDAO"
-		class="com.appspot.cloudserviceapi.security.spring.UserSecurityDAO" />
+		class="com.appspot.cloudserviceapi.security.spring.model.UserSecurityDAO" />
 
-	<beans:bean lazy-init="true" id="GaeUserDetailsService" class="com.appspot.cloudserviceapi.security.spring.GaeUserDetailsService">
+	<beans:bean lazy-init="true" id="GaeUserDetailsService" class="com.appspot.cloudserviceapi.security.spring.model.GaeUserDetailsService">
 	    <beans:property name="userSecurityDAO" ref="userSecurityDAO" />
 	</beans:bean>
 
