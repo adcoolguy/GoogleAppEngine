@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.servlet.ServletException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 //import org.datanucleus.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -59,7 +60,10 @@ public class UserController {
 		}
 		else {
 			GaeUserDetails usr = (new UserSecurityDAO()).getGaeUserDetails(login.name);
-			if(usr != null && usr.getPassword() != null && usr.getPassword().equals(login.password)) {
+//			System.out.println(usr.getPassword());
+//			System.out.println(login.password);
+			//=== c.f. https://docs.spring.io/spring-security/site/docs/4.0.4.CI-SNAPSHOT/apidocs/org/springframework/security/crypto/bcrypt/BCrypt.html
+			if(usr != null && BCrypt.checkpw(login.password, usr.getPassword())) {
 				authenticated = true;
 			}
 		}
