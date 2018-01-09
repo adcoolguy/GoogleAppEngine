@@ -84,9 +84,9 @@ public class UserSave {
 		id = (new UserSecurityDAO()).exist(myBean);
 		Long bid = myBean.getId();
 
-//		if(myBean != null && myBean.getUserRole() == null) {
-//			throw new ValidationException("Role is empty or null.");
-//		} else
+		if(myBean != null && myBean.getUserRole() == null) {
+			throw new ValidationException("Role is empty or null.");
+		} else
 		if(myBean != null && id > 0 && !id.equals(myBean.getId())) {
 			//as workaround as GAE4J does not support composite primary key i.e.
 			//beanManager.delete(id);

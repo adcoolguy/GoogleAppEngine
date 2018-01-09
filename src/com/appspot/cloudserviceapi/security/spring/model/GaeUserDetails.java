@@ -152,7 +152,7 @@ public class GaeUserDetails implements UserDetails, Cloneable, Serializable {
 	}
 	
 	public String getUserRole() {
-		return getUserRoles().toString();
+		return getUserRoles() != null?getUserRoles().toString():"";
 	}
 
 	@Validate("required")
