@@ -9,7 +9,6 @@
         <class>app.model.User</class>
         <class>app.model.Movie</class>
         <class>app.model.Calendar</class>
-        <class>app.model.Calendar</class>
 <!--
 Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.appspot.cloudserviceapi.media.xmm.Movie column: id (should be mapped with insert="false" update="false")
 -->

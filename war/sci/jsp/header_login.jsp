@@ -2,7 +2,7 @@
 <%@page import="com.google.appengine.api.users.User" %>
 <%@page import="com.google.appengine.api.users.UserService" %>
 <%@page import="com.google.appengine.api.users.UserServiceFactory" %>
-<%@page import="com.appspot.cloudserviceapi.security.spring.UserSecurityDAO" %>
+<%@page import="com.appspot.cloudserviceapi.security.spring.model.UserSecurityDAO" %>
 <%@page import="org.springframework.security.core.userdetails.UserDetails" %>
 <%@page import="org.springframework.security.core.context.SecurityContextHolder" %>
 

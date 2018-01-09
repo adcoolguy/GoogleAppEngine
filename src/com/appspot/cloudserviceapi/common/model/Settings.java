@@ -35,6 +35,9 @@ public class Settings {
 	@Basic
 	private Date recorded;
 
+	public Settings() {
+	}
+
 	public Settings(String pinCode, String setting, String status,
 			Date reportDateTime) {
 		super();

@@ -3,7 +3,7 @@
 <%@ page import="cloudserviceapi.app.controller.UserHandler" %>
 <%@ page import="com.appspot.cloudserviceapi.common.model.JsonUtil" %>
 <%@ page import="com.appspot.cloudserviceapi.security.spring.model.*" %>
-<%@ page import="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" %>
+<%@ page import="org.springframework.security.crypto.bcrypt.BCrypt" %>
 <html>
     <title>User Verification</title>
 <%
@@ -14,7 +14,6 @@ if(userId != null && password != null) {
     GaeUserDetails user = null;
     String storedPassword = null;
     String hashedPassword = null;
-    BCryptPasswordEncoder passwordEncoder = null;
     UserSecurityDAO dao = null;
     try {
     	
@@ -30,14 +29,7 @@ if(userId != null && password != null) {
 		//System.out.println("user [" + user + "]...");
         if(user != null) {
 			storedPassword = user.getPassword();
-			passwordEncoder = new BCryptPasswordEncoder();
-			hashedPassword = passwordEncoder.encode(password);
-			%>
-			Password: <%=password%><p>
-			Stored: <%=storedPassword%><p>
-			Generated: <%=hashedPassword%><p>
-<%
-			if(hashedPassword == storedPassword) {
+			if(BCrypt.checkpw(password, storedPassword)) {
 %>
 	    		OK
 <%
