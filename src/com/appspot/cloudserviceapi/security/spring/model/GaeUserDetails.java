@@ -43,8 +43,8 @@ public class GaeUserDetails implements UserDetails, Cloneable, Serializable {
 
 	//=== http://stackoverflow.com/questions/12106124/eclipse-error-on-mapping-with-embeddedid
 	//===  turn off validation for this in Eclipse under Preferences -> Java Persistence -> JPA -> Errors/Warnings -> Attributes -> Cannot resolve attribute name
-//	@OneToMany(cascade=CascadeType.ALL, mappedBy="gaeUserDetails")
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="gaeUserDetails")
+	// @OneToMany(cascade=CascadeType.ALL)	//=== Warning: Broke user lookup by userId!!!!!!
 	private List<GaeGrantedAuthority> grantedAuthorities;
 
 	@Basic
