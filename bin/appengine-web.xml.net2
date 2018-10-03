@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <runtime>java8</runtime>
     <application>chudoonet2</application>
     <version>0</version>    <!-- https://groups.google.com/forum/#!topic/google-appengine-java/PYpoELG7ZZ4 -->
     <!-- already true by default, just trying to be explicit -->
@@ -32,15 +33,10 @@
 		<include path="/css/*.css" />
 		<include path="/images/*" />
 		<include path="/js/*" />
-<<<<<<< HEAD
      	<include path="/galleria*/**.css" />
      	<include path="/galleria*/**.js" />
      	<include path="/galleria*/**.gif" />
      	<include path="/galleria*/**.png" />
-=======
-     	<include path="/galleria/**.css" />
-     	<include path="/galleria/**.js" />
->>>>>>> 2eb925d094e6ec5a442cea17398f6141cb3a3148
      	<include path="/parse/css/*.css" />
      	<include path="/parse/*" />
      	<include path="/mcrud/*" />

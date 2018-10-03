@@ -12,8 +12,8 @@ set PROJECT_HOME=%CD%
 
 echo %CLASSPATH%
 
-appcfg --enable_jar_splitting update "%PROJECT_HOME%\GoogleAppEngine\war"
-:appcfg --no_cookies --enable_jar_splitting update "%PROJECT_HOME%\GoogleAppEngine\war"
+appcfg --enable_jar_splitting update "%PROJECT_HOME%\gaej\war"
+:appcfg --no_cookies --enable_jar_splitting update "%PROJECT_HOME%\gaej\war"
 cd %~dp0
 
 :pause
