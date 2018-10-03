@@ -887,7 +887,7 @@ Subversion with Subclipse
 
 You need at least 1.10.1 of Subversion client adapter, get it from http://subclipse.tigris.org/update_1.10.x/.
 
-7/22/2015
+10/3/2018
 
 Good Reference -
 
@@ -895,3 +895,5 @@ http://groups.google.com/group/google-appengine-java/web/will-it-play-in-app-eng
 http://code.google.com/p/kaptcha/
 http://www.javacodegeeks.com/2013/01/spring-data-jpa-and-pagination.html
 https://cloud.google.com/appengine/docs/standard/java/datastore/jpa/overview
+https://cloud.google.com/appengine/docs/standard/java/runtime-java8
+https://medium.com/google-cloud/beyond-java-8-on-google-app-engine-standard-environment-bc97cc67d026
