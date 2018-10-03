@@ -15,7 +15,7 @@ import com.appspot.cloudserviceapi.data.PMF;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Cursor;
-import com.google.appengine.datanucleus.query.JDOCursorHelper;
+import org.datanucleus.store.appengine.query.JDOCursorHelper;
 
 
 @Api(name = "calendarendpoint")

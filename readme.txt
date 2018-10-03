@@ -894,3 +894,4 @@ Good Reference -
 http://groups.google.com/group/google-appengine-java/web/will-it-play-in-app-engine
 http://code.google.com/p/kaptcha/
 http://www.javacodegeeks.com/2013/01/spring-data-jpa-and-pagination.html
+https://cloud.google.com/appengine/docs/standard/java/datastore/jpa/overview

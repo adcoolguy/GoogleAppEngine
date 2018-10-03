@@ -14,7 +14,8 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Cursor;
 //import org.datanucleus.store.appengine.query.JPACursorHelper;
-import com.google.appengine.datanucleus.query.JPACursorHelper;
+import org.datanucleus.store.appengine.query.JDOCursorHelper;
+import org.datanucleus.store.appengine.query.JPACursorHelper;
 
 @Api(name = "userendpoint")
 public class UserEndpoint {
