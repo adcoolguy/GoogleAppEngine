@@ -3,7 +3,7 @@
     <runtime>java8</runtime>
 	<!-- c.f. https://developers.google.com/appengine/docs/java/config/appconfig for latest features -->
     <application>cloudiservice</application>
-    <version>22</version>
+    <version>23</version>
     <!-- Configure java.util.logging -->
     <system-properties>
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>

@@ -34,17 +34,10 @@
 		<include path="/css/*.css" />
 		<include path="/images/*" />
 		<include path="/js/*" />
-<<<<<<< HEAD
      	<include path="/galleria*/**.css" />
      	<include path="/galleria*/**.js" />
      	<include path="/galleria*/**.gif" />
      	<include path="/galleria*/**.png" />
-=======
-     	<include path="/galleria/**.css" />
-     	<include path="/galleria/**.js" />
-     	<include path="/galleria/**.gif" />
-     	<include path="/galleria/**.png" />
->>>>>>> 2eb925d094e6ec5a442cea17398f6141cb3a3148
      	<include path="/parse/css/*.css" />
      	<include path="/parse/*" />
      	<include path="/mcrud/*" />     	
