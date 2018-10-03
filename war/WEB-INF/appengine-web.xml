@@ -1,37 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
     <runtime>java8</runtime>
-	<!-- c.f. https://developers.google.com/appengine/docs/java/config/appconfig for latest features -->
-    <application>cbiit-service</application>
-    <version>9</version>
-    <!-- Configure java.util.logging -->
-    <system-properties>
-        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
-        <property name="appengine.orm.disable.duplicate.emf.exception" value="false"/>
-    </system-properties>
-    <!-- https://groups.google.com/forum/#!topic/google-appengine-java/PYpoELG7ZZ4 -->
+    <application>chudoonet2</application>
+    <version>0</version>    <!-- https://groups.google.com/forum/#!topic/google-appengine-java/PYpoELG7ZZ4 -->
     <!-- already true by default, just trying to be explicit -->
 	<warmup-requests-enabled>true</warmup-requests-enabled>
     <!-- http://code.google.com/appengine/docs/java/config/appconfig.html#Concurrent_Requests -->
 	<threadsafe>true</threadsafe>	<!-- run url fetch service in parallel -->
+    <system-properties>
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+		<!-- To avoid "at org.apache.poi.hssf.record.WriteAccessRecord.setUsername(WriteAccessRecord.java:101) error on GAE -->
+		<!-- Reference: http://amithmit.blogspot.com/2010/04/this-poi-hack-on-google-appengine-lets.html -->
+        <property name="user.name" value="voicestreams"/>
+    </system-properties>
 	<ssl-enabled>true</ssl-enabled>
 	<!-- For request.getSession() to work/Wicket needs it to be true -->
 	<sessions-enabled>true</sessions-enabled>
     <!-- on a different server than the app server -->
 	<static-files>
-      	<!-- swagger stuff -->
-		<include path="/swagger/*" />
-		<include path="/swagger/**/*" />
 		<!-- common stuff -->
-        <include path="/index.html" />
-		<include path="/static/**.srt" />
+      	<include path="/**.html" />
         <include path="/g/service/iui/**" />
         <include path="/tpl/**" />
       	<include path="/media/ihavepeopleskills.mp3" />
       	<include path="/media/ihavepeopleskills.mp4" />
 		<!-- 2share stuff -->
-     	<include path="/ui/index.html" />
-     	<include path="/ui/**/*.html" />
      	<include path="/ui/*.css" />
      	<include path="/ui/**/*.css" />
      	<include path="/ui/**/*.js" />
@@ -39,15 +32,14 @@
      	<include path="/ui/**/*.woff" />
 		<include path="/css/*.css" />
 		<include path="/images/*" />
-		<include path="/js/*.js" />
-		<include path="/js/**/*.js" />
+		<include path="/js/*" />
      	<include path="/galleria*/**.css" />
      	<include path="/galleria*/**.js" />
      	<include path="/galleria*/**.gif" />
      	<include path="/galleria*/**.png" />
      	<include path="/parse/css/*.css" />
      	<include path="/parse/*" />
-     	<include path="/mcrud/*" />     	
+     	<include path="/mcrud/*" />
      	<include path="/html/*" />
         <include path="/html/doc/*" />
      	<include path="/fullcalendar/*" />
@@ -55,29 +47,16 @@
      	<include path="/CSS3Accordion/**.css" />
      	<include path="/CSS3Accordion/**.js" />
      	<include path="/CSS3Accordion/**/*.*" />
-     	<include path="/angularjs/**.js" />  
+     	<include path="/angularjs/**.js" />     	
      	<!-- GU stuff -->
 		<include path="/static/**.html" />
       	<include path="/sgc/html/pc/css/style.css" />
       	<include path="/sgc/css/style.css" />
-     	<!-- n stuff -->
-     	<include path="/n/*"/>
-     	<include path="/n/**/*"/>
-      	<!-- crud stuff -->
+     	<!-- crud stuff -->
 		<exclude path="/**.php"/>
-     	<!-- 2Share -->
-     	<exclude path="/ws/*" />
-     	<!-- n stuff -->
-     	<exclude path="/n/**/node_modules**/*"/>
     </static-files>
     <!-- on the same server as the app server -->
 	<resource-files>
-       	<include path="/error/forbidden_error.html" />
-       	<include path="/error/custom_error.html" />
-       	<!-- n stuff -->
-	    <include path="/fusr/**" />
-      	<!-- swagger stuff -->
-      	<include path="/index_api.html" />
 		<!-- GU stuff -->
 		<include path="/struts/*" />
 		<!-- others -->
@@ -107,8 +86,6 @@
 		<!-- xmm stuff -->
      	<include path="/app/resources/**/*.js" />
      	<include path="/app/resources/**/*.css" />
-     	<!-- 2Share -->
-     	<exclude path="/ws/*" />
     </resource-files>
  	<admin-console>
  	    <!-- 3. https://developers.google.com/appengine/docs/java/tools/appstats
