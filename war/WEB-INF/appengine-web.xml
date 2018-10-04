@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-    <runtime>java8</runtime>
     <application>chudoonet2</application>
     <version>0</version>    <!-- https://groups.google.com/forum/#!topic/google-appengine-java/PYpoELG7ZZ4 -->
     <!-- already true by default, just trying to be explicit -->
