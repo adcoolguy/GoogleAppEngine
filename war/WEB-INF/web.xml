@@ -741,6 +741,7 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
     <servlet-name>ServiceRegistryServlet</servlet-name>
     <url-pattern>/go</url-pattern>
   </servlet-mapping>
+<!--
 	<servlet>
 		<servlet-name>serviceregistry</servlet-name>
 		<jsp-file>/sci/serviceregistrystart</jsp-file>
@@ -749,6 +750,7 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
 		<servlet-name>serviceregistry</servlet-name>
 		<url-pattern>/sr</url-pattern>
 	</servlet-mapping>
+-->
 <servlet>
  <servlet-name>SCIGAEJSendEmailServlet</servlet-name>
  <servlet-class>com.appspot.cloudserviceapi.sci.services.GAEJSendEmailServlet</servlet-class>
