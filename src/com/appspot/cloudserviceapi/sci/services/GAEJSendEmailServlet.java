@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.SettingsDBUtils;
+import com.appspot.cloudserviceapi.common.model.SettingsDBUtils;
 
 /**
  * Source: http://gaejexperiments.wordpress.com/2009/10/09/episode-3-using-the-gaej-email-service/

@@ -8,7 +8,7 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.persistence.EntityManager;
 
-import com.appspot.cloudserviceapi.common.Constants;
+import com.appspot.cloudserviceapi.common.model.Constants;
 import com.appspot.cloudserviceapi.data.EMF;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.sgc.Protect;

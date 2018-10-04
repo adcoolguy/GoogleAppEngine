@@ -1,4 +1,4 @@
-package com.appspot.cloudserviceapi.common;
+package com.appspot.cloudserviceapi.common.model;
 
 import org.apache.tapestry5.alerts.AlertManager;
 

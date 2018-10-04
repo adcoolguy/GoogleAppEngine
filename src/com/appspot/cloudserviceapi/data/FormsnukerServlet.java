@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.Constants;
+import com.appspot.cloudserviceapi.common.model.Constants;
 import com.appspot.cloudserviceapi.sgc.Protect;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;

@@ -1,4 +1,4 @@
-package com.appspot.cloudserviceapi.common;
+package com.appspot.cloudserviceapi.common.model;
 
 import com.appspot.cloudserviceapi.dto.Template;
 

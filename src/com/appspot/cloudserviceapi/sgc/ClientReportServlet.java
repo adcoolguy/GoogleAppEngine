@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.Constants;
-import com.appspot.cloudserviceapi.common.TimeUtil;
+import com.appspot.cloudserviceapi.common.model.Constants;
+import com.appspot.cloudserviceapi.common.model.TimeUtil;
 import com.appspot.cloudserviceapi.sgc.dao.WorkOrderDAO;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;

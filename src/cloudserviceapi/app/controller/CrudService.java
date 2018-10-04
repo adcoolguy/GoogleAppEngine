@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.JsonUtil;
+import com.appspot.cloudserviceapi.common.model.JsonUtil;
 
 import app.common.Constants;
 import app.model.Movie;

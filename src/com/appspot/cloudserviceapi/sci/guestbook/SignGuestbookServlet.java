@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.SettingsDBUtils;
+import com.appspot.cloudserviceapi.common.model.SettingsDBUtils;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.sgc.guestbook.Greeting;
 import com.google.appengine.api.users.User;

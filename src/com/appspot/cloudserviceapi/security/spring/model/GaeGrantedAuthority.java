@@ -12,7 +12,6 @@ import org.springframework.security.core.GrantedAuthority;
 
 import com.google.appengine.api.datastore.Key;
 
-//@PersistenceCapable(identityType = IdentityType.APPLICATION)
 @Entity
 public class GaeGrantedAuthority implements GrantedAuthority {
 
@@ -20,17 +19,13 @@ public class GaeGrantedAuthority implements GrantedAuthority {
 	public static final String ROLE_ANONYMOUS = "ROLE_ANONYMOUS";
 	public static final String ROLE_ADMIN = "ROLE_ADMIN";
 
-//	@Persistent @PrimaryKey
 	@Basic	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Key id;
 
-//	@Persistent
-//	@Basic
 	@Enumerated(EnumType.STRING)
 	private UserRole role = UserRole.ROLE_USER;
 
-//	@Persistent
 	@Basic
 	private GaeUserDetails gaeUserDetails;
 

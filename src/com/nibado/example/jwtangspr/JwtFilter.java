@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 //import org.datanucleus.util.StringUtils;
 
-import com.appspot.cloudserviceapi.common.HttpUtil;
-import com.appspot.cloudserviceapi.common.SettingsDBUtils;
+import com.appspot.cloudserviceapi.common.model.HttpUtil;
+import com.appspot.cloudserviceapi.common.model.SettingsDBUtils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

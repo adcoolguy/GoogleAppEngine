@@ -1,4 +1,4 @@
-package com.appspot.cloudserviceapi.common;
+package com.appspot.cloudserviceapi.common.model;
 
 /*
  * Copyright (c) 2004 David Flanagan.  All rights reserved.

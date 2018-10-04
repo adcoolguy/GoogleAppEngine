@@ -18,7 +18,7 @@ import org.compass.annotations.Searchable;
 import org.compass.annotations.SearchableId;
 import org.compass.annotations.SearchableProperty;
 
-import com.appspot.cloudserviceapi.common.SimilarityManager;
+import com.appspot.cloudserviceapi.common.model.SimilarityManager;
 
 /**
  * This is a DTO class.
