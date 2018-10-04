@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 
 import org.joda.time.DateTime;
 
-import com.appspot.cloudserviceapi.common.model.Constants;
+import com.appspot.cloudserviceapi.common.Constants;
 import com.appspot.cloudserviceapi.data.EMF;
 import com.appspot.cloudserviceapi.data.Persistence;
 import com.appspot.cloudserviceapi.sgc.Protect;

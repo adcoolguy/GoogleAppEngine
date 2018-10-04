@@ -424,11 +424,11 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
 <!-- Settings -->
 <servlet>
 	<servlet-name>PostSettingsServlet</servlet-name>
-	<servlet-class>com.appspot.cloudserviceapi.common.model.SettingsPostServlet</servlet-class>
+	<servlet-class>com.appspot.cloudserviceapi.common.SettingsPostServlet</servlet-class>
 </servlet>
 <servlet>
 	<servlet-name>SettingsServlet</servlet-name>
-	<servlet-class>com.appspot.cloudserviceapi.common.model.SettingsServlet</servlet-class>
+	<servlet-class>com.appspot.cloudserviceapi.common.SettingsServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>PostSettingsServlet</servlet-name>

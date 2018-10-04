@@ -13,7 +13,7 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.appspot.cloudserviceapi.common.model.JsonUtil;
+import com.appspot.cloudserviceapi.common.JsonUtil;
 import com.appspot.cloudserviceapi.data.EMF;
 
 import app.common.Constants;

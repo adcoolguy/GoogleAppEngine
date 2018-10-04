@@ -21,8 +21,8 @@ import org.apache.tapestry5.services.ajax.AjaxResponseRenderer;
 import org.ocpsoft.pretty.time.PrettyTime;
 import org.springframework.security.core.Authentication;
 
-import com.appspot.cloudserviceapi.common.model.HTMLUtil;
-import com.appspot.cloudserviceapi.common.model.TimeUtil;
+import com.appspot.cloudserviceapi.common.HTMLUtil;
+import com.appspot.cloudserviceapi.common.TimeUtil;
 import com.appspot.cloudserviceapi.data.AppEngine;
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;
 import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;

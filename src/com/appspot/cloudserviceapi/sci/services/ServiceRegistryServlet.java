@@ -12,9 +12,9 @@ import org.apache.commons.lang3.StringUtils;
 //import org.datanucleus.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.appspot.cloudserviceapi.common.model.Constants;
-import com.appspot.cloudserviceapi.common.model.SettingsDBUtils;
-import com.appspot.cloudserviceapi.common.model.StringUtil;
+import com.appspot.cloudserviceapi.common.Constants;
+import com.appspot.cloudserviceapi.common.SettingsDBUtils;
+import com.appspot.cloudserviceapi.common.StringUtil;
 import com.appspot.cloudserviceapi.data.ServiceRegistryUtil;
 import com.appspot.cloudserviceapi.data.URLCategory;
 import com.appspot.cloudserviceapi.sci.dao.ServiceRegistryDAO;

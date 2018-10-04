@@ -1,7 +1,7 @@
 package com.appspot.cloudserviceapi.sgc;
 
-import static com.appspot.cloudserviceapi.common.model.StringUtil.handleNumber;
-import static com.appspot.cloudserviceapi.common.model.StringUtil.handleYesNo;
+import static com.appspot.cloudserviceapi.common.StringUtil.handleNumber;
+import static com.appspot.cloudserviceapi.common.StringUtil.handleYesNo;
 
 import java.io.IOException;
 import java.util.Date;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.model.Constants;
-import com.appspot.cloudserviceapi.common.model.TimeUtil;
+import com.appspot.cloudserviceapi.common.Constants;
+import com.appspot.cloudserviceapi.common.TimeUtil;
 import com.appspot.cloudserviceapi.sgc.dao.WorkOrderDAO;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;

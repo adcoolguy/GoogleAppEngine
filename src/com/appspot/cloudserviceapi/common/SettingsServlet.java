@@ -1,4 +1,4 @@
-package com.appspot.cloudserviceapi.common.model;
+package com.appspot.cloudserviceapi.common;
 
 import java.io.IOException;
 import java.util.Iterator;

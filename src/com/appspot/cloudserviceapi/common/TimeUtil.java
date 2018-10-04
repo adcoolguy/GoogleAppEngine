@@ -1,4 +1,4 @@
-package com.appspot.cloudserviceapi.common.model;
+package com.appspot.cloudserviceapi.common;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

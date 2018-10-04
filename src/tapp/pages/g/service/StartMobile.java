@@ -9,7 +9,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 import org.ocpsoft.pretty.time.PrettyTime;
 
-import com.appspot.cloudserviceapi.common.model.HTMLUtil;
+import com.appspot.cloudserviceapi.common.HTMLUtil;
 import com.appspot.cloudserviceapi.data.AppEngine;
 import com.appspot.cloudserviceapi.sci.services.manager.ServiceRegistryManager;
 

@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.appspot.cloudserviceapi.common.model.StringUtil;
+import com.appspot.cloudserviceapi.common.StringUtil;
 
 public class DalekUtils {
 

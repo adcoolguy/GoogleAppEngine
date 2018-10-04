@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import org.joda.time.DateTime;
 
-import com.appspot.cloudserviceapi.common.model.JsonUtil;
+import com.appspot.cloudserviceapi.common.JsonUtil;
 import com.google.api.server.spi.response.CollectionResponse;
 
 import app.common.Constants;

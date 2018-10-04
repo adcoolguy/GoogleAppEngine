@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appspot.cloudserviceapi.common.model.CodesionUtil;
-import com.appspot.cloudserviceapi.common.model.SettingsDBUtils;
+import com.appspot.cloudserviceapi.common.CodesionUtil;
+import com.appspot.cloudserviceapi.common.SettingsDBUtils;
 import com.appspot.cloudserviceapi.data.AppEngine;
 
 @SuppressWarnings("serial")
