@@ -1,5 +1,7 @@
 call setenv.bat
 
+java -version
+
 echo on
 mkdir c:\temp
 set TEMP=c:\temp

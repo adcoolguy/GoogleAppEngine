@@ -75,15 +75,14 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/swagger-annotations-1.5.5-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/swagger-core-1.5.5-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/swagger-models-1.5.5-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-jpa-1.1.5.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/geronimo-jpa_3.0_spec-1.1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/javax.servlet-3.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jdo2-api-2.3-eb.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-appengine-1.0.10.final.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jdo-api-3.0.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/javax.inject-1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-jsr107cache-1.9.65.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jsr107cache-1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/geronimo-jpa_2.0_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-appengine-2.1.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Swagger"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jetty"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/joda-time-2.2.jar"/>
@@ -98,5 +97,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gaej_lib"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
