@@ -143,14 +143,13 @@
         <servlet-name>DefaultServletConfig</servlet-name>
         <servlet-class>io.swagger.servlet.config.DefaultServletConfig</servlet-class>
         <load-on-startup>2</load-on-startup>
+            <!--
         <init-param>
             <param-name>swagger.resource.package</param-name>
-            <!--
 Caused by: java.security.AccessControlException: access denied ("java.io.FilePermission" "/Applications/appengine-java-sdk-1.9.25/lib/impl/agent/appengine-agentruntime.jar" "read")
             <param-value>cloudserviceapi;com.appspot.cloudserviceapi.dto</param-value>
             <param-value>cloudserviceapi;com.appspot.cloudserviceapi.springmvc.controller;tapp.model</param-value>
             <param-value>com.appspot.cloudserviceapi.springmvc.controller</param-value>
-            -->
             <param-value>cloudserviceapi.app.controller</param-value>
         </init-param>
 		<init-param>
@@ -161,6 +160,7 @@ Caused by: java.security.AccessControlException: access denied ("java.io.FilePer
             <param-name>api.version</param-name>
             <param-value>1.0.0</param-value>
         </init-param>
+            -->
         <!--
 		<init-param>       
             <param-name>swagger.api.basepath</param-name>
@@ -179,6 +179,16 @@ Caused by: java.security.AccessControlException: access denied ("java.io.FilePer
         <url-pattern>/swagger/*</url-pattern>
     </servlet-mapping>
 
+   	<!-- Json Web Token (JWT) filter -->
+    <filter>
+        <filter-name>JwtFilter</filter-name>
+        <filter-class>com.nibado.example.jwtangspr.JwtFilter</filter-class>
+	</filter>
+    <filter-mapping>
+        <filter-name>JwtFilter</filter-name>
+        <url-pattern>/api/jwt/*</url-pattern>
+    </filter-mapping>
+
     <filter>
         <filter-name>ApiOriginFilter</filter-name>
         <filter-class>io.swagger.sample.util.ApiOriginFilter</filter-class>
@@ -186,17 +196,6 @@ Caused by: java.security.AccessControlException: access denied ("java.io.FilePer
     <filter-mapping>
         <filter-name>ApiOriginFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
-
-   	<!-- Json Web Token (JWT) filter -->
-    <filter>
-        <filter-name>JwtFilter</filter-name>
-        <filter-class>com.nibado.example.jwtangspr.JwtFilter</filter-class>
-        <load-on-startup>1</load-on-startup>
-	</filter>
-    <filter-mapping>
-        <filter-name>JwtFilter</filter-name>
-        <url-pattern>/api/jwt/*</url-pattern>
     </filter-mapping>
 
 <!-- Spring MVC stuff -->
@@ -424,11 +423,11 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
 <!-- Settings -->
 <servlet>
 	<servlet-name>PostSettingsServlet</servlet-name>
-	<servlet-class>com.appspot.cloudserviceapi.common.SettingsPostServlet</servlet-class>
+	<servlet-class>com.appspot.cloudserviceapi.common.model.SettingsPostServlet</servlet-class>
 </servlet>
 <servlet>
 	<servlet-name>SettingsServlet</servlet-name>
-	<servlet-class>com.appspot.cloudserviceapi.common.SettingsServlet</servlet-class>
+	<servlet-class>com.appspot.cloudserviceapi.common.model.SettingsServlet</servlet-class>
 </servlet>
 <servlet-mapping>
 	<servlet-name>PostSettingsServlet</servlet-name>
@@ -793,10 +792,9 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
     <servlet-name>CompassIndexServlet</servlet-name>
     <url-pattern>/task/compassindex</url-pattern>
 </servlet-mapping>
-<!--
--->
 <!-- http://blog.notdot.net/2010/04/Using-the-new-bulkloader -->
   <!-- Add this to your web.xml to enable remote API on Java. -->
+<!--
   <servlet>
     <servlet-name>remoteapi</servlet-name>
     <servlet-class>com.google.apphosting.utils.remoteapi.RemoteApiServlet</servlet-class>
@@ -805,6 +803,7 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
     <servlet-name>remoteapi</servlet-name>
     <url-pattern>/remote_api</url-pattern>
   </servlet-mapping>
+-->
  
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
@@ -914,18 +913,6 @@ java.lang.RuntimeException: Exception constructing service 'ApplicationContext':
 		<location>/error/not_found.html</location>
 	</error-page>
 	-->
- <servlet>
-  <servlet-name>SystemServiceServlet</servlet-name>
-  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
-  <init-param>
-   <param-name>services</param-name>
-   <param-value>app.model.CalendarEndpoint,app.model.MovieEndpoint,app.model.UserEndpoint,com.bkper.server.api.TransactionEndpoint,tapp.model.ServiceRegistryUserEndpoint</param-value>
-  </init-param>
- </servlet>
- <servlet-mapping>
-  <servlet-name>SystemServiceServlet</servlet-name>
-  <url-pattern>/_ah/spi/*</url-pattern>
- </servlet-mapping>
 	<!-- http://forrst.com/posts/HTML5_application_cache_on_GAE_Java-sVR -->
 	<!-- prefer appcache to be friendly with .Net server :-) -->
 	<mime-mapping>
