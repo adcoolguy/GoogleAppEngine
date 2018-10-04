@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-  <runtime>java8</runtime>
-	<!-- speed up init time (https://cloud.google.com/appengine/docs/java/config/appconfig#Disabling_Precompilation) -->
-	<precompilation-enabled>false</precompilation-enabled>
+    <runtime>java8</runtime>
 	<!-- c.f. https://developers.google.com/appengine/docs/java/config/appconfig for latest features -->
-    <application>cloudaware</application>
-    <version>13</version>
+    <application>chudoon3t</application>
+    <version>2</version>
     <!-- Configure java.util.logging -->
     <system-properties>
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
@@ -70,12 +68,13 @@
      	<!-- 2Share -->
      	<exclude path="/ws/*" />
      	<!-- n stuff -->
-      <exclude path="/n/**/node_modules/**"/>
+     	<exclude path="/n/**/node_modules**/*"/>
     </static-files>
     <!-- on the same server as the app server -->
 	<resource-files>
-       	<!-- n stuff -->
+       	<include path="/error/forbidden_error.html" />
        	<include path="/error/custom_error.html" />
+       	<!-- n stuff -->
 	    <include path="/fusr/**" />
       	<!-- swagger stuff -->
       	<include path="/index_api.html" />

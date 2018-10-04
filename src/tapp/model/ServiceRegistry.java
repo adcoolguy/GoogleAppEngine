@@ -81,13 +81,14 @@ public class ServiceRegistry implements Cloneable, Serializable {
     private Text descriptionText;
 
 	@ApiModelProperty(value = "enabled/disabled flag", required = false)
-    private Boolean disabled = false;
+    private boolean disabled = false;
 	@ApiModelProperty(value = "use the description instead of the url field as output", required = false)
-    private Boolean useDescription = false;		//returns the description field instead of endpoint
+    private boolean useDescription = false;		//returns the description field instead of endpoint
 	@ApiModelProperty(value = "save and display description as html", required = false)
-    private Boolean useHtml = true;	//returns the endpoint as html content type/to be saved in rich text/html format
+    private boolean useHtml = true;	//returns the endpoint as html content type/to be saved in rich text/html format
 	@ApiModelProperty(value = "save only flag", required = false)
-    private Boolean saveOnly = false;	//stays if the saveOnly is true
+    private boolean saveOnly = false;	//stays if the saveOnly is true
+
 	@ApiModelProperty(value = "owner id", required = false)
     private String oid;	//owner's id
 
@@ -236,35 +237,35 @@ public class ServiceRegistry implements Cloneable, Serializable {
 	}
 
 	//TBD - need a primitive boolean for Tapestry but datastore needs Boolean to avoid error
-	public Boolean getDisabled() {
+	public boolean getDisabled() {
 		return disabled;
 	}
 
-	public void setDisabled(Boolean disabled) {
+	public void setDisabled(boolean disabled) {
 		this.disabled = disabled;
 	}
 
-	public Boolean getUseDescription() {
+	public boolean getUseDescription() {
 		return useDescription;
 	}
 
-	public void setUseDescription(Boolean useDescription) {
+	public void setUseDescription(boolean useDescription) {
 		this.useDescription = useDescription;
 	}
 
-	public Boolean getUseHtml() {
+	public boolean getUseHtml() {
 		return useHtml;
 	}
 
-	public void setUseHtml(Boolean useHtml) {
+	public void setUseHtml(boolean useHtml) {
 		this.useHtml = useHtml;
 	}
 
-	public Boolean getSaveOnly() {
+	public boolean getSaveOnly() {
 		return saveOnly;
 	}
 
-	public void setSaveOnly(Boolean saveOnly) {
+	public void setSaveOnly(boolean saveOnly) {
 		this.saveOnly = saveOnly;
 	}
 
@@ -287,16 +288,16 @@ public class ServiceRegistry implements Cloneable, Serializable {
 				+ ((description == null) ? 0 : description.hashCode());
 		result = prime * result
 				+ ((descriptionText == null) ? 0 : descriptionText.hashCode());
-		result = prime * result
-				+ ((disabled == null) ? 0 : disabled.hashCode());
+//		result = prime * result
+//				+ ((disabled == null) ? 0 : disabled.hashCode());
 		result = prime * result
 				+ ((endpoint == null) ? 0 : endpoint.hashCode());
 		result = prime * result + ((hit == null) ? 0 : hit.hashCode());
 		result = prime * result + ((service == null) ? 0 : service.hashCode());
 		result = prime * result + ((summary == null) ? 0 : summary.hashCode());
-		result = prime * result
-				+ ((useDescription == null) ? 0 : useDescription.hashCode());
-		result = prime * result + ((useHtml == null) ? 0 : useHtml.hashCode());
+//		result = prime * result
+//				+ ((useDescription == null) ? 0 : useDescription.hashCode());
+//		result = prime * result + ((useHtml == null) ? 0 : useHtml.hashCode());
 		return result;
 	}
 
@@ -322,11 +323,11 @@ public class ServiceRegistry implements Cloneable, Serializable {
 		} 
 		else if (!descriptionText.equals(other.descriptionText))
 			return false;
-		if (disabled == null) {
-			if (other.disabled != null)
-				return false;
-		} else if (!disabled.equals(other.disabled))
-			return false;
+//		if (disabled == null) {
+//			if (other.disabled != null)
+//				return false;
+//		} else if (!disabled.equals(other.disabled))
+//			return false;
 		if (endpoint == null) {
 			if (other.endpoint != null)
 				return false;
@@ -347,16 +348,16 @@ public class ServiceRegistry implements Cloneable, Serializable {
 				return false;
 		} else if (!summary.equals(other.summary))
 			return false;
-		if (useDescription == null) {
-			if (other.useDescription != null)
-				return false;
-		} else if (!useDescription.equals(other.useDescription))
-			return false;
-		if (useHtml == null) {
-			if (other.useHtml != null)
-				return false;
-		} else if (!useHtml.equals(other.useHtml))
-			return false;
+//		if (useDescription == null) {
+//			if (other.useDescription != null)
+//				return false;
+//		} else if (!useDescription.equals(other.useDescription))
+//			return false;
+//		if (useHtml == null) {
+//			if (other.useHtml != null)
+//				return false;
+//		} else if (!useHtml.equals(other.useHtml))
+//			return false;
 		return true;
 	}
 

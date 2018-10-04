@@ -64,7 +64,7 @@ public class ServiceRegistryStart {
 	
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState(create=true)	//didn't work
-    private Boolean justSaved;
+    private boolean justSaved;
     
     private String currentExcerpt;
 	
@@ -240,9 +240,10 @@ public class ServiceRegistryStart {
             propModel.sortable(false);
         }
         */
-		justSaved = (Boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedServiceRegistry");
+		justSaved = (boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedServiceRegistry");
 		//System.out.println("sr: justSaved " + justSaved);
-		if(justSaved != null && !justSaved) {
+		if(!justSaved) {	//TODO J8 this has not been tested before after moving to Java 8
+//		if(justSaved != null && !justSaved) {
 //	        _grid.getSortModel().updateSort("lastAccessed");
 //	        _grid.getSortModel().updateSort("lastAccessed");
 		} else {
