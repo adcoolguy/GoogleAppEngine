@@ -558,7 +558,9 @@ public class MovieHandler implements CrudServiceCallback, ServletContextListener
 			} else if(Constants.SHARED_BY_ALL.equalsIgnoreCase(filter)) {
 				while(it.hasNext()) {
 					m = it.next();
-					if(m != null && m.getShared() != null && m.getShared().booleanValue()) {
+					if(m != null && m.getShared()
+							//!= null && m.getShared().booleanValue()
+							) {
 						nList.add(m);
 						System.out.println(this.getClass().getName() + ": SHARED by me/others movieId [" + m.getId() + "] title [" + m.getTitle() + "]");
 					}
@@ -567,7 +569,9 @@ public class MovieHandler implements CrudServiceCallback, ServletContextListener
 				while(it.hasNext()) {
 					m = it.next();
 					//=== only by me and have to be non-scheduled movies!
-					if(m != null && m.getShared() != null && m.getShared().booleanValue() && (m.getCalendarId() == null || m.getCalendarId() < 1) && uid != null && uid.equals(m.getOwner())) {
+					if(m != null && m.getShared()
+							//!= null && m.getShared().booleanValue() 
+							&& (m.getCalendarId() == null || m.getCalendarId() < 1) && uid != null && uid.equals(m.getOwner())) {
 						nList.add(m);
 						System.out.println(this.getClass().getName() + ": SHARED by me movieId [" + m.getId() + "] title [" + m.getTitle() + "]");
 					}

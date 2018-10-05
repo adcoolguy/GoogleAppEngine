@@ -121,7 +121,9 @@ public class PartnerDaoImpl extends GaeAbstractDaoImpl<Partner> implements Partn
             checkMaxLength( "ipAddress", dto.getIpAddress(), 100 );
             _ent.setProperty( "ipAddress", dto.getIpAddress());
 
-            if ( dto.getDisabled() == null ) {
+            if ( dto.getDisabled() 
+            		//== null 
+            		) {
                 throw new DaoException("Value of column 'disabled' cannot be null");
             }
             _ent.setProperty( "disabled", dto.getDisabled());
@@ -256,7 +258,9 @@ public class PartnerDaoImpl extends GaeAbstractDaoImpl<Partner> implements Partn
             isUpdated = true;
         }
 
-        if ( dto.getDisabled() != null ) {
+        if ( dto.getDisabled()
+        		//!= null 
+        		) {
             _ent.setProperty( "disabled", dto.getDisabled());
             isUpdated = true;
         }

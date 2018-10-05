@@ -1,3 +1,12 @@
+To Java 8 Runtime
+
+- Currently you can not run this runtime locally with DEV server, thus you need to set your compiler to compile to Java 7
+and set the JRE/JDK to 1.7 - run with r1.bat or j7 && r.
+
+- You can only run Java 8 on production of GAEJ - run with r.bat.
+
+- You can launch the enhancer accordingly by invoking e.cmd (run j7 or j8 if needed).
+
 Google App Engine for Java (GAE4J) Showcase
 
 How to launch?

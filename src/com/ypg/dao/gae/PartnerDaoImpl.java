@@ -121,7 +121,9 @@ public class PartnerDaoImpl extends GaeAbstractDaoImpl<Partner> implements Partn
             }
             if (dto.getIpAddress() != null) _ent.setProperty( "ipAddress", dto.getIpAddress());
 
-            if ( dto.getDisabled() == null ) {
+            if ( dto.getDisabled() 
+            		//== null 
+            		) {
                 // gae unindexed or empty property
             }
             else {
@@ -265,7 +267,9 @@ public class PartnerDaoImpl extends GaeAbstractDaoImpl<Partner> implements Partn
         }
 
         if ( dto.isDisabledModified()) {
-            if (dto.getDisabled() == null) _ent.removeProperty( "disabled" );
+            if (dto.getDisabled()
+            		//== null
+            		) _ent.removeProperty( "disabled" );
             else _ent.setProperty( "disabled", dto.getDisabled());
             isUpdated = true;
         }

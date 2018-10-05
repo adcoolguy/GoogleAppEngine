@@ -522,7 +522,9 @@ public class CalendarHandler implements CrudServiceCallback, ServletContextListe
 			Calendar cOld = (Calendar)doGetItem(tempId); 
 			String pattern = cOld != null?cOld.getRecurringPattern():null;
 			//=== takes care of its associated events first if it is recurring
-			if(cOld != null && cOld.getIsRecurring() != null && pattern != null) {
+			if(cOld != null && cOld.getIsRecurring()
+					//!= null 
+					&& pattern != null) {
 				System.out.println("1: " + cal.getClass().getName() + " object deleted with id '" + id + "' " + cal.getTitle() + " " + cal.getStart() + " " + cal.getEnd() + " existing pattern [" + pattern + "]");
 				long totalDeleted = deleteItemsByPattern(pattern);
 				System.out.println(totalDeleted + " recurring events deleted.");

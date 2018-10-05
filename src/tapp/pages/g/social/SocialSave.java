@@ -49,7 +49,7 @@ public class SocialSave {
 	@Inject
     private AlertManager alertManager; 
 
-	private Boolean justSaved;
+	private boolean justSaved;
 	
 	public Object onActivate(Long id) {
 		Object retVal = null;

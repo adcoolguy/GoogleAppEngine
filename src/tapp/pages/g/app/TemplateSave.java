@@ -51,7 +51,7 @@ public class TemplateSave {
 	
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState	//didn't work
-	private Boolean justSaved;
+	private boolean justSaved;
 	
 	public Object onActivate(Long id) {
 		Object retVal = null;

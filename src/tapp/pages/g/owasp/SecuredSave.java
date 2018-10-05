@@ -52,7 +52,7 @@ public class SecuredSave {
 	
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState	//didn't work
-	private Boolean justSaved;
+	private boolean justSaved;
 	
 	/** Backup Service Host */
 	public String getBackupServiceHost() {

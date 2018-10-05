@@ -42,7 +42,7 @@ public class SaveMobile {
     
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState	//didn't work
-	private Boolean justSaved;
+	private boolean justSaved;
 
 	//=== ckeditor's config file (http://tynamo.org/tapestry-ckeditor+guide)
 	@Inject

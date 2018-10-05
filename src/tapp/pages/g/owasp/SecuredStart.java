@@ -60,7 +60,7 @@ public class SecuredStart {
 	 
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState(create=true)	//didn't work
-    private Boolean justSaved;
+    private boolean justSaved;
 
 	@Inject
     private AlertManager alertManager;
@@ -155,9 +155,10 @@ public class SecuredStart {
 		model.get("first_name").sortable(false).label("First"); 
         */
 		
-		justSaved = (Boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedTemplate");
+		justSaved = (boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedTemplate");
 		//System.out.println("similarity: justSaved " + justSaved);
-		if(justSaved != null && !justSaved) {
+		if(!justSaved) {
+//		if(justSaved != null && !justSaved) {
 //	        _grid.getSortModel().updateSort("id");
 //	        _grid.getSortModel().updateSort("id");
 		} else {

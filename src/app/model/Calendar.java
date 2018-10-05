@@ -49,23 +49,23 @@ public class Calendar implements Cloneable, Serializable {
 	private Long number;
 	@SearchableProperty
 	private Long hit = -1L;
-	private Boolean disabled = false;
+	private boolean disabled = false;
 	//view specific attributes (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
 	private String title;
-	private Boolean allDay;
+	private boolean allDay;
 	private String start;
 	private String end;
 	private Date startDate;
 	private Date endDate;
 	private String url;
 	private String className;
-	private Boolean editable;
+	private boolean editable;
 //	private Object source;	Caused by: org.datanucleus.exceptions.ClassNotDetachableException: The class "modelCalendar" is not Detachable. This means that the MetaData for the class did not have the "detachable" attribute set to true.
 	private String color;
 	private String backgroundColor;
 	private String borderColor;
 	private String textColor;
-	private Boolean isRecurring;
+	private boolean isRecurring;
 	private String recurringPattern;
 	private Long movieId;
 	private String eventPattern = "0";	//for sorting
@@ -175,11 +175,11 @@ public class Calendar implements Cloneable, Serializable {
 		this.hit = hit;
 	}
 
-	public Boolean getDisabled() {
+	public boolean getDisabled() {
 		return disabled;
 	}
 
-	public void setDisabled(Boolean disabled) {
+	public void setDisabled(boolean disabled) {
 		this.disabled = disabled;
 	}
 
@@ -192,11 +192,11 @@ public class Calendar implements Cloneable, Serializable {
 		this.title = title;
 	}
 
-	public Boolean getAllDay() {
+	public boolean getAllDay() {
 		return allDay;
 	}
 
-	public void setAllDay(Boolean allDay) {
+	public void setAllDay(boolean allDay) {
 		this.allDay = allDay;
 	}
 
@@ -264,11 +264,11 @@ public class Calendar implements Cloneable, Serializable {
 		this.className = className;
 	}
 
-	public Boolean getEditable() {
+	public boolean getEditable() {
 		return editable;
 	}
 
-	public void setEditable(Boolean editable) {
+	public void setEditable(boolean editable) {
 		this.editable = editable;
 	}
 
@@ -312,11 +312,11 @@ public class Calendar implements Cloneable, Serializable {
 		this.textColor = textColor;
 	}
 
-	public Boolean getIsRecurring() {
+	public boolean getIsRecurring() {
 		return isRecurring;
 	}
 
-	public void setIsRecurring(Boolean isRecurring) {
+	public void setIsRecurring(boolean isRecurring) {
 		this.isRecurring = isRecurring;
 	}
 

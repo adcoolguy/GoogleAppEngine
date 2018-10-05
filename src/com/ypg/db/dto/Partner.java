@@ -34,7 +34,7 @@ public class Partner extends AbstractDto {
     private String userId;
     private String position;
     private String ipAddress;
-    private Boolean disabled;
+    private boolean disabled;
     private String nationalId;
     private String nationality;
     private String homeAddress;
@@ -129,11 +129,11 @@ public class Partner extends AbstractDto {
         this.ipAddress = _val;
     }
 
-    public Boolean getDisabled() {
+    public boolean getDisabled() {
         return disabled;
     }
 
-    public void setDisabled( Boolean _val) {
+    public void setDisabled( boolean _val) {
         this.disabled = _val;
     }
 
@@ -276,10 +276,10 @@ public class Partner extends AbstractDto {
         }
         else if ( _o.ipAddress == null || !ipAddress.equals( _o.ipAddress )) return false;
 
-        if ( disabled == null ) {
-            if ( _o.disabled != null ) return false;
-        }
-        else if ( _o.disabled == null || disabled.booleanValue() != _o.disabled.booleanValue()) return false;
+//        if ( disabled == null ) {
+//            if ( _o.disabled != null ) return false;
+//        }
+//        else if ( _o.disabled == null || disabled.booleanValue() != _o.disabled.booleanValue()) return false;
 
         if ( nationalId == null ) {
             if ( _o.nationalId != null ) return false;
@@ -353,7 +353,7 @@ public class Partner extends AbstractDto {
         _ret = 29 * _ret + (userId == null ? 0 : userId.hashCode());
         _ret = 29 * _ret + (position == null ? 0 : position.hashCode());
         _ret = 29 * _ret + (ipAddress == null ? 0 : ipAddress.hashCode());
-        _ret = 29 * _ret + (disabled == null ? 0 : (disabled ? 1 : 0));
+//        _ret = 29 * _ret + (disabled == null ? 0 : (disabled ? 1 : 0));
         _ret = 29 * _ret + (nationalId == null ? 0 : nationalId.hashCode());
         _ret = 29 * _ret + (nationality == null ? 0 : nationality.hashCode());
         _ret = 29 * _ret + (homeAddress == null ? 0 : homeAddress.hashCode());

@@ -32,14 +32,14 @@ public class Movie implements Cloneable, Serializable {
 	private User parent;
 	//just for cloudendpoint
 	private Long id;
-	private Boolean shuffled;
+	private boolean shuffled;
 	//TODO this should be moved into Channel object
 	private String channelPattern = "0";	//for channel display, automatic carry forward etc (advanced settings)
 
 	private Long calendarId;
 	//TODO this should be populated from Calendar object and to be renamed to calendarEventPattern
 	private String eventPattern = "0";	//for sorting
-	private Boolean calendarAllDay;
+	private boolean calendarAllDay;
 	
 	@SearchableProperty
 	private String Title;
@@ -335,7 +335,7 @@ public class Movie implements Cloneable, Serializable {
 	}
 
 	/** begin of resource sharing properties */
-	private Boolean shared;
+	private boolean shared;
 	private String sharedPattern;
 	private String owner;	//Parse user's id
 	private String oid;	//Parse user's object id
@@ -369,19 +369,19 @@ public class Movie implements Cloneable, Serializable {
 		this.subtitles = subtitles;
 	}
 
-	public Boolean getCalendarAllDay() {
+	public boolean getCalendarAllDay() {
 		return calendarAllDay;
 	}
 
-	public void setCalendarAllDay(Boolean allDay) {
+	public void setCalendarAllDay(boolean allDay) {
 		this.calendarAllDay = allDay;
 	}
 
-	public Boolean isShuffled() {
+	public boolean isShuffled() {
 		return shuffled;
 	}
 
-	public void setShuffled(Boolean shuffled) {
+	public void setShuffled(boolean shuffled) {
 		this.shuffled = shuffled;
 	}
 
@@ -1522,11 +1522,11 @@ public class Movie implements Cloneable, Serializable {
 	}
 */
 
-	public Boolean getShared() {
+	public boolean getShared() {
 		return shared;
 	}
 
-	public void setShared(Boolean shared) {
+	public void setShared(boolean shared) {
 		this.shared = shared;
 	}
 

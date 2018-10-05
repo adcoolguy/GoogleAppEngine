@@ -240,7 +240,17 @@ public class ServiceRegistryStart {
             propModel.sortable(false);
         }
         */
-		justSaved = (boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedServiceRegistry");
+		try {
+			justSaved = (boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedServiceRegistry");
+		} finally {
+			/*
+			 * org.apache.tapestry5.ioc.internal.util.TapestryException
+				java.lang.NullPointerException
+				Filter stack frames Stack trace
+				tapp.pages.sci.ServiceRegistryStart.setupRender(ServiceRegistryStart.java:243)
+			 */
+			justSaved = false;	//NPE! but why???
+		}
 		//System.out.println("sr: justSaved " + justSaved);
 		if(!justSaved) {	//TODO J8 this has not been tested before after moving to Java 8
 //		if(justSaved != null && !justSaved) {

@@ -20,7 +20,7 @@ public class Partner {
 
 	private String position;
 	
-	private Boolean disabled;
+	private boolean disabled;
 	
 	private String ipAddress;
 
@@ -50,7 +50,7 @@ public class Partner {
 	}
 
 	public Partner(Integer partnerId, String addedBy, Date date, String name,
-			String userId, String position, Boolean disabled,
+			String userId, String position, boolean disabled,
 			String ipAddress, String nationalId, String nationality,
 			String homeAddress, String state, String postalCode,
 			String country, String phoneNumber, String homeNumber,
@@ -147,11 +147,11 @@ public class Partner {
 		this.position = position;
 	}
 
-	public Boolean getDisabled() {
+	public boolean getDisabled() {
 		return disabled;
 	}
 
-	public void setDisabled(Boolean disabled) {
+	public void setDisabled(boolean disabled) {
 		this.disabled = disabled;
 	}
 

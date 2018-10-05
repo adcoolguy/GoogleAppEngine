@@ -42,7 +42,7 @@ public class StartMobile {
 	
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState(create=true)	//didn't work
-    private Boolean justSaved;
+    private boolean justSaved;
     
     private String currentExcerpt;
 	
@@ -103,9 +103,10 @@ public class StartMobile {
             propModel.sortable(false);
         }
         */
-		justSaved = (Boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedServiceRegistry");
+		justSaved = (boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedServiceRegistry");
 		//System.out.println("sr: justSaved " + justSaved);
-		if(justSaved != null && !justSaved) {
+		if(!justSaved) {
+//		if(justSaved != null && !justSaved) {
 //	        _grid.getSortModel().updateSort("lastAccessed");
 //	        _grid.getSortModel().updateSort("lastAccessed");
 		} else {

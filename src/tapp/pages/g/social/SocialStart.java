@@ -58,7 +58,7 @@ public class SocialStart {
 	@Inject 
 	private RequestGlobals requestGlobals; 
 	 
-    private Boolean justSaved;
+    private boolean justSaved;
 
 	@Inject
     private AlertManager alertManager;
@@ -142,9 +142,10 @@ public class SocialStart {
         }
         */
 
-		justSaved = (Boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedTemplate");
+		justSaved = (boolean)requestGlobals.getHTTPServletRequest().getSession().getAttribute("justSavedTemplate");
 		//=== these allow a descending sort based on column lastUpdatedDate (I know it seems like it is a hack, but it is not!)
-		if(justSaved != null && !justSaved) {
+		if(!justSaved) {
+//		if(justSaved != null && !justSaved) {
 //	        _grid.getSortModel().updateSort("id");
 //	        _grid.getSortModel().updateSort("id");
 		} else {
