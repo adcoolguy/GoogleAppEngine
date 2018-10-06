@@ -273,37 +273,37 @@ typeof requirejs !== 'undefined' && requirejs(
             window.fbAsyncInit = function() {
                 //initialize facebook SDK via parse
                 var realAppId;
-                if(location.hostname.indexOf('cbiit') > -1 || location.hostname.indexOf('cadsr') > -1) {
-                    realAppId = '1391742604391122';
-                }
-                else
-                if(location.hostname.indexOf('teev.rhc') > -1) {
-                    realAppId = '395343103935527';
-                }
-                else
-                if(location.hostname.indexOf('oo.tv') > -1 || location.hostname.indexOf('hudoon') > -1) {
+//                if(location.hostname.indexOf('cbiit') > -1 || location.hostname.indexOf('cadsr') > -1) {
+//                    realAppId = '1391742604391122';
+//                }
+//                else
+//                if(location.hostname.indexOf('teev.rhc') > -1) {
+//                    realAppId = '395343103935527';
+//                }
+//                else
+//                if(location.hostname.indexOf('oo.tv') > -1 || location.hostname.indexOf('hudoon') > -1) {
                     realAppId = '427156927648651';	//TODO should not use my personal Facebook account!
-                }
-                else
-                if(location.hostname.indexOf('service') > -1) {
-                    realAppId = '333890893403449';
-                }
-                else
-                if(location.hostname.indexOf('share') > -1) {
-                    realAppId = '351597214975046';
-                }
-                else
-                if(location.hostname.indexOf('aware') > -1) {
-                    realAppId = '1434646580086725';
-                }
-                else
-                if(location.hostname.indexOf('localhost') > -1) {
-                    realAppId = '149411878572809';
-                }
-                else {
-                    window.console && console.log("ERROR: No appdomain registered with Facebook, please visit https://developers.facebook.com/apps to create one!!!");
-                    realAppId = '149411878572809';
-                }
+//                }
+//                else
+//                if(location.hostname.indexOf('service') > -1) {
+//                    realAppId = '333890893403449';
+//                }
+//                else
+//                if(location.hostname.indexOf('share') > -1) {
+//                    realAppId = '351597214975046';
+//                }
+//                else
+//                if(location.hostname.indexOf('aware') > -1) {
+//                    realAppId = '1434646580086725';
+//                }
+//                else
+//                if(location.hostname.indexOf('localhost') > -1) {
+//                    realAppId = '149411878572809';
+//                }
+//                else {
+//                    window.console && console.log("ERROR: No appdomain registered with Facebook, please visit https://developers.facebook.com/apps to create one!!!");
+//                    realAppId = '149411878572809';
+//                }
 
                 Parse.FacebookUtils.init({
                     status: false,  //https://parse.com/questions/what-does-a-non-null-parseusercurrent-guarantee

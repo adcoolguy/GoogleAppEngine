@@ -21,6 +21,8 @@ Spreadsheet Control Setup
 
 PROD https://docs.google.com/spreadsheets/d/1tVSPjaHDxv9C2k8_Oz_FUX7_JWFe0CjEFYvPqUMfmq0/edit#gid=0
 
+TEST https://docs.google.com/spreadsheets/d/1rHd8FkYXBQO7H7J0qcC7PMLQ0SjU4aWqKcUWSRTOLgc/edit#gid=0
+
 DEV https://docs.google.com/spreadsheets/u/1/d/1nZ5bITADCBoiUXnExeCy1ejaJOZBj6eyHwiuP1409aY/edit#gid=0
 
 Google App Engine for Java (GAE4J) Showcase

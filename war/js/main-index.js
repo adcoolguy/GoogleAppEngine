@@ -9,8 +9,9 @@ requirejs.config({
 //        jquery: ['//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery', 'jquery-1.9.1'],    //for some reason, this is needed for IE 8 otherwise  'jQuery' is undefined or  '$' is undefined will occur
         //===used by index1.html
         index: '../html/index'
-        //,
+        ,
         //parse: '//www.parsecdn.com/js/parse-latest',	//TODO is this the same js sdk after the parse server retiring???
+        parse: '//cdnjs.cloudflare.com/ajax/libs/parse/2.1.0/parse.min',	//TODO is this the same js sdk after the parse server retiring???
         facebook: '../parse/facebook'
 //        plusone:  '//apis.google.com/js/plusone',
 //        gapi: 'https://apis.google.com/js/client.js?onload=load',
