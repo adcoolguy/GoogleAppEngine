@@ -58,7 +58,7 @@ typeof requirejs !== 'undefined' && requirejs.config({
         jquery: ['//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery', 'jquery-1.9.1'],
         purl: '../jquery/purl',
 //        parse: 'https://www.parsecdn.com/js/parse-1.3.5.min',		//retiring Parse, bye, we will miss u!
-        parse: '//www.parsecdn.com/js/parse-latest',	//TODO is this the same js sdk after the parse server retiring???
+        parse: '//cdnjs.cloudflare.com/ajax/libs/parse/2.1.0/parse.min',	//TODO is this the same js sdk after the parse server retiring???
 //        parse: '//dodsoftware.com/sotests/resources/js/parse',		//=== https://jsfiddle.net/DelightedDoD/gzbmkLnm/
         facebook: '../parse/facebook',
         gapi: 'https://apis.google.com/js/client.js?onload=load',
