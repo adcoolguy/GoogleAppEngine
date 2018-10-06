@@ -64,7 +64,7 @@ public class ServiceRegistryStart {
 	
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState(create=true)	//didn't work
-    private boolean justSaved;
+    private Boolean justSaved;
     
     private String currentExcerpt;
 	

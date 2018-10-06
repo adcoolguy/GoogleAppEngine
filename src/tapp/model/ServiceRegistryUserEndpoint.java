@@ -148,7 +148,7 @@ public class ServiceRegistryUserEndpoint {
 		return serviceregistryuser;
 	}
 
-	private boolean containsServiceRegistryUser(
+	private Boolean containsServiceRegistryUser(
 			ServiceRegistryUser serviceregistryuser) {
 		PersistenceManager mgr = getPersistenceManager();
 		boolean contains = true;

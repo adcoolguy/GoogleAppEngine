@@ -30,8 +30,8 @@ public class ServiceRegistryServlet extends HttpServlet {
 	ServiceRegistryRepository r;
 
 	//=== common db based settings of SR
-	private static boolean hitCountEnabled;
-	private static boolean backupServiceEnabled;
+	private static Boolean hitCountEnabled;
+	private static Boolean backupServiceEnabled;
 
 	public static boolean isBackupServiceEnabled() {
 		return backupServiceEnabled;
@@ -41,11 +41,11 @@ public class ServiceRegistryServlet extends HttpServlet {
 		ServiceRegistryServlet.backupServiceEnabled = backupServiceEnabled;
 	}
 
-	public static boolean isHitCountEnabled() {
+	public static Boolean isHitCountEnabled() {
 		return hitCountEnabled;
 	}
 
-	public static void setHitCountEnabled(boolean hitCountEnabled) {
+	public static void setHitCountEnabled(Boolean hitCountEnabled) {
 		ServiceRegistryServlet.hitCountEnabled = hitCountEnabled;
 	}
 
@@ -53,14 +53,14 @@ public class ServiceRegistryServlet extends HttpServlet {
 //	    GaeVFS.setRootPath(config.getServletContext().getRealPath("/"));
     	String temp = SettingsDBUtils.getSettings("sr.hit.count.enabled");
     	if(!StringUtils.isEmpty(temp) && !temp.startsWith("${")) {
-    		setHitCountEnabled(Boolean.valueOf(temp));
+//    		setHitCountEnabled(Boolean.parseBoolean(temp));
     		System.out.println("Hit count enabled in datastore detected.");
     	} else {
     		System.out.println("Hit count disabled.");
     	}
     	temp = SettingsDBUtils.getSettings("sr.backup.service.enabled");
     	if(!StringUtils.isEmpty(temp) && !temp.startsWith("${")) {
-    		setBackupServiceEnabled(Boolean.valueOf(temp));
+//    		setBackupServiceEnabled(Boolean.parseBoolean(temp));
     		System.out.println("Backup service enabled in datastore detected.");
     	} else {
     		System.out.println("Backup service disabled.");
@@ -138,27 +138,28 @@ public class ServiceRegistryServlet extends HttpServlet {
 				//TODO - this could be a target for the (future's) Java closure :)
 				//=== BT0001 begin - handling "legacy" bigtable column (does not exist before the new changes)
 				boolean disabled = false, useDescription = false, useHTML = true;
-				try {
-					if(sr.getDisabled()) {
-						disabled = true;
-					}
-				} catch (Exception e) {
-					System.out.println("legacy entity without disabled flag: " + sr);
-				}
-				try {
-					if(sr.getUseDescription()) {
-						useDescription = true;
-					}
-				} catch (Exception e) {
-					System.out.println("legacy entity without useDescription flag: " + sr);
-				}
-				try {
-					if(!sr.getUseHtml()) {
-						useHTML = false;
-					}
-				} catch (Exception e) {
-					System.out.println("legacy entity without useHTML flag: " + sr);
-				}
+//				try {
+////					if(sr.getDisabled()) {
+//					if(Boolean.valueOf(sr.getDisabled()).booleanValue()) {
+//						disabled = true;
+//					}
+//				} catch (Exception e) {
+//					System.out.println("legacy entity without disabled flag: " + sr);
+//				}
+//				try {
+//					if(Boolean.valueOf(sr.getUseDescription()).booleanValue()) {
+//						useDescription = true;
+//					}
+//				} catch (Exception e) {
+//					System.out.println("legacy entity without useDescription flag: " + sr);
+//				}
+//				try {
+//					if(Boolean.valueOf(sr.getUseHtml()).booleanValue()) {
+//						useHTML = false;
+//					}
+//				} catch (Exception e) {
+//					System.out.println("legacy entity without useHTML flag: " + sr);
+//				}
 				//=== BT0001 end - handling "legacy" bigtable column (does not exist before the new changes)
 				if(sr != null 
 						&& !disabled
@@ -179,9 +180,10 @@ public class ServiceRegistryServlet extends HttpServlet {
 						String finalEndPoint = firstRedirectedSR.getEndpoint();
 						boolean disabled1 = false, useDescription1 = false, useHTML1 = true;
 						try {
-							if(firstRedirectedSR.getUseDescription()) {
-								useDescription1 = true;
-							}
+//							if(firstRedirectedSR.getUseDescription()) {
+//							if(Boolean.valueOf(firstRedirectedSR.getUseDescription()).booleanValue()) {
+//								useDescription1 = true;
+//							}
 						} catch (Exception e) {
 							System.out.println("legacy entity level 1 without useDescription flag: " + sr);
 						}

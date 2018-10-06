@@ -7,6 +7,8 @@ and set the JRE/JDK to 1.7 - run with r1.bat or j7 && r.
 
 - You can launch the enhancer accordingly by invoking e.cmd (run j7 or j8 if needed).
 
+- Add -parameter -g:vars VM arguments into your Java 8 JDK installed JRE.
+
 Google App Engine for Java (GAE4J) Showcase
 
 How to launch?

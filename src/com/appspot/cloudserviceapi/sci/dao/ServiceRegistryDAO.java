@@ -30,9 +30,10 @@ public class ServiceRegistryDAO {
 	private static final String ALL_SR_LIST = "AllServiceRegistryList";
 	
 	public ServiceRegistry findServiceRegistryByService(String service) {
-		ServiceRegistry sr = getServiceFromCache(service);
+//=== disable cache for now to fix "java.lang.String cannot be cast to java.lang.Boolean at tapp.model.ServiceRegistry.jdoReplaceField"!
+//		ServiceRegistry sr = getServiceFromCache(service);
 		ServiceRegistry gud;
-		if(sr == null) {
+//		if(sr == null) {
 			EntityManager em = EMF.get().createEntityManager();
 			try {
 				javax.persistence.Query q = (javax.persistence.Query) em.createQuery("select u from tapp.model.ServiceRegistry u where u.service = ?1");
@@ -42,14 +43,14 @@ public class ServiceRegistryDAO {
 //			} catch (com.google.apphosting.api.ApiProxy.OverQuotaException e1) {
 //				throw e1;
 			} catch (Exception e) {
-				//e.printStackTrace();
+				e.printStackTrace();
 				gud = null;
 			} finally {
 				em.close();
 			}
-		} else {
-			gud = sr;
-		}
+//		} else {
+//			gud = sr;
+//		}
 		return gud;
 	}
 	

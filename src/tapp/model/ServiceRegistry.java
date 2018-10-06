@@ -32,43 +32,56 @@ public class ServiceRegistry implements Cloneable, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @SearchableId(name = "id")
+    @Basic
 	private Long id;
 	@ApiModelProperty(value = "last updated date", required = false)
     @SearchableProperty
+    @Basic
 	private Date lastUpdated;	//updated by admin generally
 	@ApiModelProperty(value = "last accessed date", required = false)
     @SearchableProperty
+    @Basic
 	private Date lastAccessed;	//updated by hit count/client access
 	@ApiModelProperty(value = "categories", allowableValues = "TECHNOLOGY, RELATIONSHIP, INCOMING, OUTGOING, SCIENCE, BUSINESS, WORLD, SPORTS, ENTERTAINMENT, HEALTH, POLITICS, SOCIETY, GOVERNMENT, CODE, AUDIO, VIDEO, IMAGE, GAME, DALEKJS, PROTRACTOR", required = true)
 	//@JsonProperty(value = "enum", required = false)
     @SearchableProperty
+    @Basic
 	private URLCategory category;
 	@ApiModelProperty(value = "service id, unique and primary", required = false)
     @SearchableProperty
+    @Basic
 	private String service;
 	@ApiModelProperty(value = "owner name", required = false)
     @SearchableProperty
+    @Basic
 	private String owner;
 	@ApiModelProperty(value = "project id", required = false)
     @SearchableProperty
+    @Basic
 	private String project;
 	@ApiModelProperty(value = "organization id", required = false)
     @SearchableProperty
+    @Basic
 	private String organization;
 	@ApiModelProperty(value = "url", required = true)
     @SearchableProperty
+    @Basic
 	private String endpoint;
 	@ApiModelProperty(value = "summary", required = false)
     @SearchableProperty //@SearchableMetaData(name = "summary1")
+    @Basic
 	private String summary;
 	@ApiModelProperty(value = "short url", required = false)
     @SearchableProperty
+    @Basic
     private String shortUrl;
 	@ApiModelProperty(value = "general purpose count", required = false)
     @SearchableProperty
+    @Basic
     private Long number;
 	@ApiModelProperty(value = "hit count", required = false)
     @SearchableProperty
+    @Basic
     private Long hit = -1L;
 
 	@ApiModelProperty(value = "description", required = false)
@@ -81,15 +94,20 @@ public class ServiceRegistry implements Cloneable, Serializable {
     private Text descriptionText;
 
 	@ApiModelProperty(value = "enabled/disabled flag", required = false)
-    private boolean disabled = false;
+    @Basic
+    private Boolean disabled = false;
 	@ApiModelProperty(value = "use the description instead of the url field as output", required = false)
-    private boolean useDescription = false;		//returns the description field instead of endpoint
+    @Basic
+    private Boolean useDescription = false;		//returns the description field instead of endpoint
 	@ApiModelProperty(value = "save and display description as html", required = false)
-    private boolean useHtml = true;	//returns the endpoint as html content type/to be saved in rich text/html format
+    @Basic
+    private Boolean useHtml = true;	//returns the endpoint as html content type/to be saved in rich text/html format
 	@ApiModelProperty(value = "save only flag", required = false)
-    private boolean saveOnly = false;	//stays if the saveOnly is true
+    @Basic
+    private Boolean saveOnly = false;	//stays if the saveOnly is true
 
 	@ApiModelProperty(value = "owner id", required = false)
+    @Basic
     private String oid;	//owner's id
 
 	public String getOid() {
@@ -237,35 +255,35 @@ public class ServiceRegistry implements Cloneable, Serializable {
 	}
 
 	//TBD - need a primitive boolean for Tapestry but datastore needs Boolean to avoid error
-	public boolean getDisabled() {
+	public Boolean getDisabled() {
 		return disabled;
 	}
 
-	public void setDisabled(boolean disabled) {
+	public void setDisabled(Boolean disabled) {
 		this.disabled = disabled;
 	}
 
-	public boolean getUseDescription() {
+	public Boolean getUseDescription() {
 		return useDescription;
 	}
 
-	public void setUseDescription(boolean useDescription) {
+	public void setUseDescription(Boolean useDescription) {
 		this.useDescription = useDescription;
 	}
 
-	public boolean getUseHtml() {
+	public Boolean getUseHtml() {
 		return useHtml;
 	}
 
-	public void setUseHtml(boolean useHtml) {
+	public void setUseHtml(Boolean useHtml) {
 		this.useHtml = useHtml;
 	}
 
-	public boolean getSaveOnly() {
+	public Boolean getSaveOnly() {
 		return saveOnly;
 	}
 
-	public void setSaveOnly(boolean saveOnly) {
+	public void setSaveOnly(Boolean saveOnly) {
 		this.saveOnly = saveOnly;
 	}
 

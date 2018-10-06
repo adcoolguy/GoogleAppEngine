@@ -58,10 +58,10 @@ public class ServiceRegistryJDO implements Cloneable, Serializable {
     @Persistent(defaultFetchGroup = "true") //https://groups.google.com/forum/#!topic/google-appengine-java/RAgJQoLJy3Q
     private Text descriptionText;
 
-    private boolean disabled = false;
-    private boolean useDescription = false;		//returns the description field instead of endpoint
-    private boolean useHtml = true;	//returns the endpoint as html content type/to be saved in rich text/html format
-    private boolean saveOnly = false;	//stays if the saveOnly is true
+    private Boolean disabled = false;
+    private Boolean useDescription = false;		//returns the description field instead of endpoint
+    private Boolean useHtml = true;	//returns the endpoint as html content type/to be saved in rich text/html format
+    private Boolean saveOnly = false;	//stays if the saveOnly is true
     private String oid;	//owner's id
 
 	public String getOid() {

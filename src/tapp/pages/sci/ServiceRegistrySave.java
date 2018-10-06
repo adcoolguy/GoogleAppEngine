@@ -46,7 +46,7 @@ public class ServiceRegistrySave {
     
 	//=== http://tapestry.apache.org/session-storage.html
 	//@SessionState	//didn't work
-	private boolean justSaved;
+	private Boolean justSaved;
 
 	//=== ckeditor's config file (http://tynamo.org/tapestry-ckeditor+guide)
 	@Inject
@@ -65,7 +65,7 @@ public class ServiceRegistrySave {
 //		return mainZone.getBody();
 //	}
 	
-    //private boolean backToStart = true;
+    //private Boolean backToStart = true;
     
 //    void onSelectedFromSubmit() {
 //    	backToStart = true;
