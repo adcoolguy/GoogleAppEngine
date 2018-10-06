@@ -11,7 +11,7 @@ requirejs.config({
         index: '../html/index'
         //,
         //parse: '//www.parsecdn.com/js/parse-latest',	//TODO is this the same js sdk after the parse server retiring???
-//        facebook: '../parse/facebook',
+        facebook: '../parse/facebook'
 //        plusone:  '//apis.google.com/js/plusone',
 //        gapi: 'https://apis.google.com/js/client.js?onload=load',
 //        google: '../js/google',
@@ -22,22 +22,22 @@ requirejs.config({
     },
 
     shim: {
-        //jquery: {
-        //    exports: '$'
-        //},
-        //parse: {
-        //    deps: ["jquery"],
-        //    exports: 'Parse'
-        //},
+        jquery: {
+            exports: '$'
+        },
+        parse: {
+            deps: ["jquery"],
+            exports: 'Parse'
+        },
         index: {
             deps: ["parse"],
             exports: 'index'
-        }
+        },
 //        //run as specified in the following orders
-//        facebook: {
-//            deps: ['jquery', 'parse'],
-//            exports: 'facebook'
-//        },
+        facebook: {
+            deps: ['jquery', 'parse'],
+            exports: 'facebook'
+        }
 //        plusone: {
 //            deps: ['jquery'],
 //            exports: 'plusone'
@@ -80,7 +80,7 @@ require(['./main-config', './app'], function (common, app) {
 //            'jquery',
             'purl',
             //'parse',
-            //'facebook',
+            'facebook',
 //            'angular',
             'prefs',
         'index', 'google'
@@ -93,7 +93,7 @@ require(['./main-config', './app'], function (common, app) {
 //            $,
             purl,
             //parse,
-            //facebook,
+            facebook,
 //            angular,
             prefs,
             index, google

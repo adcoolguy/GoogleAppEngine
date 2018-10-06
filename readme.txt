@@ -9,6 +9,20 @@ and set the JRE/JDK to 1.7 - run with r1.bat or j7 && r.
 
 - Add -parameter -g:vars VM arguments into your Java 8 JDK installed JRE.
 
+Facebook Login Setup
+
+- Visit https://developers.facebook.com/apps/427156927648651/fb-login/settings/
+
+- Add the domain of your app into Basic | App Domains: Say [your app].appspot.com
+
+- Add https://toshare.auth0.com/login/callback and https://[your app].appspot.com/mcrud/movie.html into PRODUCTS | Facebook Login | Settings | Valid OAuth Redirect URIs
+
+Spreadsheet Control Setup
+
+PROD https://docs.google.com/spreadsheets/d/1tVSPjaHDxv9C2k8_Oz_FUX7_JWFe0CjEFYvPqUMfmq0/edit#gid=0
+
+DEV https://docs.google.com/spreadsheets/u/1/d/1nZ5bITADCBoiUXnExeCy1ejaJOZBj6eyHwiuP1409aY/edit#gid=0
+
 Google App Engine for Java (GAE4J) Showcase
 
 How to launch?

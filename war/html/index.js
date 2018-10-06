@@ -95,7 +95,7 @@
 
         //=== source: https://www.parse.com/questions/trouble-with-facebook-login-with-javascript-sdk
         if (Parse.User.current() == null) {
-            Parse.FacebookUtils.logIn("user_likes,email,user_about_me", {
+            Parse.FacebookUtils.logIn("email,public_profile", {
                 success: function(user) {
                     var msg;
                     if (!user.existed()) {

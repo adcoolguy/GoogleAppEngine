@@ -281,8 +281,8 @@ typeof requirejs !== 'undefined' && requirejs(
                     realAppId = '395343103935527';
                 }
                 else
-                if(location.hostname.indexOf('oo.tv') > -1 || location.hostname.indexOf('hudoone') > -1) {
-                    realAppId = '522052734496612';
+                if(location.hostname.indexOf('oo.tv') > -1 || location.hostname.indexOf('hudoon') > -1) {
+                    realAppId = '427156927648651';	//TODO should not use my personal Facebook account!
                 }
                 else
                 if(location.hostname.indexOf('service') > -1) {
