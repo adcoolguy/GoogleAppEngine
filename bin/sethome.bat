@@ -1,1 +1,1 @@
-set GAE_JAVA_SDK_HOME=c:\appengine-java-sdk-1.9.65
+set GAE_JAVA_SDK_HOME=c:\appengine-java-sdk-1.9.66

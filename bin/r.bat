@@ -1,8 +1,10 @@
 call setenv.bat
 
-:set VERBOSE=-verbose:class
-set VERBOSE=
+call sethome.bat
 
-:java -Xmx2048m -javaagent:\perfino\agent\perfino.jar -javaagent:%GAE_JAVA_SDK_HOME%/lib/agent/appengine-agent.jar -classpath %GAE_JAVA_SDK_HOME%/lib/appengine-tools-api.jar  com.google.appengine.tools.development.DevAppServerMain --port=8888 --address=0.0.0.0 ../war
+:netstat -ano | find "8080"
+:taskkill /F /PID 10340
 
-%JAVA_HOME%\bin\java %VERBOSE% -Xmx1048m -javaagent:%GAE_JAVA_SDK_HOME%/lib/agent/appengine-agent.jar -classpath %GAE_JAVA_SDK_HOME%/lib/appengine-tools-api.jar  com.google.appengine.tools.development.DevAppServerMain --port=8888 --address=0.0.0.0 ../war
+%GAE_JAVA_SDK_HOME%\bin\dev_appserver.cmd %PROJECT_HOME%\war & start http://localhost:8080/
+
+:%JAVA_HOME%\bin\java %VERBOSE% -Xmx1048m -javaagent:%GAE_JAVA_SDK_HOME%/lib/agent/appengine-agent.jar -classpath %GAE_JAVA_SDK_HOME%/lib/appengine-tools-api.jar  com.google.appengine.tools.development.DevAppServerMain --port=8888 --address=0.0.0.0 ../war
